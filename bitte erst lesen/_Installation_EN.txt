@@ -1,0 +1,111 @@
+**************************************************************************************************
+*                               modified eCommerce store software installation guide             *
+**************************************************************************************************
+*                               Status: 04.07.2022                                               *
+**************************************************************************************************
+
+1. installation on the webserver
+
+   1.1 Create MYSQL database
+  
+   1.2 Transfer files via FTP to the webspace and set file permissions
+       Please pay attention to the following:
+       - Transfer mode binary
+       - If your FTP client program has a setting that upper case letters are converted to lower case letters, deactivate this option!
+       - If you use FileZilla, please make sure that after the transfer of the files no files are listed in the tab "Failed transfers".
+         otherwise select all of them and add them to the queue again by right-clicking on them and
+         right-click the files in the "Files to be transferred" tab to process the queue again. Repeat this process as often
+         until no more files are listed in the "Failed transfers" tab.
+       The installer shows whether the file permissions need to be adjusted at all
+
+       Folder                                                Rights  Function
+       /admin/backups                                        777     database backups
+       /admin/images/graphs                                  777     Statistics graphs
+       /admin/images/icons                                   777     customer group icons
+       /admin/rss                                            777     files from admin info * no longer available as of 1.06
+       /cache                                                777     Cache files from Smarty
+       /export                                               777     export directory
+       /images                                               777     image directory
+       /images/banner                                        777     Images for banners
+       /images/categories                                    777     Category images
+       /images/content                                       777     Images from WYSIWYG editor
+       /images/icons                                         777     Customer group icons
+       /images/manufacturers                                 777     Manufacturer images
+       /images/product_images/info_images                    777     Info images
+       /images/product_images/midi_images                    777     Midi images
+       /images/product_images/mini_images                    777     Mini images
+       /images/product_images/original_images                777     Original images
+       /images/product_images/popup_images                   777     Popup images
+       /images/product_images/thumbnail_images               777     Thumbnail images
+       /images/tags                                          777     Images for item properties
+       /import                                               777     import directory
+       /includes/external/magnalister                        777     Magnalister directory
+       /log                                                  777     log directory
+       /media/content                                        777     Files for ContentManager
+       /media/content/backup                                 777     backup files for ContentManager
+       /media/products                                       777     files for ProductManager
+       /media/products/backup                                777     backup files for ProductManager
+       /templates/tpl_modified                               777     Template directory
+       /templates/xtc5                                       777     template directory
+       /templates_c                                          777     Smarty directory
+          
+       File                                                  Rights  Function
+       /sitemap.xml                                          777     File for the sitemap information
+       /includes/configure.php                               777     Shop configuration file
+       /admin/magnalister.php                                777     Magnalister file
+       /magnaCallback.php                                    777     Magnalister file
+
+   1.3 Run web based installation routine
+       (Attention: No .htaccess directory protection must be set on the store directory).
+       To do this, enter the SHOP URL in the browser and add /_installer, then follow the instructions in the installer.
+  
+       Assign rights after installation for the configure files for security purposes!
+
+       File rights function
+       /includes/configure.php 444 Configuration file Shop
+  
+   1.4 Delete the "_installer" directory of the installer
+
+
+2. set up search engine friendly URLs (optional)
+
+   If "Shopstat" is to be used to create search engine friendly URLS,
+   the following requirements must be met:
+
+   2.1 The server must support "mod_rewrite". 
+       (see Administration -> Utilities -> Server info) 
+   
+   2.2 Activate "Search Engine Friendly URLS" in the admin area 
+       (Advanced Configuration -> Meta-Tags/Search Engines -> 
+        Use search engine friendly URLs -> "true")
+   
+   2.3 Rename the "_.htaccess" in the main directory of the store to ".htaccess".
+
+   If your store is located in a subfolder (e.g. http://domain.de/shop/ ),
+   you have to edit the .htaccess file and change the "RewriteBase" according to the instructions 
+   in the file.
+
+   Do you have questions, problems or suggestions?
+   Use our forum at https://www.modified-shop.org/forum
+
+
+3. after the installation
+
+   3.1 If the store was installed completely, you can now create or import categories and articles. 
+       can be created or imported.
+       More information about this and the general configuration of the store itself can be found in the 
+       in the modified eCommerce Shopsoftware user manual at:
+       https://new-business-consulting.de/modified-eCommerce-Shopsoftware-Handbuch:::2.html
+  
+   3.2 Help with customizing / updating the template is available at:
+       https://www.modified-shop.org/forum/index.php?topic=1040.0
+
+
+4. important note
+
+   Again and again we see that HTML or PHP files are edited with programs like Microsoft Word or
+   OpenOffice are edited. These are not suitable editors and errors will occur!
+   A list of suitable programs for store creation can be found here:
+   https://www.modified-shop.org/forum/index.php?topic=4226.0
+
+**************************************************************************************************

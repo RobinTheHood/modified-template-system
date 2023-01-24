@@ -1,0 +1,568 @@
+**************************************************************************************************
+*                               modified eCommerce Shopsoftware Updateanleitung                  *
+**************************************************************************************************
+*                               Stand: 04.07.2022                                                *
+**************************************************************************************************
+
+Für alle Update-Pakete gilt:
+1. Alle gewünschten Shopupdate-ZIP-Pakete entpacken (Bei Problemen beim entpacken bitte die 
+   Freeware 7-Zip [ https://www.7-zip.org ] benutzen.)
+2. Aufgrund einer Pfadlängen-Limitierung von 256 Zeichen unter Windows bitte die ZIP-Pakete 
+   direkt im Laufwerk C:\ entpacken und den Ordner "shoproot" aus dem entpackten Ordner danach 
+   ebenfalls direkt nach C:\ verschieben.
+3. Backup der Datenbank des Shops erstellen
+4. Backup der Shop-Dateien erstellen
+5. ACHTUNG: Falls das "/admin/" Verzeichnis im Shop umbenannt wurde, den/die Ordner "/admin/" 
+   aus den Update-Paketen entsprechend vorher umbenennen!
+6. Inhalt der/des Ordner(s) "shoproot" aus dem/den Update-Paket(e) der Reihe nach (älteste 
+   Version zuerst, neueste Version zuletzt) mit FTP-Client auf den Server in den Ordner des zu 
+   aktualisierenden Shops übertragen.
+   ACHTUNG: Dabei werden die entsprechenden Dateien des Shops und auch das Template überschrieben,
+   sofern man eines der mitgelieferten Standard-Templates verwendet und es nicht vorher umbenannt
+   hat! Module, die ggf. vorher im Shop installiert waren müssen nach dem Update erneut installiert
+   werden!
+   Bitte auf folgendes achten:
+   - Übertragungsmodus binär
+   - Sollte Ihr FTP-Client Programm eine Einstellung haben, dass Großbuchstaben in Kleinbuchstaben
+     umgewandelt werden, so deaktivieren Sie diese Option!
+   - Verwenden Sie FileZilla, dann achten Sie unbedingt darauf, dass nach der Übertragung der
+     Dateien unten im Reiter "Fehlgeschlagene Übertragungen" keine Dateien aufgelistet werden,
+     andernfalls markieren Sie bitte alle und fügen sie mit einem Rechtsklick erneut zur Warteschlange
+     hinzu und lassen die Warteschlange im Reiter "Zu übertragende Dateien" ebenfalls per Rechtsklick
+     nochmal abarbeiten. Diesen Vorgang wiederholen Sie so oft, bis keine Dateien mehr im Reiter
+     "Fehlgeschlagene Übertragungen" aufgelistet werden.
+7. Bitte die URL des Shops mit Anhang /_installer aufrufen (Beispiel: 
+   https://www.example.com/_installer). Hier müssen seit Version 2.0.2.0 rev 10591 nun die 
+   Admin-Zugangsdaten eingegeben werden um ihn auszuführen. Der Haken bei "Update der bereits 
+   installierten modified eCommerce Shopsoftware durchführen!" ist automatisch gesetzt um den 
+   Updater auszuführen. Hier bitte der Reihe nach alle Punkte einmal ausführen (mit Ausnahme des 
+   letzten Punktes "Manuelle SQL-Eingabe"). Beim Punkt Datenbank-Update nur die Update-Dateien 
+   entsprechend der Versionsnummern der hochgeladenen Update-Pakete auswählen.
+8. Das Template entsprechend der folgenden Anleitung aktualisieren: 
+   https://www.modified-shop.org/wiki/Tutorial:_Template_eines_xt:Commerce_Shops_in_der_modified_eCommerce_Shopsoftware_weiter_verwenden
+9. Alternativ kann auch ein neues Template für die entsprechende Shopversion gekauft und 
+   verwendet werden. Wir bieten diverse Templates in unserem Shop zum Kauf an: https://www.modified-shop.org/shop/
+10. Wichtiger Hinweis: Immer wieder sehen wir, dass HTML- oder PHP-Dateien mit Programmen wie 
+    Microsoft Word oder OpenOffice bearbeitet werden. Das sind keine geeigneten Editoren und es
+    kommt zu Fehlern!
+    Eine Liste geeigneter Programme für die Shoperstellung ist hier zu finden:
+    https://www.modified-shop.org/forum/index.php?topic=4226.0
+
+
+Update von 2.0.7.1 rev 14605
+
+1. Bitte die URL des Shops mit Anhang /_installer aufrufen (Beispiel: 
+   https://www.example.com/_installer). Hier müssen seit Version 2.0.2.0 rev 10591 nun die 
+   Admin-Zugangsdaten eingegeben werden um ihn auszuführen. Bitte unten den Button "UPDATE" klicken. 
+   Hier bitte der Reihe nach alle Punkte einmal ausführen (mit Ausnahme der Punkte "Datenbank 
+   Wiederherstellung" und "Manuelle SQL-Eingabe").
+2. Wichtig: Einmal in den Adminbereich des Shops gehen und Menüpunkt "Konfiguration" -> "Mein 
+   Shop" aufrufen, damit die für den Adminbereich wichtigen neuen Konfigurations-Werte eingespielt 
+   werden!
+3. Template-Anpassungen durchführen: 
+   https://www.modified-shop.org/wiki/Tutorial:_Template_eines_xt:Commerce_Shops_in_der_modified_eCommerce_Shopsoftware_weiter_verwenden#.C3.84nderungen_ab_Version_2.0.7.0
+4. Wurde die Erstinstallation des Shops mit Shopversion 2.0.4.0 oder 2.0.4.1 in ISO-8859-15 
+   durchgeführt, dann bitte den folgenden Fix laden: 
+   https://www.modified-shop.org/forum/index.php?action=downloads;sa=downfile&id=134
+   Die Datei entpacken, per FTP in den Shop laden und im Browser einmalig aufrufen (Beispiel: 
+   https://www.example.com/fix_latin1_database.php). Die Datei danach vom Server löschen.
+
+
+Update von 2.0.7.0 rev 14473
+
+1. Bitte die URL des Shops mit Anhang /_installer aufrufen (Beispiel: 
+   https://www.example.com/_installer). Hier müssen seit Version 2.0.2.0 rev 10591 nun die 
+   Admin-Zugangsdaten eingegeben werden um ihn auszuführen. Bitte unten den Button "UPDATE" klicken. 
+   Hier bitte der Reihe nach alle Punkte einmal ausführen (mit Ausnahme der Punkte "Datenbank 
+   Wiederherstellung" und "Manuelle SQL-Eingabe").
+2. Wichtig: Einmal in den Adminbereich des Shops gehen und Menüpunkt "Konfiguration" -> "Mein 
+   Shop" aufrufen, damit die für den Adminbereich wichtigen neuen Konfigurations-Werte eingespielt 
+   werden!
+3. Template-Anpassungen durchführen: 
+   https://www.modified-shop.org/wiki/Tutorial:_Template_eines_xt:Commerce_Shops_in_der_modified_eCommerce_Shopsoftware_weiter_verwenden#.C3.84nderungen_ab_Version_2.0.7.0
+4. Wurde die Erstinstallation des Shops mit Shopversion 2.0.4.0 oder 2.0.4.1 in ISO-8859-15 
+   durchgeführt, dann bitte den folgenden Fix laden: 
+   https://www.modified-shop.org/forum/index.php?action=downloads;sa=downfile&id=134
+   Die Datei entpacken, per FTP in den Shop laden und im Browser einmalig aufrufen (Beispiel: 
+   https://www.example.com/fix_latin1_database.php). Die Datei danach vom Server löschen.
+
+
+Update von 2.0.6.0 rev 13500
+
+1. Bitte die URL des Shops mit Anhang /_installer aufrufen (Beispiel: 
+   https://www.example.com/_installer). Hier müssen seit Version 2.0.2.0 rev 10591 nun die 
+   Admin-Zugangsdaten eingegeben werden um ihn auszuführen. Bitte unten den Button "UPDATE" klicken. 
+   Hier bitte der Reihe nach alle Punkte einmal ausführen (mit Ausnahme der Punkte "Datenbank 
+   Wiederherstellung" und "Manuelle SQL-Eingabe").
+2. Wichtig: Einmal in den Adminbereich des Shops gehen und Menüpunkt "Konfiguration" -> "Mein 
+   Shop" aufrufen, damit die für den Adminbereich wichtigen neuen Konfigurations-Werte eingespielt 
+   werden!
+3. Template-Anpassungen durchführen: 
+   https://www.modified-shop.org/wiki/Tutorial:_Template_eines_xt:Commerce_Shops_in_der_modified_eCommerce_Shopsoftware_weiter_verwenden#.C3.84nderungen_ab_Version_2.0.7.0
+4. Wurde die Erstinstallation des Shops mit Shopversion 2.0.4.0 oder 2.0.4.1 in ISO-8859-15 
+   durchgeführt, dann bitte den folgenden Fix laden: 
+   https://www.modified-shop.org/forum/index.php?action=downloads;sa=downfile&id=134
+   Die Datei entpacken, per FTP in den Shop laden und im Browser einmalig aufrufen (Beispiel: 
+   https://www.example.com/fix_latin1_database.php). Die Datei danach vom Server löschen.
+
+
+Update von 2.0.5.1 rev 12725
+
+1. Bitte die URL des Shops mit Anhang /_installer aufrufen (Beispiel: 
+   https://www.example.com/_installer). Hier müssen seit Version 2.0.2.0 rev 10591 nun die 
+   Admin-Zugangsdaten eingegeben werden um ihn auszuführen. Bitte unten den Button "UPDATE" klicken. 
+   Hier bitte der Reihe nach alle Punkte einmal ausführen (mit Ausnahme der Punkte "Datenbank 
+   Wiederherstellung" und "Manuelle SQL-Eingabe").
+2. Wichtig: Einmal in den Adminbereich des Shops gehen und Menüpunkt "Konfiguration" -> "Mein 
+   Shop" aufrufen, damit die für den Adminbereich wichtigen neuen Konfigurations-Werte eingespielt 
+   werden!
+3. Template-Anpassungen durchführen: 
+   https://www.modified-shop.org/wiki/Tutorial:_Template_eines_xt:Commerce_Shops_in_der_modified_eCommerce_Shopsoftware_weiter_verwenden#.C3.84nderungen_ab_Version_2.0.6.0
+4. Wurde die Erstinstallation des Shops mit Shopversion 2.0.4.0 oder 2.0.4.1 in ISO-8859-15 
+   durchgeführt, dann bitte den folgenden Fix laden: 
+   https://www.modified-shop.org/forum/index.php?action=downloads;sa=downfile&id=134
+   Die Datei entpacken, per FTP in den Shop laden und im Browser einmalig aufrufen (Beispiel: 
+   https://www.example.com/fix_latin1_database.php). Die Datei danach vom Server löschen.
+
+
+Update von 2.0.5.0 rev 12487
+
+1. Bitte die URL des Shops mit Anhang /_installer aufrufen (Beispiel: 
+   https://www.example.com/_installer). Hier müssen seit Version 2.0.2.0 rev 10591 nun die 
+   Admin-Zugangsdaten eingegeben werden um ihn auszuführen. Bitte unten den Button "UPDATE" klicken. 
+   Hier bitte der Reihe nach alle Punkte einmal ausführen (mit Ausnahme der Punkte "Datenbank 
+   Wiederherstellung" und "Manuelle SQL-Eingabe").
+2. Wichtig: Einmal in den Adminbereich des Shops gehen und Menüpunkt "Konfiguration" -> "Mein 
+   Shop" aufrufen, damit die für den Adminbereich wichtigen neuen Konfigurations-Werte eingespielt 
+   werden!
+3. Template-Anpassungen durchführen: 
+   https://www.modified-shop.org/wiki/Tutorial:_Template_eines_xt:Commerce_Shops_in_der_modified_eCommerce_Shopsoftware_weiter_verwenden#.C3.84nderungen_ab_Version_2.0.5.1
+4. Wurde die Erstinstallation des Shops mit Shopversion 2.0.4.0 oder 2.0.4.1 in ISO-8859-15 
+   durchgeführt, dann bitte den folgenden Fix laden: 
+   https://www.modified-shop.org/forum/index.php?action=downloads;sa=downfile&id=134
+   Die Datei entpacken, per FTP in den Shop laden und im Browser einmalig aufrufen (Beispiel: 
+   https://www.example.com/fix_latin1_database.php). Die Datei danach vom Server löschen.
+
+
+Update von 2.0.4.2 rev 11374
+
+1. Bitte die URL des Shops mit Anhang /_installer aufrufen (Beispiel: 
+   https://www.example.com/_installer). Hier müssen seit Version 2.0.2.0 rev 10591 nun die 
+   Admin-Zugangsdaten eingegeben werden um ihn auszuführen. Bitte unten den Button "UPDATE" klicken. 
+   Hier bitte der Reihe nach alle Punkte einmal ausführen (mit Ausnahme der Punkte "Datenbank 
+   Wiederherstellung" und "Manuelle SQL-Eingabe").
+2. Wichtig: Einmal in den Adminbereich des Shops gehen und Menüpunkt "Konfiguration" -> "Mein 
+   Shop" aufrufen, damit die für den Adminbereich wichtigen neuen Konfigurations-Werte eingespielt 
+   werden!
+3. Template-Anpassungen durchführen: 
+   https://www.modified-shop.org/wiki/Tutorial:_Template_eines_xt:Commerce_Shops_in_der_modified_eCommerce_Shopsoftware_weiter_verwenden#.C3.84nderungen_ab_Version_2.0.5.0
+4. Wurde die Erstinstallation des Shops mit Shopversion 2.0.4.0 oder 2.0.4.1 in ISO-8859-15 
+   durchgeführt, dann bitte den folgenden Fix laden: 
+   https://www.modified-shop.org/forum/index.php?action=downloads;sa=downfile&id=134
+   Die Datei entpacken, per FTP in den Shop laden und im Browser einmalig aufrufen (Beispiel: 
+   https://www.example.com/fix_latin1_database.php). Die Datei danach vom Server löschen.
+
+
+Update von 2.0.4.1 rev 11327
+
+1. Bitte die URL des Shops mit Anhang /_installer aufrufen (Beispiel: 
+   https://www.example.com/_installer). Hier müssen seit Version 2.0.2.0 rev 10591 nun die 
+   Admin-Zugangsdaten eingegeben werden um ihn auszuführen. Bitte unten den Button "UPDATE" klicken. 
+   Hier bitte der Reihe nach alle Punkte einmal ausführen (mit Ausnahme der Punkte "Datenbank 
+   Wiederherstellung" und "Manuelle SQL-Eingabe").
+2. Wichtig: Einmal in den Adminbereich des Shops gehen und Menüpunkt "Konfiguration" -> "Mein 
+   Shop" aufrufen, damit die für den Adminbereich wichtigen neuen Konfigurations-Werte eingespielt 
+   werden!
+3. Template-Anpassungen durchführen: 
+   https://www.modified-shop.org/wiki/Tutorial:_Template_eines_xt:Commerce_Shops_in_der_modified_eCommerce_Shopsoftware_weiter_verwenden#.C3.84nderungen_ab_Version_2.0.4.2
+4. Wurde die Erstinstallation des Shops mit Shopversion 2.0.4.0 oder 2.0.4.1 in ISO-8859-15 
+   durchgeführt, dann bitte den folgenden Fix laden: 
+   https://www.modified-shop.org/forum/index.php?action=downloads;sa=downfile&id=134
+   Die Datei entpacken, per FTP in den Shop laden und im Browser einmalig aufrufen (Beispiel: 
+   https://www.example.com/fix_latin1_database.php). Die Datei danach vom Server löschen.
+
+
+Update von 2.0.4.0 rev 11204
+
+1. Bitte die URL des Shops mit Anhang /_installer aufrufen (Beispiel: 
+   https://www.example.com/_installer). Hier müssen seit Version 2.0.2.0 rev 10591 nun die 
+   Admin-Zugangsdaten eingegeben werden um ihn auszuführen. Bitte unten den Button "UPDATE" klicken. 
+   Hier bitte der Reihe nach alle Punkte einmal ausführen (mit Ausnahme der Punkte "Datenbank 
+   Wiederherstellung" und "Manuelle SQL-Eingabe").
+2. Wichtig: Einmal in den Adminbereich des Shops gehen und Menüpunkt "Konfiguration" -> "Mein 
+   Shop" aufrufen, damit die für den Adminbereich wichtigen neuen Konfigurations-Werte eingespielt 
+   werden!
+3. Template-Anpassungen durchführen: 
+   https://www.modified-shop.org/wiki/Tutorial:_Template_eines_xt:Commerce_Shops_in_der_modified_eCommerce_Shopsoftware_weiter_verwenden#.C3.84nderungen_ab_Version_2.0.4.1
+
+
+Update von 2.0.3.0 rev 10907
+
+1. Bitte die URL des Shops mit Anhang /_installer aufrufen (Beispiel: 
+   https://www.example.com/_installer). Hier müssen seit Version 2.0.2.0 rev 10591 nun die 
+   Admin-Zugangsdaten eingegeben werden um ihn auszuführen. Bitte unten den Button "UPDATE" klicken. 
+   Hier bitte der Reihe nach alle Punkte einmal ausführen (mit Ausnahme der Punkte "Datenbank 
+   Wiederherstellung" und "Manuelle SQL-Eingabe").
+2. Wichtig: Einmal in den Adminbereich des Shops gehen und Menüpunkt "Konfiguration" -> "Mein 
+   Shop" aufrufen, damit die für den Adminbereich wichtigen neuen Konfigurations-Werte eingespielt 
+   werden!
+3. Template-Anpassungen durchführen: 
+   https://www.modified-shop.org/wiki/Tutorial:_Template_eines_xt:Commerce_Shops_in_der_modified_eCommerce_Shopsoftware_weiter_verwenden#.C3.84nderungen_ab_Version_2.0.4.0
+
+
+Update von 2.0.2.2 rev 10690
+
+1. Bitte die URL des Shops mit Anhang /_installer aufrufen (Beispiel: 
+   https://www.example.com/_installer). Hier müssen seit Version 2.0.2.0 rev 10591 nun die 
+   Admin-Zugangsdaten eingegeben werden um ihn auszuführen. Bitte unten den Button "UPDATE" klicken. 
+   Hier bitte der Reihe nach alle Punkte einmal ausführen (mit Ausnahme der Punkte "Datenbank 
+   Wiederherstellung" und "Manuelle SQL-Eingabe").
+2. Wichtig: Einmal in den Adminbereich des Shops gehen und Menüpunkt "Konfiguration" -> "Mein 
+   Shop" aufrufen, damit die für den Adminbereich wichtigen neuen Konfigurations-Werte eingespielt 
+   werden!
+3. Template-Anpassungen durchführen: 
+   https://www.modified-shop.org/wiki/Tutorial:_Template_eines_xt:Commerce_Shops_in_der_modified_eCommerce_Shopsoftware_weiter_verwenden#.C3.84nderungen_ab_Version_2.0.3.0
+
+
+Update von 2.0.2.1 rev 10607
+
+1. Bitte die URL des Shops mit Anhang /_installer aufrufen (Beispiel: 
+   https://www.example.com/_installer). Hier müssen seit Version 2.0.2.0 rev 10591 nun die 
+   Admin-Zugangsdaten eingegeben werden um ihn auszuführen. Der Haken bei "Update der bereits 
+   installierten modified eCommerce Shopsoftware durchführen!" ist automatisch gesetzt um den 
+   Updater auszuführen. Hier bitte der Reihe nach alle Punkte einmal ausführen (mit Ausnahme des 
+   letzten Punktes "Manuelle SQL-Eingabe").
+2. Wichtig: Einmal in den Adminbereich des Shops gehen und Menüpunkt "Konfiguration" -> "Mein 
+   Shop" aufrufen, damit die für den Adminbereich wichtigen neuen Konfigurations-Werte eingespielt 
+   werden!
+3. Template-Anpassungen durchführen: 
+   https://www.modified-shop.org/wiki/Tutorial:_Template_eines_xt:Commerce_Shops_in_der_modified_eCommerce_Shopsoftware_weiter_verwenden#.C3.84nderungen_ab_Version_2.0.2.2
+
+
+Update von 2.0.2.0 rev 10591
+
+1. Bitte die URL des Shops mit Anhang /_installer aufrufen (Beispiel: 
+   https://www.example.com/_installer). Hier müssen seit Version 2.0.2.0 rev 10591 nun die 
+   Admin-Zugangsdaten eingegeben werden um ihn auszuführen. Der Haken bei "Update der bereits 
+   installierten modified eCommerce Shopsoftware durchführen!" ist automatisch gesetzt um den 
+   Updater auszuführen. Hier bitte der Reihe nach alle Punkte einmal ausführen (mit Ausnahme des 
+   letzten Punktes "Manuelle SQL-Eingabe").
+2. Wichtig: Einmal in den Adminbereich des Shops gehen und Menüpunkt "Konfiguration" -> "Mein 
+   Shop" aufrufen, damit die für den Adminbereich wichtigen neuen Konfigurations-Werte eingespielt 
+   werden!
+3. Template-Anpassungen durchführen: 
+   https://www.modified-shop.org/wiki/Tutorial:_Template_eines_xt:Commerce_Shops_in_der_modified_eCommerce_Shopsoftware_weiter_verwenden#.C3.84nderungen_ab_Version_2.0.2.1
+
+
+Update von 2.0.1.0 rev 10403
+
+1. Bitte die URL des Shops mit Anhang /_installer aufrufen (Beispiel: 
+   https://www.example.com/_installer). Hier müssen seit Version 2.0.2.0 rev 10591 nun die 
+   Admin-Zugangsdaten eingegeben werden um ihn auszuführen. Der Haken bei "Nur Datenbank-Update der 
+   bereits installierten modified eCommerce Shopsoftware durchführen!" ist automatisch gesetzt um 
+   den Updater auszuführen. Hier bitte der Reihe nach alle Punkte einmal ausführen (mit Ausnahme 
+   des letzten Punktes "Manuelle SQL-Eingabe").
+2. Wichtig: Einmal in den Adminbereich des Shops gehen und Menüpunkt "Konfiguration" -> "Mein 
+   Shop" aufrufen, damit die für den Adminbereich wichtigen neuen Konfigurations-Werte eingespielt 
+   werden!
+3. Template-Anpassungen durchführen: 
+   https://www.modified-shop.org/wiki/Tutorial:_Template_eines_xt:Commerce_Shops_in_der_modified_eCommerce_Shopsoftware_weiter_verwenden#.C3.84nderungen_ab_Version_2.0.2.0
+
+
+Update von 2.0.0.0 rev 9678
+
+1. Die configure.php Datei muss aktualisiert werden. Siehe hierzu: 
+   https://www.modified-shop.org/forum/index.php?topic=5203.0
+2. Beim ersten Aufruf des Shops wird der Installer automatisch ausgeführt und es ist der Haken 
+   gesetzt um den Updater auszuführen. Hier bitte der Reihe nach alle Punkte einmal ausführen.
+3. Wichtig: Einmal in den Adminbereich des Shops gehen und Menüpunkt "Konfiguration" -> "Mein 
+   Shop" aufrufen, damit die für den Adminbereich wichtigen neuen Konfigurations-Werte eingespielt 
+   werden!
+4. Template-Anpassungen durchführen: 
+   https://www.modified-shop.org/wiki/Tutorial:_Template_eines_xt:Commerce_Shops_in_der_modified_eCommerce_Shopsoftware_weiter_verwenden#.C3.84nderungen_ab_Version_2.0.1.0
+
+
+Update von 1.06 rev 4642 SP4
+
+1. Wichtig: Einmal in den Adminbereich des Shops gehen und Menüpunkt "Konfiguration" -> "Mein 
+   Shop" aufrufen, damit die für den Adminbereich wichtigen neuen Konfigurations-Werte eingespielt 
+   werden!
+2. Im Admin-Backend die verwendeten order_total Module unter "Module" -> "Zusammenfassung", 
+   deinstallieren und erneut installieren.
+3. Im Admin-Backend die verwendeten Zahlungsmodule Module unter "Module" -> "Zahlungsoptionen", 
+   deinstallieren und erneut installieren.
+4. Im Admin-Backend die verwendeten Versandmodule Module unter "Module" -> "Versandart", 
+   deinstallieren und erneut installieren.
+5. Die configure.php Datei muss aktualisiert werden. Siehe hierzu: 
+   https://www.modified-shop.org/forum/index.php?topic=5203.0
+6. Beim ersten Aufruf des Shops wird der Installer automatisch ausgeführt und es ist der Haken 
+   gesetzt um den Updater auszuführen. Hier bitte der Reihe nach alle Punkte einmal ausführen.
+7. Template-Anpassungen durchführen: 
+   https://www.modified-shop.org/wiki/Tutorial:_Template_eines_xt:Commerce_Shops_in_der_modified_eCommerce_Shopsoftware_weiter_verwenden#.C3.84nderungen_ab_Version_2.0.0.0
+
+
+Update von 1.06 rev 4642 SP3
+
+1. Wichtig: Einmal in den Adminbereich des Shops gehen und Menüpunkt "Konfiguration" -> "Mein 
+   Shop" aufrufen, damit die für den Adminbereich wichtigen neuen Konfigurations-Werte eingespielt 
+   werden!
+2. Im Admin-Backend die folgenden order_total Module unter "Module" -> "Zusammenfassung", sofern 
+   verwendet, deinstallieren:
+      Klarna - Rechnungsgebühr (ot_klarna_fee)
+3. Im Admin-Backend die folgenden order_total Module unter "Module" -> "Zusammenfassung", sofern 
+   verwendet, erneut installieren:
+      Klarna - Rechnungsgebühr (ot_klarna_fee)
+4. Im Admin-Backend das folgende Modul unter "Module" -> "Module", sofern verwendet, 
+   deinstallieren:
+      shipcloud - die neue Generation des Paketversandes
+5. Im Admin-Backend das folgende Modul unter "Module" -> "Module", sofern verwendet, erneut 
+   installieren:
+      shipcloud - die neue Generation des Paketversandes
+6. Im Admin-Backend das folgende Modul unter "Module" -> "Module", sofern verwendet, 
+   deinstallieren:
+      janolaw AGB Hosting-Service
+7. Im Admin-Backend das folgende Modul unter "Module" -> "Module", sofern verwendet, erneut 
+   installieren:
+      janolaw AGB Hosting-Service
+8. Im Admin-Backend das Zahlungsmodul "Nachnahme (cod)", sofern verwendet, deinstallieren
+9. Im Admin-Backend das Zahlungsmodul "Nachnahme (cod)", sofern verwendet, erneut installieren
+10. Über phpMyAdmin die Datei "/_installer/update/update_1.0.6.3_to_1.0.6.4.sql" importieren.
+
+
+Update von 1.06 rev 4642 SP2
+
+1. Im Admin-Backend die folgenden Zahlungsmodule, sofern verwendet, deinstallieren:
+      Kauf auf Rechnung mit BillSAFE (billsafe_2)
+      sofortüberweisung.de (pn_sofortueberweisung)
+      Lastschrift by SOFORT (sofort_lastschrift)
+      SOFORT Lastschrift (sofort_sofortlastschrift)
+      Rechnung by SOFORT (sofort_sofortrechnung)
+      SOFORT Überweisung (sofort_sofortueberweisung)
+      Vorkasse by SOFORT (sofort_sofortvorkasse)
+2. Dateien des Update-Pakets aus dem Ordner "shoproot" per FTP in den Shop übertragen
+3. Das Update des Shops starten mittels Aufruf der URL: 
+   https://www.example.com/_installer/update.php
+   Das SQL-Update kann auch manuell über phpMyAdmin eingespielt werden. Die Datei befindet sich 
+   hier: "/_installer/update/update_1.0.6.2_to_1.0.6.3.sql"
+4. Im Admin-Backend die folgenden Zahlungsmodule, sofern verwendet, erneut installieren:
+      Kauf auf Rechnung mit BillSAFE (billsafe_2)
+      sofortüberweisung.de (pn_sofortueberweisung)
+      Lastschrift by SOFORT (sofort_lastschrift)
+      SOFORT Lastschrift (sofort_sofortlastschrift)
+      Rechnung by SOFORT (sofort_sofortrechnung)
+      SOFORT Überweisung (sofort_sofortueberweisung)
+      Vorkasse by SOFORT (sofort_sofortvorkasse)
+5. Über phpMyAdmin die Datei "/_installer/update/update_1.0.6.2_to_1.0.6.3.sql" importieren.
+6. Template-Anpassungen durchführen: 
+   https://www.modified-shop.org/wiki/Tutorial:_Template_eines_xt:Commerce_Shops_in_der_modified_eCommerce_Shopsoftware_weiter_verwenden#.C3.84nderungen_ab_Version_1.0.6_rev_4642_SP3
+
+
+Update von 1.06 rev 4642 SP1
+
+1. Im Admin-Backend das Zahlungsmodul "Lastschriftverfahren (banktransfer)", sofern verwendet, 
+   deinstallieren
+2. Im Admin-Backend das Export-Modul "janolaw AGB Hosting-Service", sofern verwendet, 
+   deinstallieren
+3. Dateien des Update-Pakets aus dem Ordner "shoproot" per FTP in den Shop übertragen
+4. Ordner "/includes/janolaw/" per FTP löschen
+5. Im Admin-Backend das Zahlungsmodul "Lastschriftverfahren (banktransfer)", sofern verwendet, 
+   erneut installieren
+6. Im Admin-Backend das Export-Modul "janolaw AGB Hosting-Service", sofern verwendet, erneut 
+   installieren
+7. Über phpMyAdmin die Datei "/_installer/update/update_1.0.6.1_to_1.0.6.2.sql" importieren.
+
+
+Update von 1.06 rev 4642
+
+1. Im Admin-Backend unter "Module" -> "Zusammenfassung" das Modul "Versandkosten (ot_shipping)" 
+   deinstallieren
+2. Im Admin-Backend das Zahlungsmodul "Lastschriftverfahren (banktransfer)", sofern verwendet, 
+   deinstallieren
+3. Dateien des Update-Pakets aus dem Ordner "shoproot" per FTP in den Shop übertragen
+4. Im Admin-Backend unter "Module" -> "Zusammenfassung" das Modul "Versandkosten (ot_shipping)" 
+   erneut installieren
+5. Im Admin-Backend das Zahlungsmodul "Lastschriftverfahren (banktransfer)", sofern verwendet, 
+   erneut installieren
+6. Sofern nicht bereits geschehen zwei neue Contents im "Content Manager" anlegen für 
+   "Muster-Widerrufsformular" & "Lieferzeit"
+7. Im Admin-Backend unter "Erweiterte Konfiguration" -> "Zusatzmodule" -> "Lieferzeit ID" die 
+   "Sprachgruppe" des zuvor angelegten Contents "Lieferzeit" angeben und auf "Speichern" klicken.
+8. PDF Dateien für AGB.pdf, Widerrufsbelehrung.pdf sowie Muster-Widerrufsformular.pdf erzeugen 
+   und per FTP-Client in einen neu angelegten Ordner "pdf" im Stammverzeichnis des Shops laden.
+9. Im Admin-Backend unter "Konfiguration" -> "E-Mail Optionen" -> "Verrechnung - E-Mail Anhänge 
+   für Bestellungen" eintragen: 
+pdf/AGB.pdf,pdf/Widerrufsbelehrung.pdf,pdf/Muster-Widerrufsformular.pdf
+10. Für Fremd-Templates sind noch die folgenden Änderungen unter "1.2.4 Template Dateien ändern" 
+    auf der folgenden Seite durchzuführen: 
+    https://www.modified-shop.org/wiki/Tutorial:_Umsetzung_der_EU-Verbraucherrichtlinie_vom_13.06.2014#Template_Dateien_.C3.A4ndern
+11. Über phpMyAdmin die Datei "/_installer/update/update_1.0.6.0_to_1.0.6.1.sql" importieren.
+12. Template-Anpassungen durchführen: 
+    https://www.modified-shop.org/wiki/Tutorial:_Template_eines_xt:Commerce_Shops_in_der_modified_eCommerce_Shopsoftware_weiter_verwenden#.C3.84nderungen_ab_Version_1.0.6_rev_4642_SP1
+
+
+
+Update von 1.06 rev 4356
+
+ACHTUNG: Wer bereits die Version 1.06 rev 4356 installiert hatte, der importiert bitte nur die 
+"/_installer/bugfixes_106r4642.sql" per phpMyAdmin (Zeichencodierung "iso-8859-15") in die 
+Shopdatenbank und überträgt die neuen Dateien per FTP in den Ordner des Shops (shoproot).
+
+
+
+Update von 1.06 rev 4332
+
+ACHTUNG: Wer bereits die Version 1.06 rev 4332 installiert hatte, der importiert bitte nur die 
+"/_installer/bugfixes_106r4356.sql" per phpMyAdmin (Zeichencodierung "iso-8859-15") in die 
+Shopdatenbank und überträgt die neuen Dateien per FTP in den Ordner des Shops (shoproot).
+
+
+
+Update von 1.06 Beta 4
+
+ACHTUNG: Wer bereits die Version 1.06 Beta 4 installiert hatte, der importiert bitte nur die 
+"/_installer/bugfixes_106beta.sql" per phpMyAdmin (Zeichencodierung "iso-8859-15") in die 
+Shopdatenbank und überträgt die neuen Dateien per FTP in den Ordner des Shops (shoproot).
+
+
+
+Update von 1.05/1.05SP1d
+
+Vorbemerkung:
+Wir haben in dieser Version die Zahlungsmodule aktualisiert. Bitte unbedingt vor einer 
+Aktualisierung die folgenden Zahlungsmodule über den Admin-Bereich des Shops deinstallieren
+und nach dem Update neu installieren lassen.
+
+Optional:
+Bei der Deinstallation des paypal-Moduls "Paypal Kaufabwicklung, Modulname: paypal" werden die
+beiden Tabellen paypal und paypal_status_history gelöscht. Wenn Sie die darin enthaltenen
+Informationen über die von Ihren Kunden geleisteten Zahlungen und die Vorgänge zu jeder
+einzelnen Zahlung nicht verlieren wollen, sollten Sie diese beiden Tabellen sichern indem Sie
+sie vor der Deinstallation des Moduls mit den SQL-Befehlen:
+
+CREATE TABLE paypal_save AS SELECT * FROM paypal;
+CREATE TABLE paypal_status_history_save AS SELECT * FROM paypal_status_history;
+
+sichern.
+Diese Daten können dann nach erfolgter Neuinstallation des aktuellen Moduls wieder
+zurückgesichert werden. Damit steht weiterhin die paypal-Historie im Admin Backend komplett
+zur Verfügung. Die Wiederherstellung der Daten wird zum entsprechenden Zeitpunkt weiter unten in
+diesem Dokument beschrieben. [Momentan weiter unten noch nicht beschrieben da noch nicht getestet]
+
+Nun zum eigentlichen Update.
+Führen Sie bitte die folgenden Schritte nacheinander aus.
+
+1. Im Admin-Backend die Zahlungsmodule (sofern verwendet)
+
+- moneybookers
+- paypal
+- sofortüberweisung
+
+deinstallieren.
+
+2. Übertragen Sie alle Dateien und Verzeichnisse ab dem Verzeichnis shoproot dieses entpackten
+   ZIP-Archivs bspw. per FTP in das root-Verzeichnis(1) Ihrer shop-Installation auf dem Server.
+
+3. Im Browser das Update starten mit:
+
+https://<meinshop>/update.php
+
+Statt <meinshop> verwenden Sie bitte die URL mit der Sie Ihren shop im Browser aufrufen und den
+Button "Ausführen" klicken.
+In der Folge erscheint nun eine lange Liste der ausgeführten Befehle.
+
+ACHTUNG: Klicken Sie nicht erneut auf den Button "Ausführen" nachdem Sie die Liste der 
+         ausgeführten Befehle überprüft haben. Sollte die Datei wegen mangelnder Schreibrechte
+         nicht gelöscht worden sein, so erscheint bei erneutem Klick auf den Button eine
+         Fehlermeldung, die zwar keine Auswirkung auf den erfolg des Updates hat, jedoch für
+         Sie ungeheuer irritierend wirken kann.
+
+Die Datei update.php wird nach erfolgreicher Ausführung automatisch gelöscht.
+Versichern Sie sich bitte vorsichtshalber, ob dies wirklich der Fall ist indem Sie im
+root-Verzeichnis Ihrer Shopinstallation auf dem Server nachschauen.
+
+Die update.php löscht unter anderem auch nicht mehr benötigte Dateien und Ordner. Wenn die 
+update.php dazu nicht in der Lage ist (kann bei manchen Serverkonfigurationen vorkommen),
+dann löschen Sie bitte per FTP manuell in Ihrem Shop folgende Dateien und Ordner inklusive
+aller Dateien und Unterverzeichnisse auf dem Server:
+
+Dateien:
+   /copyright.php
+   /includes/configure.org.php
+   /admin/includes/configure.org.php
+   /admin/includes/modules/fckeditor/editor/filemanager/browser/default/frmactualfolder.html
+   /admin/includes/modules/fckeditor/editor/filemanager/browser/default/frmcreatefolder.html
+   /admin/includes/modules/fckeditor/editor/filemanager/browser/default/frmfolders.html
+   /admin/includes/modules/fckeditor/editor/filemanager/browser/default/frmresourceslist.html
+   /admin/includes/modules/fckeditor/editor/filemanager/browser/default/frmresourcetype.html
+   /admin/includes/modules/fckeditor/editor/filemanager/browser/default/frmupload.html
+   /includes/modules/payment/iclear.php
+   /lang/english/modules/payment/iclear.php
+   /lang/german/modules/payment/iclear.php
+   /update.php
+   /update_1.0.5.0_to_1.0.6.0.sql
+   /wsdl_iclear_order.php
+
+Ordner:
+   /_installer
+   /admin/includes/modules/carp
+   /admin/includes/modules/magpierss
+   /admin/rss
+   /includes/classes/Smarty_2.6.22
+   /includes/classes/Smarty_2.6.26
+   /includes/iclear
+   /shopstat
+
+4. Zahlungsmodule neu installieren
+
+Installieren Sie nun die im ersten Schritt deinstallierten Zahlungsmodule neu.
+
+Optional:
+Wenn Sie zu Beginn des Updates die paypal-Tabellen gesichert haben, können die Sicherungsdaten nun
+wieder zurück kopiert werden.
+Sie übertragen die Transaktionsdaten in die Originaltabellen mit folgenden SQL-Befehlen zurück:
+
+INSERT INTO paypal (SELECT * FROM paypal_save ORDER BY paypal_ipn_id);
+INSERT INTO paypal_status_history (SELECT * FROM paypal_status_history_save ORDER BY payment_status_history_id);
+DROP TABLE paypal_save;
+DROP TABLE paypal_status_history_save;
+
+Optional:
+Die "change_language_id.sql" (Zeichencodierung "iso-8859-15") dient dem ändern der Sprach-IDs. 
+In früheren Versionen der modified eCommerce Shopsoftware war leider die ID für deutsch auf 1 
+gesetzt, was zu einigen Problemen beim Datenimport eines xt:Commerce 3.0.4 SP2.1 Shops geführt 
+hatte. Ab modified eCommerce Shopsoftware v1.03 sind die IDs wieder auf den Ursprungszustand 
+zurück gesetzt worden (englisch=1, deutsch=2). Es ist ausdrücklich NICHT erforderlich die IDs 
+wieder zu tauschen, es sei denn, es besteht der unbedingte Wunsch dazu, dann aber bitte vorher 
+ein Backup der Datenbank anlegen.
+
+Falls von einer älteren Version auf eine neue aktualisiert wird, sind aufsteigend folgende 
+SQL-Statements per phpMyAdmin (Zeichencodierung "iso-8859-15") in der Datenbank auszuführen 
+(Eine genaue Update-Anleitung findet sich hier: 
+https://www.modified-shop.org/forum/index.php?topic=3731.0):
+
+#1 update_1.0.1.0_to_1.0.2.0.sql
+#2 update_1.0.2.0_to_1.0.3.0.sql
+#3 update_1.0.3.0_to_1.0.4.0.sql
+#4 update_1.0.4.0_to_1.0.5.0.sql
+#5 update_1.0.5.0_to_1.0.6.0.sql
+#6 update_1.0.6.0_to_1.0.6.1.sql
+#7 update_1.0.6.1_to_1.0.6.2.sql
+#8 update_1.0.6.2_to_1.0.6.3.sql
+#8 update_1.0.6.3_to_1.0.6.4.sql
+#10 update_1.0.6.4_to_2.0.0.0.sql
+
+ACHTUNG: Beim Update von Version 1.03 auf 1.04 ist das Widerrufsrecht mit content_id 17 (für 
+englisch) bzw. content_id 18 (für deutsch) und Sprachgruppe 9 fest hinzugefügt worden und kann 
+nicht gelöscht werden! Hattet ihr vorher bereits Einträge im Content Manager mit ID 17/18, dann 
+haben diese nach dem Update die IDs 117/118 und Sprachgruppe 999. Falls ihr vorher schon ein 
+Widerrufsrecht im Content-Manager angelegt hattet, dann bitte den Inhalt übertragen und die 
+alten Einträge aus dem Content Manager löschen, damit nichts doppelt ist.
+
+--------------------------------------------------------------------------------
+(1) Das root-Verzeichnis Ihrer shop-Installation finden Sie im Eintrag:
+    define('DIR_FS_DOCUMENT_ROOT', 'Hies steht das root-Verzeichnis Ihrer shop-Installation');
+    der Datei includes/configure.php
+
+================================================================================
+Bitte halten Sie Ihre Shopversion aktuell, indem Sie das folgende Thema verfolgen:
+https://www.modified-shop.org/forum/index.php?topic=24165.0

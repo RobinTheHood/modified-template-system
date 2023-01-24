@@ -1,0 +1,111 @@
+**************************************************************************************************
+*                               modified eCommerce Shopsoftware Installationsanleitung           *
+**************************************************************************************************
+*                               Stand: 04.07.2022                                                *
+**************************************************************************************************
+
+1. Installation auf dem Webserver
+
+   1.1 MYSQL-Datenbank anlegen
+  
+   1.2 Dateien über FTP auf den Webspace übertragen und Dateirechte setzen
+       Bitte auf folgendes achten:
+       - Übertragungsmodus binär
+       - Sollte Ihr FTP-Client Programm eine Einstellung haben, dass Großbuchstaben in Kleinbuchstaben umgewandelt werden, so deaktivieren Sie diese Option!
+       - Verwenden Sie FileZilla, dann achten Sie unbedingt darauf, dass nach der Übertragung der Dateien unten im Reiter "Fehlgeschlagene Übertragungen"
+         keine Dateien aufgelistet werden, andernfalls markieren Sie bitte alle und fügen sie mit einem Rechtsklick erneut zur Warteschlange hinzu und
+         lassen die Warteschlange im Reiter "Zu übertragende Dateien" ebenfalls per Rechtsklick nochmal abarbeiten. Diesen Vorgang wiederholen Sie so oft,
+         bis keine Dateien mehr im Reiter "Fehlgeschlagene Übertragungen" aufgelistet werden.
+       Der Installer zeigt an, ob die Dateirechte überhaupt angepasst werden müssen
+
+       Ordner                                                Rechte  Funktion
+       /admin/backups                                        777     Datenbank Backups
+       /admin/images/graphs                                  777     Statistik Graphen
+       /admin/images/icons                                   777     Kundengruppen Icons
+       /admin/rss                                            777     Dateien aus Admin Info * Nicht mehr ab 1.06 vorhanden
+       /cache                                                777     Cache Dateien von Smarty
+       /export                                               777     Export-Verzeichnis
+       /images                                               777     Bilderverzeichnis
+       /images/banner                                        777     Bilder für Banner
+       /images/categories                                    777     Kategorie-Bilder
+       /images/content                                       777     Bilder aus WYSIWYG Editor
+       /images/icons                                         777     Kundengruppen Icons
+       /images/manufacturers                                 777     Hersteller-Bilder
+       /images/product_images/info_images                    777     Info-Bilder
+       /images/product_images/midi_images                    777     Midi-Bilder
+       /images/product_images/mini_images                    777     Mini-Bilder
+       /images/product_images/original_images                777     Original-Bilder
+       /images/product_images/popup_images                   777     Popup-Bilder
+       /images/product_images/thumbnail_images               777     Thumbnail-Bilder
+       /images/tags                                          777     Bilder für Artikeleigenschaften
+       /import                                               777     Import-Verzeichnis
+       /includes/external/magnalister                        777     Magnalister-Verzeichnis
+       /log                                                  777     Log-Verzeichnis
+       /media/content                                        777     Dateien für ContentManager
+       /media/content/backup                                 777     Backup-Dateien für ContentManager
+       /media/products                                       777     Dateien für ProduktManager
+       /media/products/backup                                777     Backup-Dateien für ProduktManager
+       /templates/tpl_modified                               777     Template-Verzeichnis
+       /templates/xtc5                                       777     Template-Verzeichnis
+       /templates_c                                          777     Smarty-Verzeichnis
+          
+       Datei                                                 Rechte  Funktion
+       /sitemap.xml                                          777     Datei für die Sitemap-Informationen
+       /includes/configure.php                               777     Konfigurationsdatei Shop
+       /admin/magnalister.php                                777     Magnalister-Datei
+       /magnaCallback.php                                    777     Magnalister-Datei
+
+   1.3 Webbasierte Installationsroutine ausführen
+       (Achtung: Es darf kein .htaccess Verzeichnis-Schutz auf dem Shop-Verzeichnis gesetzt sein!)
+       Dazu die SHOP URL im Browser eingeben und mit /_installer ergänzen, dann die Anleitungen im Installer befolgen.
+  
+       Rechtevergabe nach der Installation für die configure-Dateien zu Sicherheitszwecken!
+
+       Datei                                       Rechte  Funktion
+       /includes/configure.php                     444     Konfigurationsdatei Shop
+  
+   1.4 Verzeichnis "_installer" der Installationsroutine löschen
+
+
+2. Suchmaschinenfreundliche URLs einrichten (optional)
+
+   Falls "Shopstat" genutzt werden soll, um Suchmaschinenfreundliche URLS zu erzeugen,
+   müssen folgende Vorraussetzungen erfüllt sein:
+
+   2.1 Der Server muss "mod_rewrite" unterstützen 
+       (siehe Administration -> Hilfsprogramme -> Serverinfo) 
+   
+   2.2 Aktivieren Sie "Suchmaschinenfreundliche URLS" im Adminbereich 
+       (Erweiterte Konfiguration -> Meta-Tags/Suchmaschinen -> 
+        Suchmaschinenfreundliche URLs benutzen -> "true")
+   
+   2.3 Benennen Sie die "_.htaccess" im Hauptverzeichnis des Shops in ".htaccess" um.
+
+   Sollte Ihr Shop in einem Unterordner (z.B. http://domain.de/shop/ ) liegen,
+   so muss die .htaccess bearbeitet und "RewriteBase" entsprechend den Anweisungen 
+   in der Datei angepasst werden.
+
+   Sie haben Fragen, Probleme oder Anregungen?
+   Nutzen Sie unser Forum unter https://www.modified-shop.org/forum
+
+
+3. Nach der Installation
+
+   3.1 Wurde der Shop vollständig installiert, so können nun Kategorien und Artikel 
+       angelegt oder importiert werden.
+       Mehr Info darüber und zur allgemeinen Konfiguration des Shops selbst erhalten sie 
+       im modified eCommerce Shopsoftware Anwenderhandbuch unter:
+       https://new-business-consulting.de/modified-eCommerce-Shopsoftware-Handbuch:::2.html
+  
+   3.2 Hilfe beim Anpassen / Aktualisieren des Templates erhalten Sie unter:
+       https://www.modified-shop.org/forum/index.php?topic=1040.0
+
+
+4. Wichtiger Hinweis
+
+   Immer wieder sehen wir, dass HTML- oder PHP-Dateien mit Programmen wie Microsoft Word oder
+   OpenOffice bearbeitet werden. Das sind keine geeigneten Editoren und es kommt zu Fehlern!
+   Eine Liste geeigneter Programme für die Shoperstellung ist hier zu finden:
+   https://www.modified-shop.org/forum/index.php?topic=4226.0
+
+**************************************************************************************************

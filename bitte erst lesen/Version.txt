@@ -1,0 +1,43 @@
+                                     INFO
+###################################################################################
+
+  modified eCommerce Shopsoftware Version 2.0.7.2 rev 14622
+  Release Datum: 04.07.2022
+  
+  ------------------------------------------------------------------------
+  Dieses Programm ist freie Software. Sie koennen es unter den Bedingungen
+  der GNU General Public License, wie von der Free Software Foundation
+  veroeffentlicht, weitergeben und/oder modifizieren, entweder gemaess Version 2 
+  der Lizenz oder (nach Ihrer Option) jeder spaeteren Version.
+  
+  Die Veroeffentlichung dieses Programms erfolgt in der Hoffnung, dass es Ihnen
+  von Nutzen sein wird, aber OHNE IRGENDEINE GARANTIE, sogar ohne die
+  implizite Garantie der MARKTREIFE oder der VERWENDBARKEIT FUER EINEN
+  BESTIMMTEN ZWECK. Details finden Sie in der GNU General Public License.
+  
+  Sie sollten eine Kopie der GNU General Public License zusammen mit diesem
+  Programm erhalten haben. Falls nicht, schreiben Sie an die Free Software
+  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA.
+
+
+  Infos:
+  ------------------------------------------------------------------------
+  Die modified eCommerce Shopsoftware ist ein unter der GPL veröffentlichtes
+  OpenSource Shopsystem.
+  Wir legen bei der modified eCommerce Shopsoftware ein besonderes Augenmerk
+  auf sicherheitsrelevante Aspekte, Usability und sie ist durch einen neuen,
+  professionellen Aufbau gekennzeichnet.
+
+  Die modified eCommerce Shopsoftware ist auf jedem System lauffähig, welches
+  eine PHP Umgebung (ab PHP5.6) und MySQL zur Verfügung stellt, wie zum Beispiel
+  Linux, Solaris, BSD, und Microsoft Windows.
+
+  Des Weiteren sollte am Server installiert sein:
+
+  GDlib2+
+  PDFlib
+
+  Weitere Informationen und Support: https://www.modified-shop.org
+
+  mfg,
+  modified eCommerce Shopsoftware, https://www.modified-shop.org

@@ -1,0 +1,1438 @@
+***************************************************************
+Alle Änderungen seit 1.02 (r159) findet man hier:
+http://trac.modified-shop.org/timeline
+***************************************************************
+
+Seit modified eCommerce Shopsoftware 2.0.7.2
+- Fix #1820 Update Smarty
+- Fix #2259 Fehler beim Editieren von Bestellungen mit PHP 8
+- Fix #2261 Installer zeigt unnötiges DB Update an
+- Fix #2262 Nach Update auf 2.0.7.1 Hinweis auf /admin/start.php, dass DB nicht aktuell
+- Fix #2263 2.0.7.1 installer erstellt langes mod_installer_warning log
+- PayPal aktualisiert
+- Update Version Check
+- Update-Seite überarbeitet
+- Installer überarbeitet
+- Bugfixing
+
+Seit modified eCommerce Shopsoftware 2.0.7.1
+- Fix #1820 Update Smarty
+- Fix #2093 shipping_allowed und payment_allowed für iso code 2 nicht case sensitiv gestalten
+- Fix #2190 Time Zone in configure.php einstellbar machen
+- Fix #2198 Mein Schnellkauf - Zahlart nicht wählbar bei Zoneneinschränkung
+- Fix #2211 Artikel-Anhang inaktiv
+- Fix #2212 Content-Anhang inaktiv
+- Fix #2213 Ungefilterter GET Parameter tracking.php
+- Fix #2214 Umlautfehler im Titel bei Klarna
+- Fix #2215 2.0.7.0 _installer warning
+- Fix #2218 "Fehler im Datenbankquery für ""Neue Artikel"""
+- Fix #2220 Ungereimtheiten Konfiguration => Maximum Werte
+- Fix #2222 "Rechnungskauf möglich trotz ""nicht erlaubt"""
+- Fix #2223 "Unter Kundengruppen ""nicht erlaubte Zahlungsweisen"" ohne funktion"
+- Fix #2224 Typo in lang_german.section
+- Fix #2226 Modul DHL Anbindung: Weitergabe der Kunden E-Mail-Adresse bei Filialrouting, trotz deaktivierter Benachrichtigung
+- Fix #2227 Fehler beim dublizieren von Artikeln
+- Fix #2228 Warum werden in der Autocompletesuche nur noch Artikel mit einem Preis größer 0 angezeigt?
+- Fix #2229 Duplizieren von Artikel mit Staffel- und Kundengruppenpreisen
+- Fix #2230 Standardpreis wird nicht als strukturierte Daten übergeben
+- Fix #2231 Phpfastcache - weiße Seite bei Update auf 2.0.7.0
+- Fix #2234 Preisangabe 'ab' bei Sonderangeboten
+- Fix #2235 Call to undefined method xtc_afterbuy_functions::get_ot_total() in File: /includes/classes/afterbuy.php on Line: 305
+- Fix #2236 Abfrage nach MODULE_ORDER_TOTAL_INSTALLED in checkout_confirmation.php korrigieren
+- Fix #2237 Paypal Button wird nicht geladen in älteren Safariversionen
+- Fix #2238 Datumsformat lang immer english
+- Fix #2241 Shipping- & Orderstatus Name
+- Fix #2242 Fehler in vat_validation.php
+- Fix #2243 "Funktion ""Bewertungen überprüfen"" optimieren"
+- Fix #2244 Paypal Checkout Modul 1.82 wirft Fehler wenn Datenbank auf latin und Umlaute im Store_Name
+- Fix #2245 Newsletter Empfänger sortierbar machen nach Anmeldedatum
+- Fix #2246 Bannermanager 2.0.6.0 bei bestehenden Bannern
+- Fix #2248 count aus Loop holen in xtc_parse_search_string.inc.php
+- Fix #2249 Warning Undefined variable $vat
+- Fix #2250 Warning Trying to access array offset on value of type bool
+- Fix #2253 "Es lassen sich nicht alle Checkboxen unter ""Erw. Konfiguration"" -> ""Captcha"" entfernen und dann speichern"
+- Fix #2254 Lagerbestand wird bei Artikel Neuanlage unter PHP8 nicht gespeichert
+- Fix #2255 Smarty4 und Umlaute bei Breadcrumb und Herstellerdropdown
+- Performance Optimierungen
+- PayPal aktualisiert
+- Installer überarbeitet
+- Update-Seite überarbeitet für Modulversionen
+- CAO Schnittstelle aktualisiert
+- Bugfixing
+
+Seit modified eCommerce Shopsoftware 2.0.7.0
+- Fix #239  Artikel sind aktiv, trotz inaktiver Kategorie
+- Fix #581  tax_class-Feld nicht übersetzt
+- Fix #978  Fehlender Alt-Tag bei Products-Popup
+- Fix #997  CSS & Javascript Optimierung der Templates
+- Fix #999  "invoice_number" Sprachdateien
+- Fix #1157 Fehlende DB-Indizes
+- Fix #1266 Falsche Tabellensyntax im Warenkorb
+- Fix #1402 userdefined Feld in products wird nicht exportiert
+- Fix #1460 Falscher Preis im Warenkorb nach Rabatt in Verbindung mit Attributen
+- Fix #1471 Kundengruppe "Händler" kann kein Guthaben aus Gutscheinen verwenden
+- Fix #1545 Cookie Hinweis / Tracking Einwilligungscheckboxen
+- Fix #1557 Verbesserungsvorschlag für die Einbindung von unveil
+- Fix #1582 Artikeleingabemaske um Felder für Zollerklärung erweitern
+- Fix #1660 Unerlaubte Werbung mit günstigstem Ab-Preis bei Staffelpreisen
+- Fix #1699 Redirection zur ursprünglich aufgerufenen Seite
+- Fix #1700 Feld Kategorieüberschrift für Artikel und Hersteller hinzufügen um h1 Überschrift anzupassen
+- Fix #1808 Update PHPfastcache
+- Fix #1817 Fix notice in admin/geo_zones.php
+- Fix #1820 Update Smarty
+- Fix #1862 ckeditor wandelt Leerzeichen selbständig in non Breaking spaces um
+- Fix #1873 Gutschein per Mail versenden gefährlich mißverständlich
+- Fix #1947 Rundungsfehler bei Nettobeträgen mit mehr als 2 Nachkommastellen
+- Fix #1954 PHP Notices in checkout_process.php
+- Fix #1993 Update jQuery to version 3.6.0
+- Fix #2003 Undefined index notice in account_checkout_express.php
+- Fix #2009 Coupon: trotz ausreichenden Wert bleibt Restbetrag zu zahlen
+- Fix #2010 undefined function in /includes/extra/application_bottom/10_matomo.php
+- Fix #2012 Kundengruppen-Speicherung /admin/content_manager.php geht nicht korrekt
+- Fix #2015 Unvollständige Erläuterung in lang/german/admin/removeoldpics.php
+- Fix #2016 Diverse Rechtschreibfehler
+- Fix #2017 Google Analytics Code
+- Fix #2018 Herstellerbild wird beim Editieren eines Herstellers nicht angezeigt und löschen funktioniert nicht
+- Fix #2019 Fehler in PAYONE Modul
+- Fix #2020 Gutschein wird bei Paypal als Versandrabatt deklariert
+- Fix #2021 Google Analytics Code always on
+- Fix #2022 boxRight fehlt nach Kategoriebearbeitung aus dem Frontend über die Admin-Box
+- Fix #2023 Newsletter erstellen nicht möglich
+- Fix #2024 Facebook Pixel Code fbds.js veraltet seit 2017
+- Fix #2025 Bildgrößen-Werte für neue midi, mini, Hersteller & Kategoriebilder inkonsistent
+- Fix #2026 CAO Schnittstelle funktioniert nicht unter PHP 8
+- Fix #2027 Transfer Sprachtabellen
+- Fix #2028 Unterkategoriebilder werden nicht angezeigt, wenn "Kategorie noimage.gif" auf "Ja" steht
+- Fix #2029 mod_warning  /includes/tracking.php
+- Fix #2030 Artikeleigenschaften werden beim Artikel kopieren nicht mehr als Option zur Übernahme angezeigt
+- Fix #2032 preg_replace() in xtc_parse_search_string() ersetzen
+- Fix #2034 Steuerklasse & Versandzone in Versandmodulen, sowie Zahlungszone in Zahlungsmodulen mehrsprachig ausgeben
+- Fix #2035 Fehler bei Verwendung von Guthaben, wenn "Inklusiv MwSt."  in ot_gv auf "Nein" steht
+- Fix #2037 Button "Einkauf fortsetzen" in Warenkorb fehlerhaft bei Shops in Unterordnern
+- Fix #2038 One Stop - EU-Umsatzsteuerreform
+- Fix #2039 Coockie-Consent erstellt oil_data-cookie für jeden Pfad
+- Fix #2040 Shopvote wird auch angezeigt, wenn der Shop offline ist
+- Fix #2041 warning undefined constant TXT_PER in includes/classes/main.php
+- Fix #2044 selfpickup.php - Duplicate entry MODULE_SHIPPING_SELFPICKUP_TAX_CLASS
+- Fix #2045 module_export.php - Suche nach leerem configuration_key
+- Fix #2047 Checkboxen bei Attributen und Tags nicht sichtbar
+- Fix #2048 shipping_block.php - Falsche Nummerierung der Radio Buttons
+- Fix #2049 Identische Texte bei Newsletter-Anmeldung
+- Fix #2050 advanced_search.php - inline css beim Suchfeld entfernen
+- Fix #2051 redirect.php - Fehlerhafte Umleitung, wenn für Hersteller keine URL hinterlegt wurde.
+- Fix #2052 Cache id nicht eindeutig in box reviews
+- Fix #2054 Datenbank Restore funktioniert nicht mit PHP8
+- Fix #2058 PHP8 Inkompatiblität in header.php
+- Fix #2059 Liefer-/ Leistungsdatum auf Rechnung
+- Fix #2061 Content für Newsletter wird nicht gespeichert
+- Fix #2063 Boxen last_viewed und login nicht performant und schlüssig implementiert
+- Fix #2064 Produkt-Links funktionieren häufig nicht
+- Fix #2065 Fehlermeldung bei Anbindung an Afterbuy unter PHP8
+- Fix #2071 API-Call-Failure bei micropayment
+- Fix #2072 Update CKEditor to version 4.16.1
+- Fix #2073 Update PHPMailer to version 6.5.3
+- Fix #2074 Mod_Error wegen SPECIAL_CHAR_FR
+- Fix #2075 Fehler Payone Lastschrift
+- Fix #2076 Kunde kann Adresse während Checkout nicht korrigieren.
+- Fix #2078 orders_edit_other.php: names der input ändern
+- Fix #2079 CONTENT_GROUP für Subcontents zur Verfügung stellen
+- Fix #2080 Billpay Fehler Bei einlösen eines Coupon/Gutschein im letzten Bestellschritt
+- Fix #2081 2 warnings fixen, $_SESSION['billing_zone'] und $return_string in shopping_cart.php
+- Fix #2086 Zwei mögliche Fehler im PAYONE Zahlungsmodul
+- Fix #2088 Klarna: Call to undefined function xtc_get_countriesList()
+- Fix #2089 Undefined array key 1 in /admin/module_export.php
+- Fix #2091 Versandoptionen mit PHP8
+- Fix #2093 shipping_allowed und payment_allowed für iso code 2 nicht case sensitiv gestalten
+- Fix #2094 \includes\extra\default\center_modules\customer_greeting.php
+- Fix #2095 Error Undefined constant "E_MSG" in File: /includes/cart_requirements.php
+- Fix #2096 Paypalmodulnamen ändern bei Erstellung manueller Bestellung und bearbeiten von Bestellungen
+- Fix #2097 Paypal Plus Zusatz (nur Deutschland) verwirrend
+- Fix #2098 Backendendbestellung mit Paypal Plus Link verhindert das senden einer Auftragsbestätigung
+- Fix #2099 Paypal Plus Link verursacht warnings beim bezahlen
+- Fix #2100 Notwendig constant DIR_TMPL_CSS zu definieren für PHP8?
+- Fix #2101 Update ckeditor to version 4.16.2
+- Fix #2102 Newsletter Empfänger: Eigenes Icon für "unsubscribe"
+- Fix #2103 Ungültiger Objekttyp für Feld "brand"
+- Fix #2104 Wenn Kundenguthaben > Bestellwert und in ot_gv "Inklusive Versandkosten" auf nein, dann Bestellabschluss nicht möglich
+- Fix #2106 Admin - CSS Klasse für rechtsbündig/zentriert greift nicht
+- Fix #2107 Admin > Produkt Bearbeiten: Überschrift "Artikelbilder" wird nicht angezeigt
+- Fix #2108 Warenkorb: Text "Zwischensumme" klebt am Preis
+- Fix #2109 banner_manager.php - banners_id wird im Tabellen-Link genutzt
+- Fix #2110 checkout_process.php - Attribut Gewicht wird nicht gespeichert
+- Fix #2111 Warning bei bearbeiten eines Gutscheinartikels
+- Fix #2113 DHL Anbindung erweitern um Kundeninformation bei Labelstornierung
+- Fix #2116 Hersteller Logo wird in "Hersteller Info Box" nicht angezeigt
+- Fix #2117 Coupon / Gutschein Versandfrei fehlerhaft wenn Artikelwert unter Versandkostenwert
+- Fix #2118 Undefined constant "MODULE_SHIPPING_FREE_TAX_CLASS" in File: /includes/external/klarna/classes/KlarnaPayment.php on Line: 379
+- Fix #2120 Bestellung bearbeiten -> E-Mail Vorschau funktioniert in Safari nicht
+- Fix #2121 account_history_info.php - $ORDER_COMMENTS fehlt
+- Fix #2123 Versandkostenfreigrenze in ot_shipping berücksichtigt keinen Kundenrabatt
+- Fix #2125 Fehlender Parameter in cfg Funktionen
+- Fix #2126 Artikel-Dropdown für Artikel-Content killt Performance
+- Fix #2127 Zahlungsart bei Bezahlung mit Guthaben
+- Fix #2133 DHL Anbindung - Absenderreferenz ergänzen
+- Fix #2135 ERROR wegen DSGVO-Export-Modul in PHP 8
+- Fix #2136 Individelle Auswahl ob Mailadresse an DHL übergeben wird
+- Fix #2137 DHL Modul Einstellmöglichkeit für Gewichtsangabe im CN23 Formular
+- Fix #2139 DHL Modul warning Undefined array key "suburb"
+- Fix #2140 mod-error.log > Undefined constant "E_MSG"
+- Fix #2143 Neuer Name für Country 126 "Macedonia, The Former Yugoslav Republic of"
+- Fix #2144 Manche Passwörter funktionieren nicht
+- Fix #2145 "Imprint" für Impressum wieder reingerutscht ?
+- Fix #2148 Suche in admin/orders_edit.php - Artikel werden zu oft angezeigt
+- Fix #2149 Checkboxen im Backend nicht sichtbar wenn NEW_ATTRIBUTES_STYLING auf 'Nein'
+- Fix #2150 Datanbank Manager führt ersten SQL-Befehl nach einem UPDATE SQL-Befehl nicht aus
+- Fix #2151 Falsche Konstanten-Nutzung in "/admin/includes/modules/categories_view.php"
+- Fix #2152 Redirects nach Logon überarbeiten und verbessern
+- Fix #2153 Fehlerhafter Code in /admin/includes/products_images.php
+- Fix #2154 Bei Express-Checkout wird MAX_PRODUCTS_QTY nicht beachtet
+- Fix #2155 auto_include in /includes/modules/products_attributes.php verkehrt gesetzt
+- Fix #2158 fileinfo Extension ist nicht immer installiert
+- Fix #2161 Sortiermöglichkeit in orders.php hinzufügen
+- Fix #2162 Auf die Browsersprache automatisch umstellen mit aktiver Spracherweiterung für SEO URL
+- Fix #2163 Warning paypal_cart mit PHP8
+- Fix #2164 Hinweis auf versandfrei ab verschwindet nicht
+- Fix #2165 Sortieren der Länder in Länderauswahl im Warenkorb
+- Fix #2166 Beschreibung für CHECKOUT_USE_PRODUCTS_SHORT_DESCRIPTION anpassen
+- Fix #2167 Wenn Kategorie noimage.gif in Bildoptionen ON ist werden keine Bilder mehr angezeigt
+- Fix #2169 Core & DuckDuckgo ggf. als Bots in /inc/xtc_check_agent.inc.php entfernen?
+- Fix #2170 System-Modul tax_eel Modul-Key fehlt
+- Fix #2171 GOOGLE_CONVERSION_TITLE zweimal definiert in Englisch
+- Fix #2172 Falsche Codierung TrustedShops Widget
+- Fix #2173 Update ckeditor to 4.17.1
+- Fix #2174 Button "Blacklist" unter "Wer ist Online" speichert keine IP-Adressen
+- Fix #2175 Import/Export Parameter-Fehler und update-sichere Erweiterung
+- Fix #2176 admin/manufacturers.php - schließendes Form-Tag fehlt
+- Fix #2179 xtc_db_fetch_row() liefert unerwartete Ergebnisse wenn cache-Parameter verwendet
+- Fix #2180 Bestellung neu Berechnung, Easycredit
+- Fix #2181 Zugriff auf gesperrte Versandarten für User über Umweg möglich
+- Fix #2182 Adminbereich -> Kunden -> Kundengruppenfilter
+- Fix #2183 DHL Versand & Label-Erstellung / Ex- Import nicht möglich
+- Fix #2185 Banner editieren bei zusätzlichen Sprachen
+- Fix #2187 Fehler GLS Versandmodul
+- Fix #2191 Parameter-Reihenfolge korrigieren in /inc/product_redirect.inc.php
+- Fix #2192 Bei Rechnung (paypalpui) fehlen leider die Zahlungsanweisungen.
+- Fix #2194 DHL Versandmodul - Fehlende Einstellung Vorausverfügung
+- Fix #2196 PayPal Checkout vergisst Umsatzsteuer zu addieren
+- Fix #2197 Eventueller Fehler: PHP 8.x Error in /includes/modules/shipping/zones.php
+- Fix #2199 modified Footer-Link nicht klickbar bei Nutzung von Modul "Spracherweiterung für SEO URL"
+- Fix #2200 Umlautproblem mit neuem PayPal Checkout
+- Fix #2202 Update PHPMailer to version 6.6.0
+- Fix #2203 Update CKEditor to version 4.18.0
+- Fix #2205 Informationspflicht Echtheit Kundenbewertungen
+- Fix #2208 Sortierreihenfolge Bestellungen - Dropdown "Zahlungsweise"
+- Fix #2210 PayPal auf Warenkorbseite - Express Button beim Artikel: Versucht zu laden trotz Deaktivierung
+- Content Manager umgebaut auf Ordnerstruktur
+- PayPal Checkout Zahlungsarten integriert
+- Omnibus Richtlinie umgesetzt
+- Cache Routinen verbessert
+- PHP 8.1 Unterstützung
+- Mindestanforderung auf PHP 7.4 angehoben
+- EU One-Stop-Shop inkl. Steuersätze integriert
+- DHL Versand & Label-Erstellung integriert
+- Adressänderung im Checkout
+- Performance Optimierungen
+- Vereinheitlichung der Fehlermeldungen
+- Zahlungsinfos in den Bestelldetails
+- ungenutzte Codestellen und Funktionen bereinigt
+- diverse neue auto includes 
+- neue Datenbank Indizes
+- Trustedshops aktualisiert
+- Händlerbund aktualisiert
+- Magnalister aktualisiert
+- Smarty 4
+- Smarty 2 und Smarty 3 aktualisiert
+- Phpfastcache aktualisiert
+- PHPMailer aktualisiert
+- CKEditor aktualisiert
+- OIL.js Cookie Consent Management aktualisiert
+- Shipcloud aktualisiert
+- Klarna aktualisiert
+- Payone aktualisiert
+- Micropayment aktualisiert
+- Bugfixing
+
+Seit modified eCommerce Shopsoftware 2.0.6.0
+- Fix #210  Klarna Modul Serbien und Montenegro
+- Fix #420  Couponcode kann nicht eingegeben werden
+- Fix #581  tax_class-Feld nicht übersetzt
+- Fix #593  Weitere Bildgrößen auf "Knopfdruck" einfügen
+- Fix #930  compactor.php hat Probleme mit Doppel-Slashes im Datei-Header
+- Fix #955  Unnötig verwirrende Angaben der Versandkosten in checkout_confirmation
+- Fix #1001 Zusätzliche mini_images
+- Fix #1047 Banner Manager erweitern um Anzeigereihenfolge
+- Fix #1128 Erweiterung der "/admin/whos_online.php" um Anzeige der Spider-Namen
+- Fix #1148 Tracking pageview_history funktioniert nicht richtig
+- Fix #1181 Accordeon bei Checkbox für Verwendung von vorhandenem Guthaben auf checkout_payment.php überarbeiten
+- Fix #1183 CSRF-Token Implementation nicht schlüssig
+- Fix #1245 Klarna Checkout Fehler
+- Fix #1282 CC Feld in /admin/module_newsletter.php ohne Funktion?
+- Fix #1286 Probleme mit "sicheren" Browsern / Paypal prüfen
+- Fix #1289 Fehler im dynamischen Menü
+- Fix #1399 Guthabenabgleich mit Bestellsumme (order_total) in checkout_payment.php
+- Fix #1408 Paypal Express - keine Fehlermeldung bei unerlaubten Ländern und Anlage einer Bestellung ohne Versandkosten
+- Fix #1450 Newsletter-Implementation überprüfen und fixen
+- Fix #1545 Cookie Hinweis / Tracking Einwilligungscheckboxen
+- Fix #1557 Verbesserungsvorschlag für die Einbindung von unveil
+- Fix #1561 Gutscheincode auch im checkout_payment eingeben
+- Fix #1600 Thumbnails schärfen, damit Details nicht untergehen
+- Fix #1639 Kundenverwaltung
+- Fix #1695 redirect.php in Banner nur nutzen, wenn es sich um eine externe URL handelt
+- Fix #1711 Mehrsprachiges Shopvote & Produktbewertungen, Update notwendig
+- Fix #1713 image_processing_step: Bilder mit falschen Dateirechten oder Eigentümer lassen sich nicht überschreiben
+- Fix #1746 Banner Manager zählt Pageviews auf jeder Seite - auch ohne Anzeige des Banners
+- Fix #1762 Fehler im CKEditor File Upload
+- Fix #1805 Verwendung von strstr() mit strpos() ersetzen
+- Fix #1809 Erweiterung der Artikelbearbeitung um Button des nicht Setzens des last modified Wertes in der DB
+- Fix #1812 Notice Undefined variable: _SESSION in File: .../includes/classes/shopping_cartModules.class.php
+- Fix #1813 Sprachen mit Minus-Zeichen
+- Fix #1814 xtc_get_ip_address - undefined index REMOTE_ADDR
+- Fix #1815 Undefined index: suffix in File: /inc/xtc_draw_selection_field.inc.php
+- Fix #1818 Fehler beim Artikelrabatt
+- Fix #1819 Konstante CURRENT_TEMPLATE in index.php des Installers nicht gesetzt
+- Fix #1820 Update Smarty
+- Fix #1821 Artikel mit Optionen ohne Aufpreis zeigt "Ab-Preis"
+- Fix #1822 Fehlende englische Sprach-Konstanten in Billpay Modulen
+- Fix #1823 PayPal Express berechnet doppelte MwSt. auf die Versandkosten
+- Fix #1824 Willkommens Gutschein/Coupon Problematik aufgrund von Schalter SEND_MAIL_ACCOUNT_CREATED
+- Fix #1826 Update PhpMailer auf Version 6.1.5
+- Fix #1827 Newsletter Abmeldung - md5 Adresse in "Ihre E-Mail Adresse"
+- Fix #1828 Suchwort in Suchfeld wird gecached
+- Fix #1829 Fehler in der Preisanzeige und Berechnung in Warenkorb und Kasse, wenn Kundengruppe Rabatt auf Artikelattribute zulässt
+- Fix #1830 Umbenennung von Piwik in Matomo
+- Fix #1831 Bestellung bearbeiten - Nettopreis ist plötzlich brutto.
+- Fix #1833 Afterbuy, Bestellungen werden nicht übertragen
+- Fix #1834 Druckfunktion in CKEditor nicht möglich
+- Fix #1835 Checkout mit Guthaben nicht möglich, wenn Kundengruppe Rabatt auf gesamte Bestellung erhält
+- Fix #1836 CrossSelling-Gruppen Sortierung nutzen
+- Fix #1837 Versandkostenfrei Titel in Modul ot_shipping fehlt auf checkout_confirmation Seite
+- Fix #1838 Filter bei "Newsletter Empfänger" wird bei klick auf Empfänger nicht übernommen
+- Fix #1839 Matomo trackt keine Gastbestellungen, nur von registrierten Kunden
+- Fix #1840 Extra Zahlungsmodule in der PayPal Plus Wall verhindern Aufruf der checkout_confirmation
+- Fix #1841 Erstes Bundesland in Bundesland-Dropdown führt zu Fehlermeldung
+- Fix #1845 ot_payment speichert "&" als "&amp;"
+- Fix #1847 Rabattierte Preise bei Produktrabatten werden nicht angezeigt
+- Fix #1849 curly braces in der vat_validation.php
+- Fix #1850 strlen in xtc_show_category.inc.php
+- Fix #1851 Fehler in PayPal PLUS bei "Anzeige Widerrufsrecht Downloads" = "Ja"
+- Fix #1852 Optimierung (und Bug ?) in /admin/modules.php
+- Fix #1854 Uneindeutige if-Clause in Methode get_products() in shopping_cart Klasse
+- Fix #1855 Fehler in E-Mail-Preview
+- Fix #1856 Zeilenumbrüche in Textmails fehlerhaft, wenn Zeile mit {/if} abgeschlossen
+- Fix #1857 Pfadangabe "text_miscellaneous" in lang_german.custom für responsive Template
+- Fix #1858 Bestellbestätigung an Admin über Shop-Konfiguration deaktivieren
+- Fix #1859 Notice wegen MAX_DISPLAY_PAGE_LINKS in split_page_results.php
+- Fix #1863 Magnalister DB Connect Problem
+- Fix #1864 MODsid Cookie wird in Zukunft abgelehnt
+- Fix #1865 Seitenzahl in <title> wieder ergänzen?
+- Fix #1869 Update CKEditor auf Version 4.14.1
+- Fix #1870 Firefox möchte ein favicon.ico im Adminbereich laden
+- Fix #1874 PayPal Express - Extra Feld: vorläufige Versandkosten nur bis Versankostenfreigrenze anzeigen
+- Fix #1875 Beschreibung Shopvote Modul ergänzen
+- Fix #1876 Modul Internetmarke: Sendungsnummer statt Auftragsnummer im Backend hinterlegen
+- Fix #1877 Hinweis steuerfreie Ausfuhrlieferung auf Rechnung einfügen
+- Fix #1878 Fehler in Micropayment Zahlungsmodulen
+- Fix #1879 Löschen eines Artikels ignoriert die Einträge aus Tabelle products_attributes_download
+- Fix #1880 UTF8-Konvertierung in Datenbank Manager fehlerhaft
+- Fix #1883 strpos-Vergleich nicht korrekt in split_page_results
+- Fix #1884 xtc_get_tax_rate()
+- Fix #1885 Fehler in xtc_check_agent.inc.php
+- Fix #1886 Typo includes/modules/content_manager_media.php und templates/alleTemplates/module/content.html
+- Fix #1887 Caching Loginbox entfernen
+- Fix #1888 System-Modul "Neue Rechnungsnummer" nicht aktivierbar
+- Fix #1889 Reste unbenutzter Konstante DISPLAY_PRICE_WITH_TAX entfernen?
+- Fix #1890 Fehler in Umsatzstatistik für Versand und Sonstiges
+- Fix #1892 Modul Internetmarke: externer Link kann Bestellbearbeitung unmöglich machen
+- Fix #1893 Seitenauswahl bei Optionswerten nicht möglich
+- Fix #1896 Standard-Template: Fehler u. Performance-Bug
+- Fix #1897 CSRF Token Fehler im Datenbankmanager
+- Fix #1900 Undefined variable: author in File: product_reviews_write.php on Line: 158
+- Fix #1902 Cross Selling Speichern Button nach links verschieben
+- Fix #1904 Http referrer in who's_online meist eigene Shopdomain
+- Fix #1905 ratenkauf by easyCredit erweitern um Bestellnummer
+- Fix #1906 checkout_confirmation.php - HEADQUARTER
+- Fix #1909 Möglichkeit schaffen die vom Compactor minimierten Dateien leeren zu können
+- Fix #1910 PayPal Express Konto-Typ an Schalter "ACCOUNT_OPTIONS" hängen
+- Fix #1911 Fehlerhaftes Verhalten bei erster Kundenrezensionen, wenn nicht automatisch freigeschaltet
+- Fix #1913 Update CKEditor auf Version 4.15.0
+- Fix #1914 Bestseller Slider wird auf Suchseiten mit leerem Ergebnis nicht geladen
+- Fix #1915 Fehler bei Wechsel der Versandzone im Checkout bei Abbruch
+- Fix #1916 Nachnahme Modul - Hinweis zur Geldübermittlung ändern
+- Fix #1917 PayPal Express berechnet bei Versandkostenfrei und Coupon trotzdem Versandkosten
+- Fix #1918 Versandkostenfrei (ot_shipping) im Warenkorb berücksichtigt keine Coupons
+- Fix #1919 Fehler xtcPrice Kundenrabatt
+- Fix #1921 Versandkostenerlass durch Coupon kundenfreundlicher ausweisen
+- Fix #1922 Weiter Button im checkout bei virtuellen Gütern falsch beschriftet
+- Fix #1923 Ungünstige Implementation der Bestseller-Box im Template
+- Fix #1924 Lagerbestandsführung fehlerhaft, wenn Download-Attribute involviert sind
+- Fix #1925 Paypal Plus Modul - Benennung Datanbanktabelle korrekt?
+- Fix #1927 Call to undefined function xtc_get_products_image() in Klarna Payments Modul
+- Fix #1928 error im Klarna-Modul, Kodierung
+- Fix #1929 Datei /admin/new_attributes.php löschen, da nicht mehr benötigt
+- Fix #1930 Datenbank Manager erweitern
+- Fix #1932 Warenkorb-Button "Einkauf fortsetzen" führt bei Shops in Unterverzeichnissen zu 404-Fehler
+- Teilweiser Fix #1933 United Kingdom in Steuerzone nicht-EU-Ausland verschieben
+- Fix #1934 Content Manager - Anhänge
+- Fix #1935 System-Modul exclude_payment: zu viele Parameter an Funktion
+- Fix #1936 Stornierung von Gutscheinen
+- Fix #1937 Signatur des Newsletters nicht linksbündig
+- Fix #1939 PHPMailer nicht ausreichend eintstellbar
+- Fix #1940 Kein Zeitstempel, wenn Hersteller beim Art-Import automatisch angelegt wird
+- Fix #1941 Generierung Random-Werte
+- Fix #1943 Länder in Steuerzone nach Name sortieren
+- Fix #1944 Anrede erweitern um "Divers"
+- Fix #1945 Sortierung der Sonderangebote ermöglichen
+- Fix #1946 Checkboxen in admin/customers.php einfügen zum mehrfachen löschen von Kundenkonten
+- Fix #1947 Rundungsfehler bei Nettobeträgen mit mehr als 2 Nachkommastellen
+- Fix #1949 SMTP_PASSWORD: Zeichen (z. B. "&") werden in HTML-Entities (z. B. "&amp;") umgewandelt
+- Fix #1950 Typofehler Coupon
+- Fix #1951 installer erkennt mysqli nicht
+- Fix #1952 Zahlungsmodul Rechnung - immer zulassen
+- Fix #1953 Button zurück im Crosselling zeigt nicht immer alle Produkte der Kategorie
+- Fix #1955 Paypal Plus v1.56 zeigt keinen Button zum bestätigen der Versandart
+- Fix #1956 "Neue Kundengruppe" für "Aktives Element" ändern funktioniert nicht mehr
+- Fix #1957 Einzelne Sonderangebote können nicht mehr gelöscht werden
+- Fix #1958 Installer unter PHP8 nicht aufrufbar
+- Fix #1959 Installer erfordert unter PHP7.4 nach jedem Klick eines Links einen neuen Login
+- Fix #1960 account_history.php - header.php später laden
+- Fix #1963 DSGVO Export unvollständig
+- Fix #1966 Download-Attribute bei Artikel-Kopie mitnehmen
+- Fix #1968 Erweiterbarkeit print_order.php und print_packingslip.php
+- Teilweiser Fix #1969 mb_detect_encoding mit strict
+- Fix #1970 Keine Reduzierung von Sonderangebotsmenge bei hinzufügen in Bestellung durch Admin
+- Fix #1971 Abhängigkeit der Zahlungsweise von Rechnungs- statt Versandadresse
+- Fix #1972 Fallback-Wert für Versandart, derzeit payment-method
+- Fix #1973 Bundesland wird nicht korrekt eingetragen und ausgegeben
+- Fix #1974 Adressformat für Niederlande falsch
+- Fix #1975 Ländernamen und Ortsnamen für Auslandslieferungen in Großbuchstaben ausgeben
+- Fix #1977 xtc_get_categories() und xtc_get_subcategories() optimieren
+- Fix #1980 Fehlende Email-erweiterbarkeit in admin/includes/module/update_orders.php
+- Fix #1982 Bug in autocomplete
+- Fix #1984 Rabatt Coupon falsch berechnet
+- Fix #1985 xampp.8.0.0.0
+- Fix #1986 includes\modules\payment\invoice.php - Undefined constant "MODULE_PAYMENT_INVOICE_MIN_ORDER"
+- Fix #1989 Undefined Constant MODULE_SHIPPING_SELFPICKUP_TEXT_TITLE
+- Fix #1990 Update CKEditor to version 4.16.0
+- Fix #1991 Filemanager zeigt keine Vorschaubilder mehr an
+- Fix #1992 admin/products_attributes.php
+- Fix #1996 Klickbaren Bereich von Checkboxen im Backend vergrößern
+- Fix #1997 Root-.htaccess anpassen bei Verwendung "Spracherweiterung für SEO URL"
+- Fix #1998 Umlaut-Problem, vorkasse-Zahlung via PayPal-Plus-Paywall
+- Fix #1999 nicht verwendete Felder in DB-Tabelle orders_products
+- Fix #2000 unnötiger Code - xtc_get_tax_class()
+- Fix #2001 unnötiger Code - new_attributes_include.php
+- Fix #2004 admin/includes/application_top.php - Spracheinbindung
+- Fix #2005 In Bewertungen dem itemprob author das itemtype person hinzufügen
+- Fix #2006 Abfrage nach Attributen in der order_details.html
+- Fix #2008 update PHPMailer to version 6.3.0
+- PayPal aktualisiert
+- Klarna aktualisiert
+- Bild Verarbeitung überarbeitet
+- Template tpl_modified_responsive umgebaut auf Mobile First
+- zusätzliche Bildgrössen
+- Tracking optimiert
+- Bildgrössenberechnung für Hersteller, Banner und Kategorien
+- Code und Dateien vereinheitlicht
+- PHP 8.0 Unterstützung
+- Datenbankmanager überarbeitet
+- diverse auto includes hinzugefügt
+- Semknox Site Search 360 Integration
+- Coupon Eingabe im Checkout
+- OIL.js Cookie Consent Tool
+- PHPMailer aktualisiert
+- CKEditor aktualisiert
+- smarty aktualisiert
+- ratenkauf by easyCredit aktualisiert
+- PayPal Express Konten nicht mehr als "Neuer Kunde", wenn "Art der Kontoerstellung" auf "Gastkonto" steht
+- Weitere Schritte für i18n unternommen
+- Zusätzliche Anrede "Divers"
+- Passwortfehler mit spitzen Klammern <> korrigiert
+- ShopVote mehrsprachig überarbeitet
+- Speichern des Lagerbestandes ohne Änderung des Bearbeitungsdatums eines Artikels
+- Caching optimiert
+- Sicherheitsfixes
+- Performance Optimierungen
+- Installer überarbeitet
+- Kampagnen überarbeitet
+- Steuerberechnung korrigiert
+- Google Analytics GTAG überarbeitet
+- Content Manager überarbeitet (Dateiname erhalten bei Upload)
+- Banner-Funktion überarbeitet
+- Bugfixing
+
+Seit modified eCommerce Shopsoftware 2.0.5.1
+- Fix #267  Bezeichnung MwSt in der Rechnung (und anderswo)
+- Fix #780  Mehrwertsteuer-Angabe im Warenkorb
+- Fix #930  compactor.php hat Probleme mit Doppel-Slashes im Datei-Header
+- Fix #1128 Erweiterung der "/admin/whos_online.php" um Anzeige der Spider-Namen
+- Fix #1222 Warum customers.refferers_id ist Varchar?
+- Fix #1447 Probleme bei Downloadshops nach Update von 1.06 rev 4642 SP4 nach 2.0.3.0 rev 10907
+- Fix #1545 Cookie Hinweis / Tracking Einwilligungscheckboxen
+- Fix #1718 Bestseller in bxSlider auf iPhone mit iOS 13.2.3 nicht klickbar
+- Fix #1730 Artikel Content wird nicht mehr gespeichert
+- Fix #1735 Paginierte Rezensionsseiten nicht aufrufbar
+- Fix #1738 Artikeleigenschaften werden beim duplizieren nicht angelegt für die Kopie
+- Fix #1744 Fehler in PayPal (Plus) Link Modul(en)
+- Fix #1766 Falsche Bestellsumme nach Änderung der Artikeloptionen
+- Fix #1772 Fehler in Coupon-Modul bei Steuerberechnung / Ausweisung
+- Fix #1776 Fehler bei Seitenwechsel Angebote -> Neue Artikel bei aktiviertem Cache und der Filter-Option "Alle Artikel anzeigen"
+- Fix #1778 SEPA-Informationen fehlen in order_mail und separate SEPA-Mail wird nicht versendet
+- Fix #1781 Paypal Rückzahlung nach Update auf Modulversion 1.38 nicht mehr möglich
+- Fix #1783 Bankdaten-Prüfmethode MarkC2 unvollständig
+- Fix #1787 Ungültiger Canonical für verlinkte Artikel
+- Fix #1790 Fehler im Updater des Installers
+- Fix #1799 Captcha auf login_admin.php Seite kann nicht geladen werden
+- Fix #1803 Bankdaten-Prüfmethode Method06 unvollständig
+- Fix #1331 Fehler mit PROJECT_VERSION
+- Fix #1492 Lieferadresse bei Selbstabholung
+- Fix #1600 Thumbnails schärfen, damit Details nicht untergehen
+- Fix #1711 Mehrsprachiges Shopvote & Produktbewertungen, Update notwendig
+- Fix #1723 Button "Quellcode" im CKEditor im Browser Microsoft Edge nicht klickbar
+- Fix #1724 REPLACE INTO in /inc/get_newsfeed.inc.php
+- Fix #1726 Bei aktiviertem Kundengruppencheck können aus dem Adminbereich keine E-Mails gesendet werden
+- Fix #1727 GET-Parameter werden auf der Startseite (index.php) bei Verwendung von "Sprachkürzel in der URL" und aktivierten SEO-URLs nicht angehängt
+- Fix #1729 Colorbox Leerzeichen fehlen
+- Fix #1731 CKEditor aktualisieren auf 4.13.1
+- Fix #1732 Bing als Suchmaschine hinzufügen
+- Fix #1733 Standard-Sortierung der neuen Artikel auf zuletzt hinzugefügt ändern
+- Fix #1734 language_charset in Session nach Änderung des Charsets zurücksetzen
+- Fix #1736 Kleinunternehmerregelung in Shopversion 2.0.5.0 nur bei Setzen eines Steuersatz auf Artikel möglich?
+- Fix #1739 Wenn man im "Adminbereich Styling" auf "Nein" setzt, dann kann man keine Kategorien oder Artikel mehr kopieren
+- Fix #1740 PayPal Express Kauf nicht möglich mit neuer Einstellung SIGN_CONDITIONS_ON_CHECKOUT = false
+- Fix #1741 Imageprocessing absichern gegen nicht eingegebene Breiten- und Höhen-Werte
+- Fix #1745 Button "Neuer Content" in Artikelsuchliste ohne product_id
+- Fix #1746 Banner Manager zählt Pageviews auf jeder Seite - auch ohne Anzeige des Banners
+- Fix #1748 Willkommens-Geschenk Gutschein nicht im Warenkorb einlösbar
+- Fix #1750 Hinweis innergemeinschaftliche Lieferung auf Rechnung einfügen
+- Fix #1752 Passwort-Recovery- bzw. Captcha-Probleme nach Update von 2.0.4.2 auf 2.0.5.0
+- Fix #1753 Artikeleigenschaften alphabetisch ordnen, wenn keine Sortierreihenfolge vorgegeben
+- Fix #1754 Deutsche Post Internetmarke: Preisdaten können nicht aktualisiert werden
+- Fix #1755 Deutsche Post Internetmarke: Label nicht erstellbar
+- Fix #1757 Kategorie Vorschaubutton
+- Fix #1763 PHP Fatal error ... aus Modul Internetmarke
+- Fix #1764 Durchschnitts-Bewertung nicht nur ganz-zahlig
+- Fix #1765 Doppeltes itemprop="price" bei Staffelpreisen
+- Fix #1768 .htaccess ohne Apache 2.4 Syntax
+- Fix #1769 .htaccess enthält doppelten Eintrag
+- Fix #1770 phpFastCache: .htaccess ohne Apache 2.4 Syntax
+- Fix #1771 Hersteller-Liste als Listenbox funktioniert nicht mit responsivem Template
+- Fix #1775 Merkzettel-Weiterleitungsbug
+- Fix #1777 Umstellung der Währung bei aktiviertem Cache führt zur Weiterleitung auf Startseite
+- Fix #1780 Admin Button in der Adminbar nach Update auf 2.0.5.0 ohne Link zum Adminbereich
+- Fix #1784 Feld Kundenname im Reiter Bestellungen der Startübersicht wird falsch gefüllt
+- Fix #1785 Update CKEditor auf Version 4.14.0
+- Fix #1786 Falsche Meldung bei Gutscheineinlösung
+- Fix #1789 Paypal Ratenzahlung (Installment) fehlerhafte Anzeige und Berechnung
+- Fix #1792 alsoPurchased Produkte im Backend deaktivierbar machen
+- Fix #1798 Anzahl der Loginversuche bevor das Captcha kommt
+- Fix #1800 Warning Parameter 2 to smarty_outputfilter_note() expected to be a reference, value given
+- Fix #1801 ZIP-Dateien können im Content Manager nicht hochgeladen werden
+- Fix #1802 Coupon Code fehlt in Email
+- Fix #1804 Deeplink auf login.php führt bei Erstaufruf auf die cookie_usage.php
+- Fix #1806 Typo Fehler in login_admin.php
+- Fix #1807 Weiterleitung in leeren Warenkorb nach Registrierung
+- Fix #1758 Erweiterung Export der Newsletterempfänger um md5 E-Mailadresse
+- Fix #1774 Masterpayment Module entfernen bzw ersetzen mit Nachfolger
+- Fix #1793 Bildgrösse berechnen unzureichende Bezeichnung
+- Fix #1725 CSV Import klappt nicht
+- Fix #1794 Anzeige "Kunden-Tipp" wird nicht deaktiviert
+- PayPal aktualisiert
+- Caching optimiert
+- Sicherheitsfixes
+- Performance Optimierungen
+- Installer überarbeitet
+- Kampagnen überarbeitet
+- Steuerberechnung korrigiert
+- Google Analytics GTAG überarbeitet
+- Content Manager überarbeitet (Dateiname erhalten bei Upload)
+- Banner-Funktion überarbeitet
+- Staffelpreis für 1 Stück korrigiert, wenn kein Artikelpreis angegeben wurde, sondern nur ein Kundengruppenpreis
+- Masterpayment Zahlungsmodul entfernt
+- Bugfixing
+
+Seit modified eCommerce Shopsoftware 2.0.5.0
+- Fix #8    Rundungsfehler bei einem Netto Shop
+- Fix #58   orders_status in Bestellbearbeitung in Adminbereich-Sprache anstatt Bestell-Sprache?
+- Fix #79   Umsatzsteuerproblem bei abweichendem Lieferland
+- Fix #99   Folgende Dateien löschen, wenn mysqli Umstellung erfolgreich getestet wurde
+- Fix #118  Kundengruppenberechtigungen setzen - Hinweistext
+- Fix #136  Fehler in Shopsuche: Kurze Wörter
+- Fix #174  Open Graph Tags setzen
+- Fix #184  Fehler bei ot-Payment Modul
+- Fix #205  Kategorien / Artikel aktiv auswählen ohne direkt den Name anklicken zu müssen.
+- Fix #281  Sortierung nach Preis im Adminbereich beachtet nicht Sonderangebotspreis
+- Fix #351  Kein Kundengruppencheck im Warenkorb
+- Fix #361  Rundungsfehler in ot_shipping.php
+- Fix #613  metatags.php überarbeiten
+- Fix #630  jQuery tpl_modified
+- Fix #641  Version von jQuery
+- Fix #654  products_tags_iframe.php & products_attributes_iframe.php vereinheitlichen
+- Fix #672  Nicht alle neuen Template-Funktionen sind mit Fallbacks ausgestattet
+- Fix #699  Problem mit "Bestellabschluß - Ausverkaufte Artikel deaktivieren"
+- Fix #704  hreflang in 2.0 nicht korrekt implementiert
+- Fix #710  Artikeleigenschaften - Hervorhebung für Eigenschaften einbauen
+- Fix #713  Unbenutzte Spalte "restrict_to_customers" in Tabelle "coupons"
+- Fix #750  KCFinder ersetzen
+- Fix #821  xtc_expire_specials()
+- Fix #826  Sonderpreise - xtcCheckSpecials() - Performance
+- Fix #831  includes/modules/order/productTagsOnCheckout.php - translate()
+- Fix #842  ShoppingCart - bitte reset, each, list, while durch foreach ersetzen
+- Fix #867  checkout_new_address.html -> Checkbox wird nicht verwendet
+- Fix #901  Liste Newsletterempfänger exportieren
+- Fix #906  Umzug der Informationen für "Mein Schnellkauf" ins Systemmodul
+- Fix #908  KCFinder / CKEditor - Verlinkung Funktion verändert
+- Fix #915  Netto Kunden mit Lieferung nach Deutschland
+- Fix #930  compactor.php hat Probleme mit Doppel-Slashes im Datei-Header
+- Fix #932  includes/extra/wysiwyg/custom_config.php
+- Fix #937  Sitemap Problem
+- Fix #941  PayPal PLUS Modul um Logos für externe Zahlungsanbieter erweitern
+- Fix #962  Tastaturnavigation / -eingabe in responsive Template funktioniert nicht
+- Fix #988  GOOGLE_RSS_FEED_REFID unbenutzt
+- Fix #991  CAO Funktionen vereinen
+- Fix #992  Upload Klasse anpassen
+- Fix #997  CSS & Javascript Optimierung der Templates
+- Fix #1040 Hersteller Seiten
+- Fix #1050 Fehler in print_product_info.php
+- Fix #1064 Laden von "boxes.php" vor "checkout_requirements"
+- Fix #1093 Tastaturnavigation in SumoSelect Dropdowns funktioniert nicht in Safari
+- Fix #1103 PayPal Abbruch ("duplicate call, cancel")
+- Fix #1133 XSS Lücken bei HEADER Fälschung
+- Fix #1136 DIR_FS_CACHE ohne Funktion
+- Fix #1164 Möglichkeit schaffen Sessions in ein Verzeichnis zu schreiben anstatt in die Datenbank
+- Fix #1169 Zahlungsmodule eustandardtransfer.php & moneyorder.php erweitern um Bestellnummer
+- Fix #1180 Datei /admin/xtbooster.php benutzt noch fck_wrapper.php die mit dem Update auf 2.0.0.0 gelöscht wird
+- Fix #1188 Fehlerhafte Umlaute in Text E-Mails
+- Fix #1192 Schalter im Adminbereich für error_reporting Aktivierung verfügbar machen
+- Fix #1204 Startseite Admin - Auswahlmöglichkeit für Tabs einbauen
+- Fix #1208 PayPal: MwSt. im Shop wird nicht aktualisiert, wenn PayPal Versandadresse im Shop überschrieben wird und im Nicht EU-Ausland ist
+- Fix #1225 Inkosistenz zwischen Kundenbestellungen und manuell im Adminbereich angelegten?
+- Fix #1232 PayPal: Attributkombinationen werden nicht an PayPal übertragen
+- Fix #1234 login.php wird doppelt ausgeführt
+- Fix #1251 favicons erweitern um fehlende favicons
+- Fix #1255 Handling von DEFAULT_CUSTOMERS_STATUS_ID_GUEST
+- Fix #1258 Unbenutzte Datei "/inc/xtc_get_customer_status_value.inc.php"
+- Fix #1259 Call to undefined function xtc_gzip_output() in ajax.php
+- Fix #1265 Logos Externer Zahlungsanbieter nicht verfügbar auf PayPal Plus Paymentwall
+- Fix #1267 Sofort. - Probleme mit Zeichenkodierung
+- Fix #1269 Undefined index: carrier in /includes/extra/ajax/get_sc_service.php on line 35
+- Fix #1272 Erfolgreich abgeschickte Bewertung wird als error message in rot angezeigt
+- Fix #1275 Fehlerhafter Canonical tag in Pagination
+- Fix #1276 Slider (Banner) Flashing der Bilder bei Page Load
+- Fix #1277 Bruttopreis statt Nettopreis bei manueller Bestellung für Händler
+- Fix #1278 MwSt. Berechnung bei Bestellung im Admin mit Artikeloptionen falsch
+- Fix #1280 KcFinder Problem mit der Thumberstellung und unbekannter Fehler
+- Fix #1284 database-design: Kein Primary-Key auf Table products_tags
+- Fix #1286 Probleme mit "sicheren" Browsern / Paypal prüfen
+- Fix #1292 Logo Zahlungsanbieter in Bestellübersicht und Rechnung angleichen
+- Fix #1303 Programmcode Reste in der Klasse products.php
+- Fix #1305 Sofort. - Probleme bei österreichischen Banken?
+- Fix #1318 Sofort. - Generelle Überarbeitung notwendig
+- Fix #1338 Währungskurse aktualisieren über yahooapis nicht mehr möglich
+- Fix #1342 categories_image und manufactures_image DB Feldlänge erhöhen
+- Fix #1353 Fehler in /admin/orders.php in Verbindung mit der Funktion xtc_remove_order()
+- Fix #1355 Datenbankdesign: Keine Tabellen ohne Primary Key
+- Fix #1359 PayPal - Mehrfach-Bestellungen?
+- Fix #1361 Fehler Billpay
+- Fix #1366 Fehlerhafte "hreflang"-Implementierung
+- Fix #1368 EU-Kunde (Händler) bestellt ohne MwSt.
+- Fix #1369 PayPal - Fehler bei Benutzung der Ajax Nachlade-Funktion
+- Fix #1371 Probleme nach Update bei Verwendung von HTML-Komprimierung und MS Word Artikelbeschreibungen
+- Fix #1373 Deprecated features in PHP 7.2.x
+- Fix #1378 products_weight unterschiedlich in DB
+- Fix #1379 Status account.php und account_history_info.php angleichen
+- Fix #1380 Update phpfastcache
+- Fix #1387 PayPal Ratenzahlung darf nicht bei virtuellen (immateriellen) Artikeln erscheinen
+- Fix #1403 IT-Recht Kanzlei Schnittstelle um Mehrsprachigkeit erweitern
+- Fix #1406 Kunde in Gruppe "Admin" kann sein Konto nicht bearbeiten
+- Fix #1408 Paypal Express - keine Fehlermeldung bei unerlaubten Ländern und Anlage einer Bestellung ohne Versandkosten
+- Fix #1411 Strukturierte Daten für Breadcrumb in Google Suche
+- Fix #1415 Datei xtc_set_customer_status_upgrade.inc.php ohne Nutzung
+- Fix #1417 Status-Filter in /admin/..../customers_listing.php nicht richtig
+- Fix #1420 Anzeige der AGB auf checkout_confirmation gebunden an "Anzeige Widerrufsrecht?"
+- Fix #1423 Captcha - Alternative einbauen?
+- Fix #1425 Mobiler Google PageSpeed in responsive Templates derzeit sehr gering
+- Fix #1427 Verbesserung in xtc_backup_restore_configuration.php
+- Fix #1428 Fehler in /admin/countries.php
+- Fix #1434 Aufbau Methode xtcFormat() in xtcPrice-Class nicht korrekt und nicht effektiv
+- Fix #1437 CKEditor 4.9.1
+- Fix #1438 Hard-kodierte Sprache für hreflang=x-default
+- Fix #1441 Verbesserungsvorschlag: parse_multi_language_value() auch für System-Module ?
+- Fix #1443 Keine Brutto-Preisangabe über /admin/specials.php möglich
+- Fix #1444 Bestellungen über das Backend haben keine Bestellhistorie, füllen orders_date_finished anders als Frontendbestellungen und IP fehlt
+- Fix #1447 Probleme bei Downloadshops nach Update von 1.06 rev 4642 SP4 nach 2.0.3.0 rev 10907
+- Fix #1451 Sonderangebote Prozentangabe im Admin falsch
+- Fix #1456 Bei Angabe von rel="prev" oder rel="next" darf kein canonical gesetzt sein
+- Fix #1457 DSGVO Änderungen
+- Fix #1459 Überarbeitung der favicons
+- Fix #1463 Erweiterung der checkout_confirmation um Datenschutzerklärung
+- Fix #1465 Sortierungsschalter im Backend "verdreht"
+- Fix #1466 Fehlende Datei media_content.php hinzufügen
+- Fix #1469 Suche von Kunden in Bestellungen admin/orders.php funktioniert nicht
+- Fix #1472 Fehler in Content-Seiten der responsive Templates
+- Fix #1473 keine Versandkosten (nach Gewicht) im Export für billiger.de
+- Fix #1474 E_WARNING in admin/includes/classes/table_block.php
+- Fix #1475 xtc_product_link - Parameter ohne Funktion
+- Fix #1476 Content Manager Products Fix und Verbesserung
+- Fix #1477 Division by Zero in admin/specials.php
+- Fix #1484 Cache Problem Box Languages
+- Fix #1485 Cache - Timeout als String statt Int
+- Fix #1486 Attributnummer 0 wird nicht übertragen
+- Fix #1488 Bug in Payone-Config
+- Fix #1489 Trustedshop verursacht E-Warning, wenn nicht installiert
+- Fix #1490 Einstellung "Autocomplete Suche Zeichenanzahl" fehlerhaft
+- Fix #1491 Bitte um Prüfung von r11330
+- Fix #1492 Lieferadresse bei Selbstabholung
+- Fix #1495 xtc_check_categories_status
+- Fix #1496 PayPal-Templates aus Shop-Template-Ordner beziehen
+- Fix #1498 HTML Fehler in checkout_confirmation.html der reponsive Templates
+- Fix #1499 Fehler in comments_block.html des PayPal-Moduls
+- Fix #1500 E_WARNING in includes/classes/table_block.php durch admin/modules.php
+- Fix #1505 Tabelle orders. Spalte shipping_class erweitern
+- Fix #1507 Hook getAttributes in includes/classes/main.php
+- Fix #1508 Fatal error in includes/modules/product_attributes.php on Line: 130
+- Fix #1510 DSGVO - bei account creation einen last login hinzufügen
+- Fix #1511 Erweiterung der shopping_cart.php wegen $add_select_cart
+- Fix #1512 Frage zu Changeset r11093 (new products attributes handling)
+- Fix #1513 Installer erweitern um Probleme bei lokaler Installation zu vermeiden
+- Fix #1514 PayPal Warenkorb internationale Zahlung möglich trotz Einschränkung auf Zone DE
+- Fix #1516 Warenkorb aktualisieren bei Klick auf "zur Kasse"
+- Fix #1517 configuration_key auf 128 Zeichen erweitern
+- Fix #1518 Enddatum Banner unterscheidet sich von Enddatum Sonderangebote
+- Fix #1519 Der Wert für item.id muss eine gültige URL sein - Metadaten nicht mehr korrekt.
+- Fix #1522 Fehler aufgrund von r11409 (update error_reporting)
+- Fix #1523 Fehler des Canonical bei paginierten Seiten
+- Fix #1524 Fehler in xtc_input_validation() und set_language_sessions.php
+- Fix #1526 Fehler in ratenkauf by easyCredit?
+- Fix #1529 Fehler in /includes/modules/metatags.php bzgl. $x_default_lng
+- Fix #1530 Favicon Gzip über htaccess
+- Fix #1531 Downloadseite für BLZ hat sich wieder geändert.
+- Fix #1533 Type Attribute für Javascript nicht mehr notwendig (HTML5)
+- Fix #1535 storage_engine in _installer/install_step1.php
+- Fix #1536 Memory Limit überschritten in admin/mail.php
+- Fix #1537 Land/Steuer SQLs im Installer anpassen und im Demoshop gleichen Installer verwenden
+- Fix #1538 E_Warnings bei Exportmodulen
+- Fix #1541 Textfelder des Content Managers von TEXT auf LONGTEXT stellen?
+- Fix #1544 Geoblocking Verordnung tritt ab dem 03.12.2018 in Kraft
+- Fix #1545 Cookie Hinweis / Tracking Einwilligungscheckboxen
+- Fix #1547 Cache von Boxen nicht abhängig von Währung
+- Fix #1548 Fehler 500 bei Zugriff auf /download
+- Fix #1550 check_country_required_zones() gibt true als Standard aus
+- Fix #1551 Als Bundesland des Kunden wird 0 in Datenbank abgespeichert
+- Fix #1552 Nicht vorhandene Variable $zone_id wird $_SESSION['customer_zone_id'] zugewiesen
+- Fix #1553 Smarty Variable $state und $display_state im Template nicht verfügbar
+- Fix #1554 JS Funktion check_input() gibt auch Fehler aus, wenn Mindestlänge 0 ist
+- Fix #1555 Bei Ändern des Landes einer Adresse, wird Bundesland des vorherigen Landes gespeichert
+- Fix #1556 Fehler im Modul Payone ab Shop Version 2.0
+- Fix #1558 Fehler in /export/cao_xtc_functions.php bzgl. attributes_model?
+- Fix #1559 Loginprobleme nach Update von 1.06 auf 2.0.0.0 und höher
+- Fix #1562 Fehler in combine_files.inc.php der templates
+- Fix #1563 Bei nur einem Versanddienstleister wird dieser nicht vorausgewählt und bleibt zugeklappt auf der checkout_confirmation bei Zahlung mit Paypal Express
+- Fix #1564 mysqli_connect - Parameter vertauscht
+- Fix #1565 Rich snippets hinzufügen für URL, priceValidUntil und sku, gtin8, gtin12, gtin13, gtin14, mpn, isbn
+- Fix #1566 eustandardtransfer: Felder auf Englisch falsch
+- Fix #1568 Hinweis auf PayPal-Ratenzahlung ausblenden
+- Fix #1569 Fehler in der new_attributes_change.php
+- Fix #1570 Error in admin/includes/functions/orders_function.php mit MySQL 8
+- Fix #1571 L10n erschwert wegen Hardcoded-Mehrsprachigkeit in catCopyProductName.php
+- Fix #1574 Suche Kunde erweitern um Versand- und Rechnungsadresse
+- Fix #1576 Monaco in Steuerzone EU verschieben
+- Fix #1578 Button im Warenkorb "Einkauf fortsetzen" Kunde wird ausgeloggt
+- Fix #1583 L10n - Modul Findologic
+- Fix #1584 Abmeldelink für Newsletter funktioniert nicht ohne zusätzliche Bestätigung
+- Fix #1585 Wesentliche Artikelmerkmale im Checkout besser kennzeichnen
+- Fix #1586 tpl_modified_responsive bei installierten Artikeleigenschaften im Checkout diese auch bei schmalen Bildschirmen anzeigen
+- Fix #1587 Artikeleigenschaften in der print_product_info anzeigen
+- Fix #1588 tpl_modified_responsive blendet die Bestellbeschreibung ab 500px aus
+- Fix #1589 aktivierter Cache verhindert gewählte Attributeauswahl bei zurück vom Warenkorb zum Artikel
+- Fix #1590 Link zum Produktdatenblatt unterschiedlich auf Artikeldetailseite und checkout_confirmation
+- Fix #1591 Erfolgsmeldung für Rezensionen nicht als errormessage ausgeben
+- Fix #1592 Funktion payment_title() Frontend/Backend vereinheitlichen
+- Fix #1593 Neuinstallation: Umlaute in DB bei UTF-8 falsch
+- Fix #1594 Paypal Plus: Shop sendet Rechnungsadresse statt Lieferadresse an Paypal
+- Fix #1595 Gefahr non-numeric value /includes/classes/shipping.php
+- Fix #1596 Durchdachte Nutzung der Funktion buildDataArray()
+- Fix #1598 autocomplete und strlen()
+- Fix #1600 Thumbnails schärfen, damit Details nicht untergehen
+- Fix #1601 Problem checkout-Klassenerweiterung für Zahlungsarten und PayPal Plus
+- Fix #1602 Bankdaten-Prüfmethode 16 unvollständig
+- Fix #1603 Schwerwiegendes Login-Problem nach Update von 1.06 auf 2.0.X
+- Fix #1605 Englische Übersetzung in invoice_number.php
+- Fix #1606 Code bzgl. 'admin' in xtc_redirect.inc.php
+- Fix #1607 E-Warning Banner Manager
+- Fix #1608 Artikeleigenschaften - ergänzen um "verbundene" Artikel
+- Fix #1610 Erweiterung includes/filenames.php
+- Fix #1611 Bug im Easy-Credit-Modul
+- Fix #1612 In Klassenerweiterungen ist das Sprach-Handling problematisch
+- Fix #1614 Paypal Plus loggt info Nachrichten trotz log_level warning
+- Fix #1616 class.shipcloud.php
+- Fix #1617 Textbaustein sofort fehlerhaft
+- Fix #1618 Hersteller werden bei CSV-Import unvollständig in der Datenbank angelegt
+- Fix #1619 Backend / Katalog / Lager Bericht: Literal "Anzahl"
+- Fix #1620 Produkte im Bestseller Slider in Google Chrome nicht klickbar
+- Fix #1622 Potentielle Sicherheitslücken in /includes/classes/shopping_cart.php
+- Fix #1623 type fehlt in einigen Funktionen von shoppingCartModules
+- Fix #1624 Backend / Konfiguration / Maximumwerte: "Neue Artikel Anzeigemodul"
+- Fix #1625 Backend / Erw. Konfiguration / Suchoptionen: "Autocomplete Suche Zeichenanzahl" "
+- Fix #1626 Undefinierte Variable in Query in /admin/includes/modules/orders_listing.php
+- Fix #1627 Problem mit Smarty replace Funktion
+- Fix #1629 HTML aus Class messageStack entfernen und ins Template verlagern
+- Fix #1631 Suche "value" durch "placeholder" ersetzen
+- Fix #1633 Fehler in "Erweiterte Suche“
+- Fix #1635 Suchen mit Autocomplete nach Suchbegriff mit zwei Zeichen
+- Fix #1636 Auswahl List- und Box-Ansicht unabhängig von PRODUCT_LIST_FILTER
+- Fix #1637 SPAM über die Kontoerstellung verhindern
+- Fix #1638 PayPal Express - Rückleitung bei alten Warenkorbbeständen ohne Meldung
+- Fix #1640 Umbenennung von Piwik nach Matomo
+- Fix #1641 Feld Firma wird nicht an Paypal übermittelt
+- Fix #1643 Sprachwahl bei eingeschaltetem Cache fehlerhaft
+- Fix #1644 Unbeabsichtigtes Skalieren von Artikel-Info-Bildern im responsiven Template
+- Fix #1646 CKEditor aktualisieren
+- Fix #1647 Mindermengenzuschlag ist nicht Währungsfähig
+- Fix #1648 Zeichen am Satzende der AGB einfügen
+- Fix #1649 Text hinter Checkboxen mittig zentrieren zur Checkbox
+- Fix #1650 Irreführende Fehlermeldung in der password_double_opt.php
+- Fix #1651 Zu kurzer Suchbegriff und "mindestens 1 von 3 Suchkriterien" haben gleiche Fehlermeldung
+- Fix #1652 In JS Fehlerprüfung für Suchformular fehlt Prüfung auf zu kurzen Suchbegriff
+- Fix #1653 advanced_serach.php - PHP Fehlerprüfung gibt Texte mit Schrägstrichen aus
+- Fix #1654 advanced_serach.php - Benutzereingaben gehen bei Fehler verloren
+- Fix #1655 advanced_search_result.php - isset() && !empty()
+- Fix #1656 advanced_search_result.php - Prüfung ob pfrom oder pto eine Zahl ist funktioniert nicht
+- Fix #1658 Bestellung im Admin editieren, gibt falschen Preis aus
+- Fix #1659 Checkboxen für Datenschutz optional machen
+- Fix #1662 Fix Typo in lang_german.conf und german.php
+- Fix #1664 Paypal Fehler bei Aufruf account_checkout_express.php mit leerem Warenkorb
+- Fix #1667 Admin Suche erweitern um Emailadresse in Bestellung
+- Fix #1668 Artikeleigenschaften in die Admin Bar aufnehmen
+- Fix #1669 .htaccess whitelist Einträge "non case sensitive" machen
+- Fix #1670 Checkout derzeit nicht möglich, wenn Guthaben nicht ausreicht den Kauf abzuschließen
+- Fix #1672 Gutschein versenden blendet keine Kunden ein im Demoshop 2.0.5.0
+- Fix #1674 metatags.php - Inkompatibel zu DBCache
+- Fix #1676 Adminartikelsuche der Bestellbearbeitung verbessern und an Frontendsuche angleichen
+- Fix #1677 product_reviews_info.php - Fehler in Prüfung auf Pflicht GET Parameter
+- Fix #1678 header.php in reviews.php am Ende einbinden
+- Fix #1679 Listen Filter SQL Performance
+- Fix #1680 Newsletter Empfänger - Erinnerungsfunktion per Mail für abonnierte aber nicht bestätigte Anmeldungen hinzufügen
+- Fix #1682 Doppelte Bestellsummen in google analytics zwingend vermeiden
+- Fix #1683 Kommentare in SQL Queries entfernen
+- Fix #1688 Passwordfelder: maxlength=30
+- Fix #1689 Das aktuelle (current) Passwort zu prüfen bei einer Änderung ist unlogisch
+- Fix #1691 Bankdaten-Prüfmethode MarkB1 unvollständig
+- Fix #1692 Große Kategoriebilder sprengen Design im Adminbereich
+- Fix #1694 Title Attribut fehlt in Banner
+- Fix #1696 Externe Links im Banner mit target=_blank öffnen
+- Fix #1697 Passwort-Feld erweitern in Datenbankstruktur-Update wurde auskommentiert
+- Fix #1698 warning beim Kauf aus Kundenkonto, Attribute ohne IDs
+- Fix #1700 Feld Kategorieüberschrift für Artikel und Hersteller hinzufügen um h1 Überschrift anzupassen
+- Fix #1701 clear_dir hat Probleme bei zu vollen verzeichnissen
+- Fix #1702 Sortierung nach "TOP" im Backend fehlerhaft
+- Fix #1703 Modul Deutsche Post Internetmarke erstellt Labels für bestimmte Produkte nicht
+- Fix #1706 DB-Index in Tabelle carriers fehlt
+- Fix #1707 Problem in Internetmarke Modul bei "latin1" Shopinstallation
+- Fix #1708 Anpassung/Fix in der Klassenerweiterung der shoppingCart
+- Fix #1710 $quote['error'] in includes/shipping_action.php
+- Fix #1712 Stückpreise Netto falsch gerundet bei Nutzung von Verpackungseinheit
+- Fix #1715 kein Rabatt auf Attribute bei negativen Attributpreisen
+- Fix #1716 Zahlungsart erforderlich bei Null-Euro-Bestellung
+- Fix #1717 Php 7.4 Support
+- Fix #1718 Bestseller in bxSlider auf iPhone mit iOS 13.2.3 nicht klickbar
+- Fix #1719 Crosssellingbearbeitung auf paginierter Seite springt nach speichern auf erste Seite
+- Fix #1721 Qwant als Suchmaschine hinzufügen
+- Erweiterung des Content Managers um Datei-Content für Seiten und E-Mails
+- PayPal aktualisiert
+- IT-Recht Kanzlei Modul aktualisiert
+- responsive Template
+- Quelltext Komprimierung
+- GZip Output
+- neue Hookpoints
+- Suche Frontend/Backend vereinheitlicht
+- Service API (BLZ Update, News, Support, etc)
+- Caching optimiert
+- Integration Deutsche Post Internetmarke
+- PSR3 Logger
+- CKEditor aktualisiert auf 4.13.0
+- Responsive Filemanager für CKEditor
+- Vereinheitlichung Attribute / Artikeleigenschaften
+- Captcha Klasse für alternative Captchas
+- Suche erweitert in den Coupons, Limitierung auf Kundengruppen
+- PHPMailer auf 6.0.7 aktualisiert
+- Magnalister aktualisiert
+- Sicherheitsfixes
+- Performance Optimierungen
+- Installer komplett überarbeitet
+- Bugfixing
+
+Seit modified eCommerce Shopsoftware 2.0.4.2
+- Fix #1341 Template für Adressauswahl im Checkout
+- Fix #1346 html wird an Download-Datei angehängt
+- Fix #1462 Fehler in customers_status.sql (Kundengruppe "Admin" wird nicht in deutscher Sprache angelegt)
+- Fix #1468 eingeschalteter Cache führt zu Problemen bei Listingfiltern und Rezensionen
+- Fix #1497 Umlaute in Kundengruppen werden bei Installation in UTF-8 nicht korrekt angelegt
+
+Seit modified eCommerce Shopsoftware 2.0.4.1
+- Fix #1072 Updater um Datenbank-Backup Möglichkeit erweitern
+- Fix #1462 Fehler in customers_status.sql (Kundengruppe "Admin" wird nicht in deutscher Sprache angelegt)
+- Fix #1464 Weisse Seite bei aktiviertem Cache
+- Fix #1468 eingeschalteter Cache führt zu Problemem bei Listingfiltern und Rezensionen
+- Fix #1470 Neuer Installer scheint Probleme auf Strato Servern zu haben
+- Fix #1461 Passwort in Klartext im neuen Installer
+- Fix #1467 Installer überarbeiten
+
+Seit modified eCommerce Shopsoftware 2.0.4.0
+- Fix #197  VAT-ID-Prüfung Ländercode Griechenland falsch
+- Fix #234  Rabatte und Skonto in der Umsatzstatistik
+- Fix #509  Prüfung von griechischen UStID-Nummern nicht möglich
+- Fix #906  Umzug der Informationen für "Mein Schnellkauf" ins Systemmodul
+- Fix #913  Umsatzstatistik (stats_sales_report.php) rechnet falsch
+- Fix #980  Verkaufs Report / Umsatzstatistik ignoriert Rabatte und Zahlungsaufschläge
+- Fix #1035 .htaccess - Komprimierung von EOT & TTF
+- Fix #1072 Updater um Datenbank-Backup Möglichkeit erweitern
+- Fix #1151 Änderungen an PayPal Ratenzahlung (paypalinstallment) erforderlich
+- Fix #1198 Fehler in checkout_success bei klick Druckansicht Bestellung drucken
+- Fix #1199 Fehler Paypalcart bzw in ot_shipping.php
+- Fix #1219 Datenschutzerklärung muss ab dem 25. Mai 2018 in die Bestell-Mails (DSGVO)
+- Fix #1239 Doppelte Sessions durch Session in externen Links verhindern
+- Fix #1260 Problem beim hinzufügen von Artikeln zum Warenkorb nach Update wegen Erweiterung der shopping_cart Klasse
+- Fix #1261 Datenbank Restore funktioniert nicht mehr
+- Fix #1264 v2.0.3.0: Typo in Textkonstante, Id in Dateiheader nicht aktualisiert
+- Fix #1268 Sofort wird nun Klarna
+- Fix #1270 Datenbankname im Installer-Script nicht escaped
+- Fix #1281 Fehler in admin/includes/head.php
+- Fix #1287 mysql_* Funtionen ersetzen
+- Fix #1290 Cache abfrage für box_orders_history geht auf box_newsletter
+- Fix #1293 Problem mit SMTP Versand
+- Fix #1297 Gültige griechische USt- / VAT Nummer wird im Shop abgewiesen
+- Fix #1299 DB Manager - Collation bei Export entfernen
+- Fix #1300 SEO-Modul kann kein Russisch
+- Fix #1306 orders_info_blocks.php : Optimieren zweier Schleifen
+- Fix #1307 Backend: Rechtschreibung, Grammatik, Umformulierung
+- Fix #1309 ot_loworder_fee und ot_z_paylater_fee
+- Fix #1310 PayPal-Plus-Modul ungeschlossenes {literal}-Tag
+- Fix #1312 Paypal Warenkorb: Kommentar zur Bestellung wird nicht gespeichert
+- Fix #1314 Fehler bei META_GOOGLE_VERIFICATION_KEY_DESC
+- Fix #1316 Datenbankfehler in Freeamaount
+- Fix #1321 Beim Registrieren fehl bei der Passwortangabe ein "mindestens"
+- Fix #1323 Mobil wird die Kundenemailadresse durch die Shopemailadresse ersetzt beim bearbeiten der Kundendaten
+- Fix #1325 Smarty: Google Analytics Funktion: Nicht definierte Variabe $account_domain bei Google Universal Analytics
+- Fix #1327 Passwortlänge beschränkt auf 30 Zeichen
+- Fix #1332 PayPal Modulbeschreibungen aktualisieren
+- Fix #1333 shipcloud - Erheblich erhöte API Zugriffe seit Update auf Shopversion 2.0.3.0
+- Fix #1334 Backend: Kein Status bei Bestellungen bei Kundensuche
+- Fix #1336 PayPal - Spalte "transaction_id" fehlt bei Update von älteren Shopversionen?
+- Fix #1339 Problem mit fehlenden ENGINE=MyISAM
+- Fix #1340 modified-shop-Link im Footer ist immer noch http
+- Fix #1360 Problem mit \callback\xtbooster\xtbcallback.php
+- Fix #1364 set_ids_by_url_parameters.php Probleme
+- Fix #1367 Problem mit glob in favicons.php
+- Fix #1369 PayPal - Fehler bei Benutzung der Ajax Nachlade-Funktion
+- Fix #1377 Verzeichnispfad-Fehler in account_history_info.php
+- Fix #1382 Datenbank-Backup im Installer
+- Fix #1384 Sicherheitslücke in Smarty relevant?
+- Fix #1386 Fehler bei nachträglicher Währungsumstellung von Bestellungen
+- Fix #1388 Pfad-Problem in /admin/print_order.php bei SSL?
+- Fix #1394 Update jquery.alerts
+- Fix #1398 XSS-Lücke in PHPMailer 5.2.23
+- Fix #1400 UPS Shipping Modul bei Spracheinstellung Englisch trotzdem Deutsch
+- Fix #1404 Bewertungssystem komplett deaktivieren, Link ausblenden
+- Fix #1412 Meta Description erhöhen von 156 auf 320 Zeichen
+- Fix #1414 Hinweis auf Zustellgebühr in Nachnahme Modul (cod) nicht vollständig deaktivierbar
+- Fix #1419 tpl_modified_responsive Template: Links in Bestseller-Box nicht anklickbar
+- Fix #1421 Fehler in cart_actions.php
+- Fix #1422 "A non-numeric value encountered in File" ab PHP 7.1
+- Fix #1426 Google Analytics-Konto speichert personenbez. Daten (PII)
+- Fix #1429 PHP Mindestvoraussetzung anheben auf 5.5
+- Fix #1430 Sprachkonstanten Versandmodul freeamount
+- Fix #1431 PHP 7.2.x - Smarty
+- Fix #1435 In /admin/includes/modules/customers_edit.php fehlendes </tr>
+- Fix #1439 Fehler in PAYONE Zahlungsmodulen für Händlerkunden ohne MwSt.
+- Fix #1440 Newsletteranmeldung um Datenschutz erweitern DSGVO
+- Fix #1442 PayPal - Umlaute der Adressen aus paypalcart werden als Entities in die DB geschrieben
+- Fix #1445 Fehler create_account_guest.html
+- Fix #1446 Funktion der print_order.php überarbeiten
+- Fix #1449 Fehler im ShopVote Modul
+- Fix #1452 Link für Download-Artikel in Textmail fehlt (downloads_content_txt)
+- Fix #1455 PayPal, xtc_draw_form, fehlerhaft verwendet
+- PHP Minimum Version angehoben auf 5.6
+- Smarty aktualisiert
+- PHPMailer aktualisiert
+- PayPal aktualisiert
+- Magnalister aktualisiert
+- Shopgate aktualisiert
+- ShopVote Modul aktualisiert
+- Sicherheitsfixes
+- Performance Optimierungen
+- Installer komplett überarbeitet
+- Datenbank Backup/Restore im Installer
+- Integration easyCredit
+- Gutschein / Coupon für Newsletter Registration
+- Bugfixing
+
+
+Seit modified eCommerce Shopsoftware 2.0.3.0
+- Fix #363  InnoDB als Default Engine
+- Fix #905  Diverse Erfolgsmeldungen im Template werden mit Klasse "errormessage" ausgegeben
+- Fix #1010 Alle von shipcloud bereitgestellten Carrier unterstützen
+- Fix #1011 Briefe, Bücher- und Warensendungen über shipcloud
+- Fix #1012 DHL Höherversicherung über shipcloud
+- Fix #1013 Beschreibung des Paketinhalts an shipcloud übergeben
+- Fix #1014 Beschreibung des Sendungsinhalts an shipcloud übergeben
+- Fix #1015 DHL Nachnahme über shipcloud
+- Fix #1016 Vorankündigung für Sendungen
+- Fix #1017 Gewichtsangabe bei Erstellung von Versandmarken über shipcloud
+- Fix #1019 Fehlerhafte Anrede bei Mail Templates
+- Fix #1029 Anzeige des noimage.gif wenn kein Kategoriebild angegeben wurde
+- Fix #1031 Übergabe von c/o-Zusatz (bei Erstellung von Versandmarken über shipcloud)
+- Fix #1109 Verbesserungsvorschlag: Fehlermeldungen Sicherheit vs Kundenfreundlichkeit
+- Fix #1125 Cache-Lebenszeit wird bei Bestellbestätigungen nicht berücksichtigt
+- Fix #1131 Zwei nachvollziehbare Fehler im PayPal Warenkorb Modul (paypalcart)
+- Fix #1146 Fehler wenn "Konfiguration" -> "Maximum Werte" -> "Neue Artikel Liste" auf "0" gesetzt wird
+- Fix #1149 Fehler bei paypalcart im Zusammenhang mit Kundengruppen-Rabatten
+- Fix #1152 Bundesland ist im Backend Pflicht, selbst wenn unter Land "Bundesländer anzeigen" deaktiviert wurde.
+- Fix #1157 Fehlende DB-Indizes
+- Fix #1170 Fatal error bei PayPal bei /admin/paypal_payment.php
+- Fix #1171 fehlender Parameter in categoriesModules->remove_product()
+- Fix #1172 Grundsätzlich nur PHP Zeitfunktionen verwenden
+- Fix #1173 Sortierreihenfolge nach IDs im Backend
+- Fix #1176 Fehler in create_account.php bzgl. Neukunden Gutschein?
+- Fix #1177 BUG in modified v2.0.2.2 --> create_account.php
+- Fix #1179 Problem mit Spalte fck_wrapper / filemanager
+- Fix #1184 for-Schleife optimieren in /includes/functions/sessions.php
+- Fix #1185 nl2br() fehlt bei comments in order_mail.html u. order_mail_step.html
+- Fix #1186 Installer Shopupdate: Fehler mit Passwortlänge
+- Fix #1187 Warnmeldung Cannot modify header information
+- Fix #1188 Fehlerhafte Umlaute in Text E-Mails
+- Fix #1189 Keine Ausgabe der Attribut-Artikelnummer in Bestell-Mails und Rechnung/Lieferschein
+- Fix #1190 fatal_error beim aufrufen von get_states.js.php in general_bottom.js.php
+- Fix #1191 Doppelte define() für Kontakt-Form Errors
+- Fix #1193 ENTRY_EMAIL_ADDRESS_ERROR_EXISTS create_account.php
+- Fix #1194 Überarbeitung der PDF-Links der IT-Recht Kanzlei Schnittstelle
+- Fix #1195 Zahlungsmodule Micropayment
+- Fix #1196 Billpay Fehler
+- Fix #1197 Login nicht möglich wegen offensichtlicher Captcha-Prüfung auf der Startseite
+- Fix #1198 Fehler in checkout_success bei klick Druckansicht Bestellung drucken
+- Fix #1199 Fehler Paypalcart bzw in ot_shipping.php
+- Fix #1200 Datei-Link bei Artikel-Content fehlerhaft?
+- Fix #1201 Fehler bei Cache löschen
+- Fix #1203 Kundenkonto-Erstellung möglich trotz Einstellung, dass nur Gastkonten erlaubt sind
+- Fix #1206 product_info.php - $product->buildDataArray auch als eigenständes Array
+- Fix #1207 Beim Security Fix zur IT-Rechtskanzlei fehlt die Revision
+- Fix #1209 Fehler bzgl. PayPal Changeset r10739 in älteren Shopversionen?
+- Fix #1211 Über die Schnellkauf Funktion können auch nicht mehr verfügbare Artikel bestellt werden
+- Fix #1212 Fehler: Erstmaliges anlegen eines Sonderangebots im Art. brutto/netto
+- Fix #1213 Anmeldung im Shop leert Warenkorb
+- Fix #1215 Erfolgsmeldung fehlt nach Erstellung einer Rezension
+- Fix #1216 PayPal Zahlungsanweisung ohne Fälligkeitsdatum, wenn per Abbuchung gezahlt wird
+- Fix #1224 define('DB_VERSION'...) in admin/inludes/application_top.php
+- Fix #1226 Im Artikeldatenblat steht "zzgl. Versandkosten", obwohl sonst überall im Shop "inkl. ..."
+- Fix #1229 PayPal Kommentar bei Rückzahlung auf 127 Zeichen begrenzen
+- Fix #1235 Unsauberkeit in includes/modules/product_listing.php
+- Fix #1236 Fehlerhafte Label-Erzeugung bei Erstellung einer Retour über Shipcloud
+- Fix #1238 Fallback für {$PAGINATION} bzw. {$NAVIGATION} erstellen
+- Fix #1241 Probleme bzgl. "Blacklist Logs"
+- Fix #1248 [shipcloud] Trennung von Carrier, Service und Pakettyp
+- Fix #1249 [shipcloud] "Advance Notice" wird immer verwendet
+- Fix #1250 [shipcloud] Paketbeschreibung statt Sendungsbeschreibung bei DHL Express
+- Fix #1252 PHP-Versionprüfung application_top.php
+- Fix #1257 Rechtschreibung in lang_german.conf
+- Update PayPal
+- Update shipcloud
+- Update Shopgate
+- Update magnalister
+- Update xs:booster for mysqli
+- Update Moneybookers / Skrill API URL
+- Neue Hookpoints verfügbar gemacht
+- Kompatibilität mit InnoDB hergestellt
+- Cross Selling im Adminbereich überarbeitet
+- Fehler in Coupon-Einlösung korrigiert
+- Update BillPay
+- Verkaufs Report optimiert
+- ShopVote integriert
+
+
+Seit modified eCommerce Shopsoftware 2.0.2.2
+- Update PHP Mailer auf Version 5.2.23
+- Update PayPal SDK auf Version 1.11.0
+- PayPal Zahlungsmodule aktualisiert
+- Fix #1144 PHP 7 Fix für session gc, session write close
+- Fix #1115 KCFinder
+- Fix #1155 products_new.php zeigte Artikel in anderen Sprache ohne Artikelnamen, wenn keiner angegeben war
+- Fix #1158 Anrede in Kontoeröffnungs-Email korrigiert
+- Fix #1159 CSS-Klassenangabe in Tabellenzeile für Download-Attribut korrigiert
+- Fix #1165 Lieferstatus Übersetzung korrigiert
+- Fix #1020 CSS- & JS-Komprimierung in Templates überarbeitet
+- Fix #1162 Unter bestimmten Umständen konnte es vorkommen, dass Kunden per PayPal versandkostenfrei einkaufen konnten
+- Update Bankleitzahlen
+- Update Shopgate Module auf Version 2.9.35
+- Update easybill Modul
+- Update billpay Zahlungsmodul
+- Update Klarna Zahlungsmodul
+- Update Trusted Shops Modul
+- Added missing language definition ab_update in templates
+- Diverse Code-Optimierungen und Fehlerkorrekturen
+
+
+Seit modified eCommerce Shopsoftware 2.0.2.1
+- Installer/Updater überarbeitet mit neuer Admin-Athentifizierung
+- Updater überarbeitet mit neuer Funktion um die Konfigurationsdatei (configure.php) aktualisieren zu können
+- Fix #1120 (Installer: Shop DB Update funktioniert nicht)
+- Fix #1090 (Überarbeitung von janolaw)
+- Fix #1021 (Falsche Rundung beim Grundpreis)
+- Fix #1022 (Doppelte Fehlermeldungen bei nicht anhaken der Checkboxen auf checkout_confirmation.php bei paypalcart)
+- Update banktransfer_validation.php (Danke an Christian Rothe)
+- Diverse Code-Optimierungen und Fehlerkorrekturen
+
+
+Seit modified eCommerce Shopsoftware 2.0.2.0
+- PHP 7 Unterstützung
+- PayPal Zahlungsmodule aktualisiert
+- Shopgate aktualisiert
+- Bestellbearbeitung neu berechnen
+- Update Google Analytics
+- PAYONE erweitert für Paydirekt
+- NuSOAP aktualisiert
+- PHPMailer aktualisiert
+- Installer jetzt bei bereits installierten Shops nur noch aufrufbar durch Eingabe der Admin-Account-Daten
+- checkout_confirmation Seite erweitert um optionale Angabe des Firmensitzes (Vorgabe seitens VISA)
+- E-Mail Archiv Funktion (Weiterleitung aller ausgehender E-Mails an gewünschtes E-Mail Postfach)
+- Datenbank vorbereitet für "Foreign Keys"
+- Kundengruppen-Berechtigungen erweitert für das setzen der Artikel Content Berechtigungen
+- error_reporting unterteilt (error, notice, warning, etc.)
+- Fehler bei Upload von Bildern mit vorhandenem Namen korrigiert
+- configuration Tabelle erweitert um unique key
+- href_lang optimiert
+- Umleitung alter URLs korrigiert
+- Fehler in Sonderangeboten korrigiert
+- janolaw Modul aktualisiert
+- Zahlungsmodule aktualisiert
+- Attribute Auswahl bei Link aus Warenkorb
+- Fehler in Versandmodulen (dhl, dp) behoben
+- Nachnahme-Gebühr (ot_cod) bei Versandkostenfrei (ot_shipping) nun möglich
+- automatische Währungsumstellung korrigiert
+- whos_online deaktivieren möglich
+- Moneybookers umbenannt in Skrill
+- Anrede in Template E-Mail-Vorlagen vereinheitlicht
+- Vorbereitungen für Priceupdater im Template gemacht
+- "Blacklist Logs" und "Wer ist Online" erweitert um Möglichkeit IP-Adressen zu sperren
+- Diverse Code-Optimierungen und Fehlerkorrekturen
+
+
+Seit modified eCommerce Shopsoftware 2.0.1.0
+- Bugfixing
+- Update Magnalister
+- Update PayPal PLUS Zahlungsmodule
+- Payone Zahlungsmodule erweitert
+- Zahlungsmodul "Rechnung (invoice)" erweitert für Angabe eines Höchstbetrags
+- Autoinclude Modulsystem erweitert
+- Tokensystem für das Frontend
+- Neuer Updater im Installer
+- Diverse kleinere Codemodifikationen
+
+
+Seit modified eCommerce Shopsoftware 2.0.0.0
+- Merkzettel
+- Schnellkauf
+- Optimierte SQL Abfragen
+- Klassenerweiterungsmodule
+- Update/Integration diverser Partner (Shipcloud, Supermailer, Cleverreach, Protectedshops, ...)
+- Imageprocessing weiter optimiert
+- Passwörter werden gesalzen
+- Captcha erneuert und mit zusätzlichen Funktionen wie z.B. nur für nicht angemeldete Kunden, Captcha bei Bewertungen
+- Neues Template "tpl_modified"
+- Template optimiert mit includes für Listing und Boxansicht
+- Smarty 3
+- PHP 5.6
+- Neues Design im Admin
+- Installer mit MySQLi und UTF8
+- Neues Error-Handling
+- Download-System erweitert für Gäste und erneutes freischalten der Downloads bei der Bestellung
+- Autoinclude Modulsystem
+- Guthaben von Kunden anzeigen
+- Artikeleigenschaften
+- Filter (Attribute, Anzeige pro Seite, Sortierung)
+- Autocomplete für die Suche
+- Google Analytics Universal
+- Google Zertifizierter Händler
+- Attribute EAN
+- E-Mail Optionen mehrsprachig
+- CSRF Token im Admin
+- Sonderangebote nur für bestimmte Kundengruppen
+- Staffelpreise überarbeitet
+- Kategoriesprung-Fix korrigiert
+- Redirect und Header 410 bei nicht existierenden Kategorien, Hersteller, Content, Artikel
+- Neue Sitemap inkl. Bilder
+- Automatische Kundennummer
+- Automatische Rechnungsnummer
+- Easybill CSV Export
+- Zahlarten abhängig von der Versandart
+- Administrator Log
+- Steuergesetz für elektronisch erbrachte Leistung
+- Trustedshops vorzertifiziert
+- Bestellungen erneut kaufen
+- Track & Trace
+- Banner Manager als Slider möglich
+- Bundesländer Dropdown per Ajax
+- Kundengruppe für Administrator im Frontend komplett umgesetzt
+- HTML5
+- Viele Einstellungen von Dateien im Admin verfügbar gemacht
+- Rechtskonforme Rechnung
+- Sonderangebote und Lagercheck
+- Neues Caching-System für SQL und Template
+- HTML und CSS Komprimierung im Frontend
+- Neuer WYSIWYG Editor und Filemanager
+- Kleinunternehmer im Admin einstellbar
+- IP Adresse anonymisierbar
+- Rich Snippets
+- Lieferstatus und Bestellstatus sortierbar
+- Umsatzstatistik überarbeitet
+- Lagerbericht aktiviert, optimiert und erweitert
+- Zusätzliche Sprache nachpflegbar (Inhalte werden nur angezeigt, wenn auch die Sprache dafür gepflegt ist)
+- Sprach-Transfer
+- Steuerzonen beim Installieren für die Schweiz wählbar
+- Währung Umrechnungskurs aktualisiert
+- Viele Versandarten auf Zonen umgebaut
+- Backupsystem für Module
+- Attribute editieren im iFrame
+- Hersteller erweitert um Beschreibung und Meta-Angaben
+- Zugriff auf Adressbuch der Kunden
+- Anzeige pro Seite im Admin auf allen relevanten Seiten einzeln definierbar
+- Umsatzstatistik auf Startseite erweitert
+- HTML Code aus PHP Dateien entfernt und ins Template verlagert
+- Lazyload für Bilder im Frontend
+- Umstellung auf Colorbox
+- Content verschachteln möglich (1 Ebene)
+- Anzeige von Coupons bereits im Warenkorb
+- Zugriff auf mein Konto für Gäste einstellbar
+- Adminverzeichnis per Installer umbenennbar
+- Passwort Policy (Anzahl Sonderzeichen, Zahlen, etc.)
+- XSS-Schutz für Frontend
+- Neuer Updater im Installer
+- Diverse kleinere Codemodifikationen
+
+
+Seit modified eCommerce Shopsoftware 1.06 rev 4642 SP4
+- Fix Ticket #751
+- Fix Ticket #731
+- Fix Ticket #782
+- Fix Ticket #795
+- Fix Ticket #739
+- Fix Ticket #810
+- Fix Ticket #813
+- Korrektur, dass Gäste keinen Link zur Bestellung mehr erhalten beim ändern des Bestellstatus
+- Korrektur, dass keine bei Download-Artikeln keine Versandadresse nötig ist
+- Korrektur der Währungs-Aktualisierung
+- janolaw Modul auf Version 3 aktualisiert
+- Klarna Zahlungsmodul aktualisiert
+- shipcloud Modul aktualisiert
+- PayOne Zahlungsmodul aktualisiert
+- PayPal PLUS Zahlungsmodul integriert (Server muss TLS v1.2 unterstützen und für Webhooks wird ein SSL-Zertifikat benötigt!)
+- Shopgate Modul aktualisiert
+- Diverse kleinere Codemodifikationen
+
+
+Seit modified eCommerce Shopsoftware 1.06 rev 4642 SP3
+- security_fix_2014_12_17.zip
+- Diverse Fehlerkorrekturen
+- Installer für Strato
+- Fix vat_validation
+- Neue robots.txt wegen Disallow: /templates/
+- Fix Warenkorb Länderdropdown für Download-Artikel
+- Fix für PHP 5.6
+- Update IT-Recht Kanzlei Modul
+- Payone Update
+- Shopgate Update
+- Fixed canonical for products in inactive categories
+- PayPal IPN Fix
+- Fix für neue gTLDs / E-Mail validation
+- Klarna Update
+- Fix SSL session handling
+- Fix PayPal Express if not installed
+- Fix Ticket #586
+- Sofortüberweisung Update
+- Add orders_status_id to order class
+- Fix tmp order status
+- BillSAFE Modul Update 2.6 to 2.8
+- Piwik Link korrigiert
+- Sprachdefinitionen für „orders_edit.php“ überarbeitet
+- Fixed link styles in stylesheet.css (props voodoopupp/Matt)
+- Fixed redeemed amount message upon gift voucher redemption
+- Fixed colspan in „/admin/includes/modules/products_attributes_values.php“
+- Fix ot_shipping tax class (MODULE_ORDER_TOTAL_SHIPPING_TAX_CLASS)
+- Fix contact form
+- canonical auf Hauptkategorie OHNE Seiten-Nummern
+- Redirect contact form to SSL if available
+- Fix Ticket #639 (Versandmodule geben keine Fehlermeldung aus)
+- Don't reset $this->contents[$products_id] by update_quantity
+- Fehler: Versandkosten im Warenkorb brutto statt netto
+- shipcloud Integration
+
+
+Seit modified eCommerce Shopsoftware 1.06 rev 4642 SP2
+- Integration des PAYONE Zahlungsmoduls
+- Integration der IT-Recht Kanzlei Schnittstelle
+- Integration der safeterms.de Schnittstelle
+- Integration EASYMARKETING
+- SEPA-Lastschrift Zahlungsmodul aktualisiert
+- Händlerbund Schnittstelle aktualisiert
+- idealo Export-Module aktualisiert
+- Fehlerkorrektur des Banner Managers
+- Diverse kleinere Codemodifikationen
+
+
+Seit modified eCommerce Shopsoftware 1.06 rev 4642 SP1
+- Umsetzung der EU-Verbraucherrichtlinie, siehe dazu: https://www.modified-shop.org/forum/index.php?topic=30342.0
+- SEPA-Lastschrift-Paket, siehe dazu: https://www.modified-shop.org/forum/index.php?topic=30340.0
+
+
+Seit modified eCommerce Shopsoftware 1.06 rev 4642
+- Das Widerrufsrecht für die Bestell-Mails wird nun aus dem Content Manager geholt
+- Klarna Zahlungsmodul integriert
+- Masterpayment Zahlungsmodul integriert
+- micropayment Zahlungsmodul integriert
+- BillSAFE Modul integriert
+- Shopgate Modul korrigiert und aktualisiert
+- xs:booster Modul korrigiert
+- Installer überarbeitet
+- PHP 5.4 Kompatibilität weiter verbessert
+- Umsatzsteuer ID Prüfung korrigiert
+- Diverse Code-Optimierungen und Fehlerkorrekturen
+
+
+Seit modified eCommerce Shopsoftware 1.06 rev 4356
+- Fehler in update.php korrigiert
+- Fehler in /lang/english/lang_english.conf korrigiert und Datei überarbeitet
+- Masterpayment Sprachdateien überarbeitet
+- Fehler in /includes/modules/order_total/ot_shipping.php korrigiert
+- /admin/includes/configuration_installer.php aktualisiert und um Update Funktion erweitert
+- /admin/customers.php erweitert um Status-Abfrage für Tabelle newsletters_recipients
+- PROJECT_VERSION kommt nun aus der /admin/includes/version.php
+- Fehler behoben, dass bei Produktbewertungen kein Zeilenumbruch gesetzt werden konnte
+- Funktion xtc_parse_input_field_data word in /admin/includes/functions/general.php nun über die berets vorhandene Funktion /inc/xtc_parse_input_field_data.inc.php eingebunden
+- IPv6 Support aus der update SQL Datei in die install SQL Datei übernommen
+- Fehlerhaften Pfad in der /admin/includes/configure.php korrigiert
+- Fehlende Anführungsstriche in /includes/modules/categories_view.php und orders_edit_products.php korrigiert
+- Preise in orders_edit_products.php werden nun über die $currencies Funktion angezeigt anstatt über $xtPrice
+- Fehlende janolaw Smarties in deutschen Bestell Mails hinzugefügt
+
+
+Seit modified eCommerce Shopsoftware 1.06 rev 4332
+- Fehler im Kontaktformular behoben (Texte wurden nicht angezeigt)
+- Metatags werden nun wieder korrekt erstellt
+- /templates/xtc5/module/login.html um fehlende Texte erweitert
+- /admin/popup_help.php korrigiert
+- /admin/customers_status.php um doppelte Eintrag bereinigt
+- Sprachdateien lang_english.conf & lang_german.conf überarbeitet
+- update.php und update_1.0.5.0_to_1.0.6.0.sql aktualisiert
+
+
+Seit modified eCommerce Shopsoftware 1.06 rev 4320
+- PHP 5.4 Kompatibilität
+- ADMIN: Neuer Bereich "Popup Fenster Optionen " im Adminbereich - Einstellungen für die Shop Popupfenster Versandkosten, etc.
+- ADMIN: Sessions - Einstellungen für Session Lebenszeit unabhängig von Frontend Sessions
+- ADMIN: Neue Emailoptionen - Einstellungen für Artikel-Bilder in Emails (Templateanpassung nötig)
+- ADMIN: Neue Emailoptionen - Anhänge in E-Mails möglich
+- ADMIN: SMTP Port bei E-Mail Versandoptionen kann jetzt beliebig geändert werden (Option war vorhanden, funktionierte jedoch nicht korrekt)
+- ADMIN: Neuer Bereich "Adminbereich Optionen" im Adminbereich - Einstellungen für Brutto Admin, etc.
+- ADMIN: FCKeditor auf Version 2.6.8 aktualisiert
+- ADMIN: Artikelverwaltung überarbeitet
+- ADMIN: Artikelmerkmale Code in separate Dateien ausgelagert, Anzeige mit Länderfahnen ergänzt
+- ADMIN: Attributsystem überarbeitet
+- ADMIN: Attribute Editieren: EAN-Nr. hinzugefügt,  Vorzeichen Gewicht/Preis jetzt VOR den den Eingabefeldern
+- ADMIN: Attribute Editieren: Speichern verbessert, bei Aufruf aus Artikelübersicht kommt man wieder auf die Ausgangsseite
+- ADMIN: Alte Artikelbilder löschen (Hilfsprogramme)
+- ADMIN: Bankleitzahlen von der deutschen Bundesbank aktualisieren
+- ADMIN: Staffelpreiseingabe verbessert (Javasript)
+- ADMIN: admin/includes/classes/order.php deaktiviert, es wird die Frontenddatei benutzt
+- ADMIN: admin/includes/classes/language.php deaktiviert, es wird die Frontenddatei benutzt
+         Dafür gibt es in admin/includes/application_top die neue Konstante RUN_MODE_ADMIN         
+- ADMIN: admin/includes/classes/categories.php komplett überarbeitet, für neue Datenbankfelder müssen nur Ergänzungen in den Defines im Dateikopf gemacht werden, der eigentliche Dateicode muss ansonsten nicht mehr bearbeitet werden
+- ADMIN: Sicherheitsfix für den filemanager
+- ADMIN: Sicherheitsfix für den Admin (Inputfilter)
+- ADMIN: Neues Newsletter Modul
+- ADMIN: Bestellbearbeitung weiter optimiert
+- ADMIN: Exportmodule aktualisiert
+- ADMIN: janolaw AGB-Hosting-Service Modul Integration
+- ADMIN: Händlerbund AGB Service Integration
+- ADMIN: Piwik und Google Analytics können nun im Adminbereich einfach (de)aktiviert werden (Templateanpassung nötig)
+- ADMIN: Kunden-Adressbuch kann jetzt im Adminbereich editiert werden
+- ADMIN: Wichtige Neuerung: Option ausverkaufte Artikel werden beim Checkout automatisch deaktiviert (standardmäßig "true")
+- ADMIN: Neues Eingabefeld für Bestellbeschreibung
+- TEMPLATE: Checkout in Standardtemplate nach Muster von Trusted Shops überarbeitet
+  WICHTIG: Wer bereits die Umsetzung der Buttonlösung aus dem Forum integriert hatte, der muss unter "Mein Shop" -> "Bestellbestätigungsseite: Kurzbeschreibung" auf "true" stellen, damit weiterhin die Kurzbeschreibung angezeigt wird und nicht die neu hinzu gekommene "Bestellbeschreibung"
+- TEMPLATE: Standard-Template erweitert für Smarty-Plugins
+- TEMPLATE: Smarty aktualisiert auf Version 2.6.27
+- Rabatt/Zuschlag auf Zahlungarten (ot_payment) Modul hinzugefügt
+- Paypal Express wieder integriert (Templateanpassung nötig)
+- Neues Checkoutdesign /checkout_confirmation)
+- Templates können jetzt Dateien enthalten, welche bei der Template Installation/Deinstallation ausgeführt werden. Dies ist für templateabhängige Sprachvariablen, Änderungen an der Datenbank oder anderen System-Erweiterungen hilfreich.
+- Weiter einkaufen im Warenkorb geändert
+- Coupon-Modul überarbeitet
+- Shopgate Integration (Templateanpassung nötig)
+- SEO-Optimierung im Shop (auch Suchergebnis-Seiten)
+- Quellcode Überarbeitungen und Optimierungen (Notices entfernt)
+- EasyBill Integration
+- Sofort Gateway Integration
+- Masterpayment Integration (Templateanpassung nötig)
+
+
+Seit modified eCommerce Shopsoftware 1.05
+- Shop offline/online schalten
+- Überarbeitetes Template mit jQuery TABs und Accordion
+- Korrektur der Staffelpreise
+- Weiter einkaufen im Warenkorb hinzugefügt
+
+
+Seit modified eCommerce Shopsoftware 1.04:
+- PHPMailer auf Version 2.0.4 aktualisiert
+- FLV Media Player integriert
+- Bewertungssterne im Template
+- Funktion zum Löschen des Caches (templates_c) aus dem Admin-Backend heraus
+- FCKeditor auf version 2.6.6 aktualisiert
+- JS am Ende und CSS am Anfang
+- Providerunabhängige SSL-Proxy-Abfrage
+- jQuery von v1.3.2 auf v1.4 aktualisiert
+- Funktionierende orders_edit.php
+- Admin Search Bar
+- Produktnavigator
+- Installer mit Strato-Fix
+- PayPal-IPN und normales PayPal-Modul
+- Kundenliste um E-Mail Anzeige erweitern
+- E-Mail-Suche in Admin Search Bar
+- MODUL: Datenbank Backup Manager 1.91b
+- MODUL: Widerruf in Bestell-Email
+- Fix für Lieferzeit bei “Neue Artikel” fehlt
+- Weitestgehend PHP 5.3 kompatibel (keine Warnungen mehr)
+
+
+Seit modified eCommerce Shopsoftware 1.03
+- Komplett überarbeiteter Admin-Bereich mit Top-Menu-Navigation und Fallback auf Standard-Menu bei ausgeschaltetem JavaScript
+- E-Mail Bestätigungsfeld
+- Bugfix mit der mehrsprachigen metatags.php und eingeschaltetem DB-Cache
+- Neues Sofortüberweisung Modul
+- Neues Moneybookers-Modul
+- Neues PayPal Express Modul
+- xs:booster integriert
+- verschiedene Export-Module aktualisiert (googlebase, guenstiger.de, preissuchmaschine.de, etc…)
+- noimage.gif Erweiterung
+- überarbeitete checkout_confirmation.php von web28
+- Doppelten Content vermeiden Erweiterung
+- Update fckeditor to 2.6.5
+- Kundengruppenberechtigungen global setzen
+- Neues Admin-Menu-JS von web28
+- Überarbeitete Kategorie/Artikelanlage im Admin inkl. “Sprach-Tabs” von web28
+- Neues Button-Set “Imagine”
+- Erweitertes Kontaktformular
+- Sonderangebote direkt bei Artikelanlage anlegen/ändern
+- Javascript Kalender vereinheitlicht
+- Server-Info in IFrame
+- Artikelmerkmale sortieren
+- Sprachen deaktivierbar machen
+- Default country in /includes/modules/address_book_details.php ist DE
+- SUMA-Links in Hersteller Dropdown Box
+- Zahlungsmodul banktransfer.php überarbeitet
+- Versionsanzeige durch Ausgabe von PROJECT_VERSION vereinheitlicht
+- Template Layout korrigiert wenn kein Produkt-Bild zugeordnet wurde
+- Sprach-IDs wieder getauscht -> english=1 / deutsch=2
+- ArtikelNr in Artikelübersicht des admin Bereichs
+- Überarbeitung Englisch
+
+
+Und viele, viele Bugfixes und Designänderungen seit 1.02...
