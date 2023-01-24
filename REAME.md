@@ -9,3 +9,18 @@ You can easily run this project with ddev:
 ```bash
 ddev launch
 ```
+
+### DB configuration
+
+You can run
+
+```bash
+ddev status
+```
+
+to see all database configuration data or try:
+
+Host: `ddev-modified-template-system-db`
+Name: `db`
+User: `db`
+Password: `db`
