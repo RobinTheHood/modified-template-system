@@ -320,6 +320,6 @@ if ($_SESSION['customer_id'] == $order_check['customers_id'] || $send_by_admin) 
 
 } else {
     $smarty->assign('ERROR', 'You are not allowed to view this order!');
-    $smarty->display(CURRENT_TEMPLATE.'/module/error_message.html');
+    $modCoreTemplate->display($smarty, 'module/error_message.html');
 }
 ?>

@@ -80,5 +80,5 @@ if (DIR_WS_BASE == '') {
 $popup_smarty->assign('content_heading', $content_heading);
 $popup_smarty->assign('content_text', $content_text);
 
-$popup_smarty->display(CURRENT_TEMPLATE.'/module/popup_content.html');
+$modCoreTemplate->display($popup_smarty, 'module/popup_content.html');
 ?>

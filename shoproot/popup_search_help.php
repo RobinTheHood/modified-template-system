@@ -29,5 +29,5 @@ if (DIR_WS_BASE == '') {
 $popup_smarty->assign('link_close', 'javascript:window.close()');
 $popup_smarty->assign('language', $_SESSION['language']);
 
-$popup_smarty->display(CURRENT_TEMPLATE.'/module/popup_search_help.html');
+$modCoreTemplate->display($popup_smarty, 'module/popup_search_help.html');
 ?>

@@ -59,7 +59,7 @@ if (!is_object($product) || $product->isProduct() === false || $language_not_fou
   $smarty->caching = 0;
   if (!defined('RM'))
     $smarty->load_filter('output', 'note');
-  $smarty->display(CURRENT_TEMPLATE.'/index.html');
+  $modCoreTemplate->display($smarty, 'index.html');
 
   include ('includes/application_bottom.php');
 } else {
@@ -178,5 +178,5 @@ if (!is_object($product) || $product->isProduct() === false || $language_not_fou
   $info_smarty->assign('CanonicalLink', $canonical_link);
  
   $info_smarty->caching = 0;
-  $info_smarty->display(CURRENT_TEMPLATE.'/module/print_product_info.html');
+  $modCoreTemplate->display($info_smarty, 'module/print_product_info.html');
 }

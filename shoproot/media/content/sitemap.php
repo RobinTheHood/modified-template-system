@@ -95,4 +95,4 @@ if (!$module_smarty->is_cached(CURRENT_TEMPLATE.'/module/sitemap.html', $cache_i
   }
 }
 
-$module_smarty->display(CURRENT_TEMPLATE.'/module/sitemap.html', $cache_id);
+$modCoreTemplate->display($module_smarty, 'module/sitemap.html', $cache_id);

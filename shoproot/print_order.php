@@ -70,7 +70,7 @@ if ((isset($_SESSION['customer_id']) && $_SESSION['customer_id'] == $order_check
 
   // dont allow cache
   $smarty->caching =0;
-  $smarty->display(CURRENT_TEMPLATE.'/module/print_order.html');
+  $modCoreTemplate->display($smarty, 'module/print_order.html');
 } else {
   die('You are not allowed to view this order!');
 }

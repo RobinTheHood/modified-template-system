@@ -151,7 +151,7 @@ foreach(auto_include(DIR_FS_CATALOG.'includes/extra/header/header_head/','php') 
 if ($shop_is_offline) {
   $smarty->assign('language', $_SESSION['language']);
   $smarty->assign('shop_offline_msg', xtc_get_shop_conf('SHOP_OFFLINE_MSG'));	
-  $smarty->display(CURRENT_TEMPLATE.'/offline.html');	
+  $modCoreTemplate->display($smarty, 'offline.html');	
   include ('includes/application_bottom.php');
   exit();
 }

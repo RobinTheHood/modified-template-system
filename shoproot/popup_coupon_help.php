@@ -123,5 +123,5 @@ if (DIR_WS_BASE == '') {
   $popup_smarty->assign('base', (($request_type == 'SSL') ? HTTPS_SERVER : HTTP_SERVER) . DIR_WS_CATALOG);
 }
 $popup_smarty->caching = 0;
-$popup_smarty->display(CURRENT_TEMPLATE.'/module/popup_coupon_help.html');
+$modCoreTemplate->display($popup_smarty, 'module/popup_coupon_help.html');
 ?>

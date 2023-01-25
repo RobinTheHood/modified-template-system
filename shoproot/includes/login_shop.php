@@ -54,7 +54,7 @@ if (is_file(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/offline/login_
   $smarty->assign('language', $_SESSION['language']);
   $smarty->caching = 0;
 
-  $smarty->display(CURRENT_TEMPLATE.'/module/offline/login_shop.html');
+  $modCoreTemplate->display($smarty, 'module/offline/login_shop.html');
   exit();
 }
 

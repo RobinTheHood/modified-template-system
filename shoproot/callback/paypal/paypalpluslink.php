@@ -122,7 +122,7 @@ if (isset($_GET['oID'])
       $smarty->caching = 0;
       if (!defined('RM'))
         //$smarty->load_filter('output', 'note');
-      $smarty->display(CURRENT_TEMPLATE.'/index.html');
+      $modCoreTemplate->display($smarty, 'index.html');
     }
   } else {
     die('Direct Access to this location is not allowed.');

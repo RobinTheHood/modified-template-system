@@ -75,6 +75,6 @@ $smarty->assign('language', $_SESSION['language']);
 if (!defined('RM')) {
   $smarty->load_filter('output', 'note');
 }
-$smarty->display(CURRENT_TEMPLATE.'/index.html');
+$modCoreTemplate->display($smarty, 'index.html');
 include ('includes/application_bottom.php');
 ?>

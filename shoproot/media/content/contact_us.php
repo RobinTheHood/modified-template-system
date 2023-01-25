@@ -238,7 +238,7 @@
 
   $smarty->assign('language', $_SESSION['language']);
   $smarty->caching = 0;
-  $smarty->display(CURRENT_TEMPLATE.'/module/contact_us.html');
+  $modCoreTemplate->display($smarty, 'module/contact_us.html');
   
   // clear variables
   $smarty->clear_assign('BUTTON_CONTINUE');

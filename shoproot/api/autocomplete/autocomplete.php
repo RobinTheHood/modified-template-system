@@ -88,7 +88,7 @@
         $module_smarty->assign('error', 'true');
       }
       $module_smarty->caching = 0;
-      $module_smarty->display(CURRENT_TEMPLATE.'/module/autocomplete.html');
+      $modCoreTemplate->display($module_smarty, 'module/autocomplete.html');
     }
   }
 ?>
