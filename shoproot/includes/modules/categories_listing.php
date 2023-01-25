@@ -112,7 +112,7 @@ if (!$categorie_smarty->is_cached(CURRENT_TEMPLATE.'/module/'.$categorie_templat
   }
 }
 
-$module = $categorie_smarty->fetch(CURRENT_TEMPLATE.'/module/'.$categorie_template, $cache_id);
+$module = $modCoreTemplate->fetch($categorie_smarty, 'module/'.$categorie_template, $cache_id);
 
 if (isset($module_smarty) && is_object($module_smarty)) {
   $module_smarty->assign('CATEGORIES_LISTING', !empty($module) ? trim($module) : $module);

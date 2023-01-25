@@ -21,9 +21,9 @@ if (!$box_smarty->is_cached(CURRENT_TEMPLATE.'/boxes/box_trustedshops.html', $ca
 }
 
 if (!$cache) {
-  $box_trustedshops = $box_smarty->fetch(CURRENT_TEMPLATE.'/boxes/box_trustedshops.html');
+  $box_trustedshops = $modCoreTemplate->fetch($box_smarty, 'boxes/box_trustedshops.html');
 } else {
-  $box_trustedshops = $box_smarty->fetch(CURRENT_TEMPLATE.'/boxes/box_trustedshops.html', $cache_id);
+  $box_trustedshops = $modCoreTemplate->fetch($box_smarty, 'boxes/box_trustedshops.html', $cache_id);
 }
 
 $smarty->assign('box_TRUSTEDSHOPS', $box_trustedshops);

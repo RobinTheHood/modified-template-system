@@ -92,8 +92,8 @@ if (isset($_GET['action'])
       $smarty->assign('language', $_SESSION['language']);
 
       // create mails
-      $html_mail = $smarty->fetch(CURRENT_TEMPLATE.'/mail/'.$_SESSION['language'].'/new_password_mail.html');
-      $txt_mail = $smarty->fetch(CURRENT_TEMPLATE.'/mail/'.$_SESSION['language'].'/new_password_mail.txt');
+      $html_mail = $modCoreTemplate->fetch($smarty, 'mail/'.$_SESSION['language'].'/new_password_mail.html');
+      $txt_mail = $modCoreTemplate->fetch($smarty, 'mail/'.$_SESSION['language'].'/new_password_mail.txt');
       
       xtc_db_query("UPDATE ".TABLE_CUSTOMERS." 
                        SET password_request_key = '".xtc_db_input($vlcode)."',
@@ -219,7 +219,7 @@ switch ($case) {
     // dont allow cache
     $smarty->caching = 0;
     $smarty->assign('language', $_SESSION['language']);
-    $main_content = $smarty->fetch(CURRENT_TEMPLATE.'/module/account_password.html');
+    $main_content = $modCoreTemplate->fetch($smarty, 'module/account_password.html');
     break;
     
   case 'code_error' :
@@ -248,7 +248,7 @@ switch ($case) {
     // dont allow cache
     $smarty->caching = 0;
     $smarty->assign('language', $_SESSION['language']);
-    $main_content = $smarty->fetch(CURRENT_TEMPLATE.'/module/password_double_opt_in.html');
+    $main_content = $modCoreTemplate->fetch($smarty, 'module/password_double_opt_in.html');
     break;
 }
 

@@ -235,7 +235,7 @@ require(DIR_WS_INCLUDES.'shipping_block.php');
 
 $smarty->assign('language', $_SESSION['language']);
 $smarty->assign('SHIPPING_BLOCK', $shipping_block);
-$main_content = $smarty->fetch(CURRENT_TEMPLATE.'/module/checkout_shipping.html');
+$main_content = $modCoreTemplate->fetch($smarty, 'module/checkout_shipping.html');
 $smarty->assign('main_content', $main_content);
 $smarty->caching = 0;
 if (!defined('RM'))	$smarty->load_filter('output', 'note');

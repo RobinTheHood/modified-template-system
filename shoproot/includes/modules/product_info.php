@@ -234,7 +234,7 @@ if (!is_object($product) || $product->isProduct() === false || $language_not_fou
   }
   
   $info_smarty->caching = 0;
-  $product_info = $info_smarty->fetch(CURRENT_TEMPLATE.'/module/product_info/'.$product->data['product_template']);
+  $product_info = $modCoreTemplate->fetch($info_smarty, 'module/product_info/'.$product->data['product_template']);
   
   $smarty->assign('main_content', $product_info);
 }

@@ -51,7 +51,7 @@ if (!$module_smarty->is_cached(CURRENT_TEMPLATE.'/module/cross_selling.html', $c
   }
 }
 
-$module = $module_smarty->fetch(CURRENT_TEMPLATE.'/module/cross_selling.html', $cache_id);
+$module = $modCoreTemplate->fetch($module_smarty, 'module/cross_selling.html', $cache_id);
 $info_smarty->assign('MODULE_cross_selling', !empty($module) ? trim($module) : $module);
 
 $module_smarty->clear_assign('module_content');
@@ -71,5 +71,5 @@ if (!$module_smarty->is_cached(CURRENT_TEMPLATE.'/module/reverse_cross_selling.h
   }
 }
 
-$module = $module_smarty->fetch(CURRENT_TEMPLATE.'/module/reverse_cross_selling.html', $cache_id);
+$module = $modCoreTemplate->fetch($module_smarty, 'module/reverse_cross_selling.html', $cache_id);
 $info_smarty->assign('MODULE_reverse_cross_selling', !empty($module) ? trim($module) : $module);

@@ -111,7 +111,7 @@ if (!is_object($product) || $product->isProduct() === false || $language_not_fou
                    SET reviews_read = reviews_read+1 
                  WHERE reviews_id = '".(int)$_GET['reviews_id']."'");
 
-  $main_content = $smarty->fetch(CURRENT_TEMPLATE.'/module/product_reviews_info.html', $cache_id);
+  $main_content = $modCoreTemplate->fetch($smarty, 'module/product_reviews_info.html', $cache_id);
   $smarty->assign('main_content', $main_content);
 }
 

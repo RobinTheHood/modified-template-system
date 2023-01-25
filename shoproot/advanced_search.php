@@ -80,7 +80,7 @@ $smarty->assign('language', $_SESSION['language']);
 $smarty->assign('FORM_END', '</form>');
 
 $smarty->caching = 0;
-$main_content = $smarty->fetch(CURRENT_TEMPLATE.'/module/advanced_search.html');
+$main_content = $modCoreTemplate->fetch($smarty, 'module/advanced_search.html');
 
 $smarty->assign('language', $_SESSION['language']);
 $smarty->assign('main_content', $main_content);

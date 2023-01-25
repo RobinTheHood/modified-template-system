@@ -198,7 +198,7 @@ $smarty->assign('language', $_SESSION['language']);
 $smarty->assign('tpl_path', DIR_WS_BASE.'templates/'.CURRENT_TEMPLATE.'/');
 
 $smarty->caching = 0;
-$main_content = $smarty->fetch(CURRENT_TEMPLATE.'/module/downloads.html');
+$main_content = $modCoreTemplate->fetch($smarty, 'module/downloads.html');
 
 $breadcrumb->add(NAVBAR_TITLE_DOWNLOAD, xtc_href_link(FILENAME_DOWNLOAD, '', 'SSL'));
 require (DIR_WS_INCLUDES.'header.php');

@@ -70,7 +70,7 @@ require (DIR_WS_INCLUDES.'header.php');
 
 $smarty->assign('BUTTON_CONTINUE', '<a href="'.xtc_href_link(FILENAME_DEFAULT).'">'.xtc_image_button('button_continue.gif', IMAGE_BUTTON_CONTINUE).'</a>');
 $smarty->assign('language', $_SESSION['language']);
-$main_content = $smarty->fetch(CURRENT_TEMPLATE.'/module/logoff.html');
+$main_content = $modCoreTemplate->fetch($smarty, 'module/logoff.html');
 $smarty->assign('main_content', $main_content);
 $smarty->caching = 0;
 if (!defined('RM'))

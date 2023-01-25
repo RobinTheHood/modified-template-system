@@ -108,7 +108,7 @@ if ($language_not_found === true) {
   foreach(auto_include(DIR_FS_CATALOG.'includes/extra/shop_content_end/','php') as $file) require_once ($file);
 
   $smarty->caching = 0;
-  $main_content = $smarty->fetch(CURRENT_TEMPLATE.'/module/'.$content_template);
+  $main_content = $modCoreTemplate->fetch($smarty, 'module/'.$content_template);
 
   require (DIR_WS_INCLUDES.'header.php');
 }

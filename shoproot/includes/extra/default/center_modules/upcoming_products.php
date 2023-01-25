@@ -73,6 +73,6 @@ if (MAX_DISPLAY_UPCOMING_PRODUCTS != '0') {
     }
   }
   
-  $module = $module_smarty->fetch(CURRENT_TEMPLATE.'/module/upcoming_products.html', $cache_id);
+  $module = $modCoreTemplate->fetch($module_smarty, 'module/upcoming_products.html', $cache_id);
   $default_smarty->assign('MODULE_upcoming_products', $module);
 }

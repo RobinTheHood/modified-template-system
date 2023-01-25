@@ -297,7 +297,7 @@ if (isset($_GET['products_id']) && (int)$_GET['products_id'] > '0') {
 $smarty->assign('language', $_SESSION['language']);
 
 $smarty->caching = 0;
-$main_content = $smarty->fetch(CURRENT_TEMPLATE.'/module/account_checkout_express.html');
+$main_content = $modCoreTemplate->fetch($smarty, 'module/account_checkout_express.html');
 
 $smarty->assign('language', $_SESSION['language']);
 $smarty->assign('main_content', $main_content);

@@ -40,5 +40,5 @@ if (!$module_smarty->is_cached(CURRENT_TEMPLATE.'/module/graduated_price.html', 
   }
 }
 
-$module = $module_smarty->fetch(CURRENT_TEMPLATE.'/module/graduated_price.html', $cache_id);
+$module = $modCoreTemplate->fetch($module_smarty, 'module/graduated_price.html', $cache_id);
 $info_smarty->assign('MODULE_graduated_price', !empty($module) ? trim($module) : $module);

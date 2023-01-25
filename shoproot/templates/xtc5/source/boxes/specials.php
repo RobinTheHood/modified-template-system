@@ -59,9 +59,9 @@ if (xtc_db_num_rows($specials_query) > 0) {
 }
 
 if (!$cache) {
-  $box_specials = $box_smarty->fetch(CURRENT_TEMPLATE.'/boxes/box_specials.html');
+  $box_specials = $modCoreTemplate->fetch($box_smarty, 'boxes/box_specials.html');
 } else {
-  $box_specials = $box_smarty->fetch(CURRENT_TEMPLATE.'/boxes/box_specials.html', $cache_id);
+  $box_specials = $modCoreTemplate->fetch($box_smarty, 'boxes/box_specials.html', $cache_id);
 }
 
 $smarty->assign('box_SPECIALS', $box_specials);

@@ -57,9 +57,9 @@ if (!$box_smarty->is_cached(CURRENT_TEMPLATE.'/boxes/box_shipping_country.html',
 }
 
 if (!$cache) {
-  $box_shipping_country = $box_smarty->fetch(CURRENT_TEMPLATE.'/boxes/box_shipping_country.html');
+  $box_shipping_country = $modCoreTemplate->fetch($box_smarty, 'boxes/box_shipping_country.html');
 } else {
-  $box_shipping_country = $box_smarty->fetch(CURRENT_TEMPLATE.'/boxes/box_shipping_country.html', $cache_id);
+  $box_shipping_country = $modCoreTemplate->fetch($box_smarty, 'boxes/box_shipping_country.html', $cache_id);
 }
 
 $smarty->assign('box_SHIPPING_COUNTRY', $box_shipping_country);

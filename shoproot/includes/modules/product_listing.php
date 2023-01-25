@@ -68,7 +68,7 @@ if ($listing_split->number_of_rows == 0
     $module_smarty->assign('DISPLAY_COUNT', $listing_split->display_count(TEXT_DISPLAY_NUMBER_OF_PRODUCTS));
     $module_smarty->assign('DISPLAY_LINKS', $listing_split->display_links(MAX_DISPLAY_PAGE_LINKS, xtc_get_all_get_params(array ('page', 'info', 'x', 'y', 'keywords')).(isset($_GET['keywords'])?'keywords='. urlencode($_GET['keywords']):'')));
     $module_smarty->caching = 0;
-    $pagination = $module_smarty->fetch(CURRENT_TEMPLATE.'/module/pagination.html');
+    $pagination = $modCoreTemplate->fetch($module_smarty, 'module/pagination.html');
   }
   $module_smarty->assign('NAVIGATION', $pagination);
   $module_smarty->assign('PAGINATION', $pagination);
@@ -220,7 +220,7 @@ if ($result != false) {
     }
     
     $module_smarty->caching = 0;
-    $main_content = $module_smarty->fetch(CURRENT_TEMPLATE.'/module/categorie_listing/'.$category['categories_template']);
+    $main_content = $modCoreTemplate->fetch($module_smarty, 'module/categorie_listing/'.$category['categories_template']);
     
     $smarty->assign('main_content', $main_content);
   } elseif (isset($_GET['filter_id']) && !is_array($_GET['filter_id']) && (int)$_GET['filter_id'] > 0) {

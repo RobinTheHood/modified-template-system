@@ -129,8 +129,8 @@
         // dont allow cache
         $smarty->caching = 0;
      
-        $html_mail = $smarty->fetch(CURRENT_TEMPLATE.'/mail/'.$_SESSION['language'].'/contact_us.html');
-        $txt_mail = $smarty->fetch(CURRENT_TEMPLATE.'/mail/'.$_SESSION['language'].'/contact_us.txt');
+        $html_mail = $modCoreTemplate->fetch($smarty, 'mail/'.$_SESSION['language'].'/contact_us.html');
+        $txt_mail = $modCoreTemplate->fetch($smarty, 'mail/'.$_SESSION['language'].'/contact_us.txt');
         $txt_mail = str_replace(array('<br />', '<br/>', '<br>'), '', $txt_mail);
       } else {
         $txt_mail = sprintf(EMAIL_SENT_BY, parse_multi_language_value(CONTACT_US_NAME, $_SESSION['language_code']), parse_multi_language_value(CONTACT_US_EMAIL_ADDRESS, $_SESSION['language_code']), $datum , $uhrzeit) . "\n" .

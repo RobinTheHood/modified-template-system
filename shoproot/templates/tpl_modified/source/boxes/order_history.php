@@ -62,9 +62,9 @@ if (!$box_smarty->is_cached(CURRENT_TEMPLATE.'/boxes/box_order_history.html', $c
 }
 
 if (!$cache) {
-  $box_order_history = $box_smarty->fetch(CURRENT_TEMPLATE.'/boxes/box_order_history.html');
+  $box_order_history = $modCoreTemplate->fetch($box_smarty, 'boxes/box_order_history.html');
 } else {
-  $box_order_history = $box_smarty->fetch(CURRENT_TEMPLATE.'/boxes/box_order_history.html', $cache_id);
+  $box_order_history = $modCoreTemplate->fetch($box_smarty, 'boxes/box_order_history.html', $cache_id);
 }
 
 $smarty->assign('box_HISTORY', $box_order_history);

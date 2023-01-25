@@ -36,7 +36,7 @@ $box_smarty->assign('FORM_END', '</form>');
 $box_smarty->assign('LINK_ADVANCED', xtc_href_link(FILENAME_ADVANCED_SEARCH));
 
 $box_smarty->caching = 0;
-$box_search = $box_smarty->fetch(CURRENT_TEMPLATE.'/boxes/box_search.html');
+$box_search = $modCoreTemplate->fetch($box_smarty, 'boxes/box_search.html');
 
 $smarty->assign('box_SEARCH',$box_search);
 ?>

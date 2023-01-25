@@ -178,7 +178,7 @@ if ($_SESSION['customer_id'] == $order_check['customers_id'] || $send_by_admin) 
             $smarty->assign('PAYMENT_BANKTRANSFER_IBAN', $rec['banktransfer_iban']);
             $smarty->assign('PAYMENT_BANKTRANSFER_BANKNAME', $rec['banktransfer_bankname']);
 
-            $sepa_info = $smarty->fetch(CURRENT_TEMPLATE.'/mail/'.$order->info['language'].'/sepa_info.html');
+            $sepa_info = $modCoreTemplate->fetch($smarty, 'mail/'.$order->info['language'].'/sepa_info.html');
 
             $smarty->assign('PAYMENT_INFO_HTML', $sepa_info);
             $smarty->assign('PAYMENT_INFO_TXT', str_replace("<br />", "\n", $sepa_info));
@@ -186,8 +186,8 @@ if ($_SESSION['customer_id'] == $order_check['customers_id'] || $send_by_admin) 
             // separate pre-notification necessary?
             if ($rec['banktransfer_owner_email'] != $order->customer['email_address']) {
                 $banktransfer_owner_email = $rec['banktransfer_owner_email'];
-                $sepa_html_mail = $smarty->fetch(CURRENT_TEMPLATE.'/mail/'.$order->info['language'].'/sepa_mail.html');
-                $sepa_txt_mail = $smarty->fetch(CURRENT_TEMPLATE.'/mail/'.$order->info['language'].'/sepa_mail.txt');
+                $sepa_html_mail = $modCoreTemplate->fetch($smarty, 'mail/'.$order->info['language'].'/sepa_mail.html');
+                $sepa_txt_mail = $modCoreTemplate->fetch($smarty, 'mail/'.$order->info['language'].'/sepa_mail.txt');
 
                 // no pre-notification in order mail
                 $smarty->clear_assign('PAYMENT_INFO_HTML');
@@ -216,8 +216,8 @@ if ($_SESSION['customer_id'] == $order_check['customers_id'] || $send_by_admin) 
 
     // EOF - Tomcraft - 2011-06-17 - Added revocation to email
 
-    $html_mail = $smarty->fetch(CURRENT_TEMPLATE.'/mail/'.$order->info['language'].'/order_mail.html');
-    $txt_mail = $smarty->fetch(CURRENT_TEMPLATE.'/mail/'.$order->info['language'].'/order_mail.txt');
+    $html_mail = $modCoreTemplate->fetch($smarty, 'mail/'.$order->info['language'].'/order_mail.html');
+    $txt_mail = $modCoreTemplate->fetch($smarty, 'mail/'.$order->info['language'].'/order_mail.txt');
 
     //email attachments
     $email_attachments = defined('EMAIL_BILLING_ATTACHMENTS') ? EMAIL_BILLING_ATTACHMENTS : '';

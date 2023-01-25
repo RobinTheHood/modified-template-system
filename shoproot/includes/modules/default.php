@@ -153,7 +153,7 @@ switch ($category_depth) {
     foreach(auto_include(DIR_FS_CATALOG.'includes/extra/default/categories_smarty/','php') as $file) require_once ($file);
 
     $default_smarty->caching = 0;
-    $main_content = $default_smarty->fetch(CURRENT_TEMPLATE.'/module/categorie_listing/'.$category['categories_template']);
+    $main_content = $modCoreTemplate->fetch($default_smarty, 'module/categorie_listing/'.$category['categories_template']);
     $smarty->assign('main_content', $main_content);
     break;
 
@@ -325,7 +325,7 @@ switch ($category_depth) {
     }
     
     $default_smarty->caching = 0;
-    $main_content = $default_smarty->fetch(CURRENT_TEMPLATE.'/module/'.$content_main_template);
+    $main_content = $modCoreTemplate->fetch($default_smarty, 'module/'.$content_main_template);
     $smarty->assign('main_content', $main_content);
     break;
 }

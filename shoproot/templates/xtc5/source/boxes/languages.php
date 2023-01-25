@@ -46,9 +46,9 @@ if (!$box_smarty->is_cached(CURRENT_TEMPLATE.'/boxes/box_languages.html', $cache
 }
 
 if (!$cache) {
-  $box_languages = $box_smarty->fetch(CURRENT_TEMPLATE.'/boxes/box_languages.html');
+  $box_languages = $modCoreTemplate->fetch($box_smarty, 'boxes/box_languages.html');
 } else {
-  $box_languages = $box_smarty->fetch(CURRENT_TEMPLATE.'/boxes/box_languages.html', $cache_id);
+  $box_languages = $modCoreTemplate->fetch($box_smarty, 'boxes/box_languages.html', $cache_id);
 }
 
 $smarty->assign('box_LANGUAGES', $box_languages);

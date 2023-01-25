@@ -125,8 +125,8 @@ if (isset($_GET['action']) && $_GET['action'] == 'process') {
     // dont allow cache
     $smarty->caching = 0;
 
-    $html_mail = $smarty->fetch(CURRENT_TEMPLATE.'/mail/'.$_SESSION['language'].'/send_gift_to_friend.html');
-    $txt_mail = $smarty->fetch(CURRENT_TEMPLATE.'/mail/'.$_SESSION['language'].'/send_gift_to_friend.txt');
+    $html_mail = $modCoreTemplate->fetch($smarty, 'mail/'.$_SESSION['language'].'/send_gift_to_friend.html');
+    $txt_mail = $modCoreTemplate->fetch($smarty, 'mail/'.$_SESSION['language'].'/send_gift_to_friend.txt');
 
     // send mail
     xtc_php_mail(EMAIL_BILLING_ADDRESS, 
@@ -196,7 +196,7 @@ $smarty->assign('GV_FAQ_LINK', $main->getContentLink(6, MORE_INFO,'NONSSL'));
 $smarty->assign('FORM_END', '</form>');
 $smarty->assign('language', $_SESSION['language']);
 
-$main_content = $smarty->fetch(CURRENT_TEMPLATE.'/module/gv_send.html');
+$main_content = $modCoreTemplate->fetch($smarty, 'module/gv_send.html');
 $smarty->assign('main_content', $main_content);
 $smarty->caching = 0;
 if (!defined('RM'))

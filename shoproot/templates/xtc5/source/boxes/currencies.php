@@ -58,9 +58,9 @@ if (!$box_smarty->is_cached(CURRENT_TEMPLATE.'/boxes/box_currencies.html', $cach
 }
 
 if (!$cache) {
-  $box_currencies = $box_smarty->fetch(CURRENT_TEMPLATE.'/boxes/box_currencies.html');
+  $box_currencies = $modCoreTemplate->fetch($box_smarty, 'boxes/box_currencies.html');
 } else {
-  $box_currencies = $box_smarty->fetch(CURRENT_TEMPLATE.'/boxes/box_currencies.html', $cache_id);
+  $box_currencies = $modCoreTemplate->fetch($box_smarty, 'boxes/box_currencies.html', $cache_id);
 }
 
 $smarty->assign('box_CURRENCIES', $box_currencies);

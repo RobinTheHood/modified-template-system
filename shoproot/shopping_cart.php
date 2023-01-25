@@ -125,7 +125,7 @@ if (defined('MODULE_CHECKOUT_EXPRESS_STATUS') && MODULE_CHECKOUT_EXPRESS_STATUS 
 require (DIR_WS_INCLUDES.'header.php');
 
 $smarty->assign('language', $_SESSION['language']);
-$main_content = $smarty->fetch(CURRENT_TEMPLATE.'/module/shopping_cart.html');
+$main_content = $modCoreTemplate->fetch($smarty, 'module/shopping_cart.html');
 $smarty->assign('main_content', $main_content);
 $smarty->caching = 0;
 if (!defined('RM')) {

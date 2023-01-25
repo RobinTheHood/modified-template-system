@@ -98,7 +98,7 @@ if ($success === true) {
 $smarty->assign('language', $_SESSION['language']);
 
 $smarty->caching = 0;
-$main_content = $smarty->fetch(CURRENT_TEMPLATE.'/module/account_delete.html');
+$main_content = $modCoreTemplate->fetch($smarty, 'module/account_delete.html');
 
 $smarty->assign('main_content', $main_content);
 if (!defined('RM'))

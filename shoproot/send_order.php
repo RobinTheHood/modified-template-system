@@ -155,8 +155,8 @@ if ($_SESSION['customer_id'] == $order_check['customers_id'] || $send_by_admin) 
   foreach(auto_include(DIR_FS_CATALOG.'includes/extra/send_order/data/','php') as $file) require ($file);
   
   $smarty->caching = 0;
-  $html_mail = $smarty->fetch(CURRENT_TEMPLATE.'/mail/'.$order->info['language'].'/order_mail.html');
-  $txt_mail = $smarty->fetch(CURRENT_TEMPLATE.'/mail/'.$order->info['language'].'/order_mail.txt');
+  $html_mail = $modCoreTemplate->fetch($smarty, 'mail/'.$order->info['language'].'/order_mail.html');
+  $txt_mail = $modCoreTemplate->fetch($smarty, 'mail/'.$order->info['language'].'/order_mail.txt');
   
   // create subject
   $order_subject = str_replace('{$nr}', $insert_id, EMAIL_BILLING_SUBJECT_ORDER);

@@ -80,9 +80,9 @@ if (!$box_smarty->is_cached(CURRENT_TEMPLATE.'/boxes/box_manufacturers.html', $c
 
 // set cache ID
 if (!$cache) {
-  $box_manufacturers = $box_smarty->fetch(CURRENT_TEMPLATE.'/boxes/box_manufacturers.html');
+  $box_manufacturers = $modCoreTemplate->fetch($box_smarty, 'boxes/box_manufacturers.html');
 } else {
-  $box_manufacturers = $box_smarty->fetch(CURRENT_TEMPLATE.'/boxes/box_manufacturers.html', $cache_id);
+  $box_manufacturers = $modCoreTemplate->fetch($box_smarty, 'boxes/box_manufacturers.html', $cache_id);
 }
 
 $smarty->assign('box_MANUFACTURERS', $box_manufacturers);

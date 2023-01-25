@@ -119,5 +119,5 @@ if (!$module_smarty->is_cached(CURRENT_TEMPLATE.'/module/sub_content_listing.htm
   }
 }
 
-$module = $module_smarty->fetch(CURRENT_TEMPLATE.'/module/sub_content_listing.html', $cache_id);
+$module = $modCoreTemplate->fetch($module_smarty, 'module/sub_content_listing.html', $cache_id);
 $smarty->assign('SUB_CONTENT_LISTING', !empty($module) ? trim($module) : $module);

@@ -73,7 +73,7 @@ if (xtc_count_customer_orders() > 0) {
     $smarty->assign('DISPLAY_COUNT', $history_split->display_count(TEXT_DISPLAY_NUMBER_OF_ORDERS));
     $smarty->assign('DISPLAY_LINKS', $history_split->display_links(MAX_DISPLAY_PAGE_LINKS, xtc_get_all_get_params(array ('page', 'info', 'x', 'y'))));
     $smarty->caching = 0;
-    $pagination = $smarty->fetch(CURRENT_TEMPLATE.'/module/pagination.html');
+    $pagination = $modCoreTemplate->fetch($smarty, 'module/pagination.html');
   }
   $smarty->assign('SPLIT_BAR', $pagination);
   $smarty->assign('PAGINATION', $pagination);
@@ -117,7 +117,7 @@ require (DIR_WS_INCLUDES.'header.php');
 $smarty->assign('language', $_SESSION['language']);
 
 $smarty->caching = 0;
-$main_content = $smarty->fetch(CURRENT_TEMPLATE.'/module/account_history.html');
+$main_content = $modCoreTemplate->fetch($smarty, 'module/account_history.html');
 
 $smarty->assign('main_content', $main_content);
 $smarty->assign('language', $_SESSION['language']);

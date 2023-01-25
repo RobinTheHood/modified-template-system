@@ -110,9 +110,9 @@ if ($product->isProduct() === true && $_SESSION['customers_status']['customers_s
 }
 
 if (!$cache) {
-  $box_reviews = $box_smarty->fetch(CURRENT_TEMPLATE.'/boxes/box_reviews.html');
+  $box_reviews = $modCoreTemplate->fetch($box_smarty, 'boxes/box_reviews.html');
 } else {
-  $box_reviews = $box_smarty->fetch(CURRENT_TEMPLATE.'/boxes/box_reviews.html', $cache_id);
+  $box_reviews = $modCoreTemplate->fetch($box_smarty, 'boxes/box_reviews.html', $cache_id);
 }
 
 $smarty->assign('box_REVIEWS', $box_reviews);

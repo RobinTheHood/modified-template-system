@@ -29,9 +29,9 @@ if (!$box_smarty->is_cached(CURRENT_TEMPLATE.'/boxes/box_newsletter.html', $cach
 }
 
 if (!$cache) {
-  $box_newsletter = $box_smarty->fetch(CURRENT_TEMPLATE.'/boxes/box_newsletter.html');
+  $box_newsletter = $modCoreTemplate->fetch($box_smarty, 'boxes/box_newsletter.html');
 } else {
-  $box_newsletter = $box_smarty->fetch(CURRENT_TEMPLATE.'/boxes/box_newsletter.html', $cache_id);
+  $box_newsletter = $modCoreTemplate->fetch($box_smarty, 'boxes/box_newsletter.html', $cache_id);
 }
 
 $smarty->assign('box_NEWSLETTER',$box_newsletter);

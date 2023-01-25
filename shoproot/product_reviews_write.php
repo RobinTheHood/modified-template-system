@@ -192,7 +192,7 @@ if ($product->isProduct() === false) {
 }
 
 $smarty->assign('language', $_SESSION['language']);
-$main_content = $smarty->fetch(CURRENT_TEMPLATE.'/module/product_reviews_write.html');
+$main_content = $modCoreTemplate->fetch($smarty, 'module/product_reviews_write.html');
 
 $smarty->assign('main_content', $main_content);
 $smarty->caching = 0;

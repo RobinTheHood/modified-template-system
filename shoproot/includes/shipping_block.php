@@ -55,6 +55,6 @@
     }
     $module_smarty->caching = 0;
     $module_smarty->assign('language', $_SESSION['language']);
-    $shipping_block = $module_smarty->fetch(CURRENT_TEMPLATE.'/module/checkout_shipping_block.html');
+    $shipping_block = $modCoreTemplate->fetch($module_smarty, 'module/checkout_shipping_block.html');
   }
 ?>

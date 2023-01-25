@@ -130,9 +130,9 @@ if (!$box_smarty->is_cached(CURRENT_TEMPLATE.'/boxes/box_information.html', $cac
 }
 
 if (!$cache) {
-  $box_information = $box_smarty->fetch(CURRENT_TEMPLATE.'/boxes/box_information.html');
+  $box_information = $modCoreTemplate->fetch($box_smarty, 'boxes/box_information.html');
 } else {
-  $box_information = $box_smarty->fetch(CURRENT_TEMPLATE.'/boxes/box_information.html', $cache_id);
+  $box_information = $modCoreTemplate->fetch($box_smarty, 'boxes/box_information.html', $cache_id);
 }
 
 $smarty->assign('box_INFORMATION', $box_information);

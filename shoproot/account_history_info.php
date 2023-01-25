@@ -147,7 +147,7 @@ $smarty->assign('BUTTON_BACK','<a href="' . xtc_href_link($back_to,xtc_get_all_g
 $smarty->assign('language', $_SESSION['language']);
 
 $smarty->caching = 0;
-$main_content = $smarty->fetch(CURRENT_TEMPLATE.'/module/account_history_info.html');
+$main_content = $modCoreTemplate->fetch($smarty, 'module/account_history_info.html');
 
 $smarty->assign('main_content', $main_content);
 $smarty->caching = 0;

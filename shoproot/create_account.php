@@ -502,8 +502,8 @@ if (isset($_POST['action']) && ($_POST['action'] == 'process')) {
 
       // create templates
       $smarty->caching = 0;
-      $html_mail = $smarty->fetch(CURRENT_TEMPLATE.'/mail/'.$_SESSION['language'].'/create_account_mail.html');
-      $txt_mail = $smarty->fetch(CURRENT_TEMPLATE.'/mail/'.$_SESSION['language'].'/create_account_mail.txt');
+      $html_mail = $modCoreTemplate->fetch($smarty, 'mail/'.$_SESSION['language'].'/create_account_mail.html');
+      $txt_mail = $modCoreTemplate->fetch($smarty, 'mail/'.$_SESSION['language'].'/create_account_mail.txt');
     
       if (SEND_EMAILS == 'true' && $send_mail == true) {
         xtc_php_mail(EMAIL_SUPPORT_ADDRESS, 
@@ -659,7 +659,7 @@ $smarty->assign('FORM_END', '</form>');
 $smarty->assign('language', $_SESSION['language']);
 $smarty->assign('BUTTON_SUBMIT', xtc_image_submit('button_continue.gif', IMAGE_BUTTON_CONTINUE));
 
-$main_content = $smarty->fetch(CURRENT_TEMPLATE.'/module/create_account.html');
+$main_content = $modCoreTemplate->fetch($smarty, 'module/create_account.html');
 $smarty->assign('main_content', $main_content);
 if (!defined('RM'))
   $smarty->load_filter('output', 'note');

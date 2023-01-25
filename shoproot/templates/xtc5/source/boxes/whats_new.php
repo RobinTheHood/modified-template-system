@@ -67,9 +67,9 @@ if (xtc_db_num_rows($whats_new_query) > 0) {
 }
 
 if (!$cache) {
-  $box_whats_new = $box_smarty->fetch(CURRENT_TEMPLATE.'/boxes/box_whatsnew.html');
+  $box_whats_new = $modCoreTemplate->fetch($box_smarty, 'boxes/box_whatsnew.html');
 } else {
-  $box_whats_new = $box_smarty->fetch(CURRENT_TEMPLATE.'/boxes/box_whatsnew.html', $cache_id);
+  $box_whats_new = $modCoreTemplate->fetch($box_smarty, 'boxes/box_whatsnew.html', $cache_id);
 }
 
 $smarty->assign('box_WHATSNEW', $box_whats_new);

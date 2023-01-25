@@ -38,9 +38,9 @@ if (!$box_smarty->is_cached(CURRENT_TEMPLATE.'/boxes/box_manufacturers_info.html
 }
 
 if (!$cache) {
-  $box_manufacturers_info = $box_smarty->fetch(CURRENT_TEMPLATE.'/boxes/box_manufacturers_info.html');
+  $box_manufacturers_info = $modCoreTemplate->fetch($box_smarty, 'boxes/box_manufacturers_info.html');
 } else {
-  $box_manufacturers_info = $box_smarty->fetch(CURRENT_TEMPLATE.'/boxes/box_manufacturers_info.html', $cache_id);
+  $box_manufacturers_info = $modCoreTemplate->fetch($box_smarty, 'boxes/box_manufacturers_info.html', $cache_id);
 }
 
 $smarty->assign('box_MANUFACTURERS_INFO',$box_manufacturers_info);

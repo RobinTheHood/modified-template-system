@@ -145,7 +145,7 @@ if (DISPLAY_PRIVACY_CHECK == 'true') {
 $smarty->assign('PRIVACY_LINK', $main->getContentLink(2, MORE_INFO, $request_type));
 $smarty->assign('language', $_SESSION['language']);
 $smarty->caching = 0;
-$main_content = $smarty->fetch(CURRENT_TEMPLATE.'/module/newsletter.html');
+$main_content = $modCoreTemplate->fetch($smarty, 'module/newsletter.html');
 $smarty->assign('main_content', $main_content);
 
 $smarty->assign('language', $_SESSION['language']);

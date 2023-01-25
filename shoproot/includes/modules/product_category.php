@@ -73,5 +73,5 @@ if (!$module_smarty->is_cached(CURRENT_TEMPLATE.'/module/products_category.html'
   }
 }
 
-$module = $module_smarty->fetch(CURRENT_TEMPLATE.'/module/products_category.html', $cache_id);
+$module = $modCoreTemplate->fetch($module_smarty, 'module/products_category.html', $cache_id);
 $info_smarty->assign('MODULE_products_category', !empty($module) ? trim($module) : $module);

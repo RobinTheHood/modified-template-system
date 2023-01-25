@@ -83,7 +83,7 @@ if (!is_object($product) || $product->isProduct() === false || $language_not_fou
       $smarty->assign('DISPLAY_COUNT', $reviews_split->display_count(TEXT_DISPLAY_NUMBER_OF_REVIEWS));
       $smarty->assign('DISPLAY_LINKS', $reviews_split->display_links(MAX_DISPLAY_PAGE_LINKS, xtc_get_all_get_params(array ('page', 'info', 'x', 'y'))));
       $smarty->caching = 0;
-      $pagination = $smarty->fetch(CURRENT_TEMPLATE.'/module/pagination.html');
+      $pagination = $modCoreTemplate->fetch($smarty, 'module/pagination.html');
     }
     $smarty->assign('NAVBAR', $pagination);
     $smarty->assign('PAGINATION', $pagination);
@@ -131,7 +131,7 @@ if ($messageStack->size('product_reviews', 'success') > 0) {
 }
 
 $smarty->caching = 0;
-$main_content = $smarty->fetch(CURRENT_TEMPLATE.'/module/product_reviews.html');
+$main_content = $modCoreTemplate->fetch($smarty, 'module/product_reviews.html');
 
 $smarty->assign('main_content', $main_content);
 

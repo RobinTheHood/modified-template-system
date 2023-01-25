@@ -52,7 +52,7 @@ if (!$smarty->is_cached(CURRENT_TEMPLATE.'/module/cookie_usage.html', $cache_id)
   $smarty->assign('BUTTON_CONTINUE', '<a href="'.xtc_href_link(FILENAME_DEFAULT).'">'.xtc_image_button('button_continue.gif', IMAGE_BUTTON_CONTINUE).'</a>');
 }
 
-$main_content = $smarty->fetch(CURRENT_TEMPLATE.'/module/cookie_usage.html', $cache_id);
+$main_content = $modCoreTemplate->fetch($smarty, 'module/cookie_usage.html', $cache_id);
 
 $smarty->assign('language', $_SESSION['language']);
 $smarty->assign('main_content', $main_content);

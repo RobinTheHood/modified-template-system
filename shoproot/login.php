@@ -243,7 +243,7 @@ if ($_SESSION['customers_login_tries'] >= MODULE_CAPTCHA_LOGIN_NUM) {
 
 $smarty->assign('language', $_SESSION['language']);
 $smarty->caching = 0;
-$main_content = $smarty->fetch(CURRENT_TEMPLATE.'/module/login.html');
+$main_content = $modCoreTemplate->fetch($smarty, 'module/login.html');
 $smarty->assign('main_content', $main_content);
 
 $smarty->assign('language', $_SESSION['language']);

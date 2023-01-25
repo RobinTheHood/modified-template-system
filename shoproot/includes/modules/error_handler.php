@@ -47,7 +47,7 @@ if (!$module_smarty->is_cached(CURRENT_TEMPLATE.'/module/error_message.html', $c
   $module_smarty->assign('FORM_END', '</form>');
 }
 
-$module = $module_smarty->fetch(CURRENT_TEMPLATE.'/module/error_message.html', $cache_id);
+$module = $modCoreTemplate->fetch($module_smarty, 'module/error_message.html', $cache_id);
 
 if (isset($smarty) && is_object($smarty)) {
   require_once(DIR_FS_BOXES . 'best_sellers.php');

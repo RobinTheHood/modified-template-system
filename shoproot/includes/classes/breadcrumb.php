@@ -53,10 +53,12 @@
 
 
     function trail($separator = ' - ') {
+      global $modCoreTemplate;
+
       $smarty = new Smarty();
       $smarty->assign('TRAIL', $this->_trail);
       $smarty->assign('SEPARATOR', $separator);
-      $trail_string = $smarty->fetch(CURRENT_TEMPLATE.'/module/breadcrumb.html');
+      $trail_string = $modCoreTemplate->fetch($smarty, 'module/breadcrumb.html');
       
       return $trail_string;
     }

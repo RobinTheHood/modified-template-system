@@ -50,9 +50,9 @@ if (!$box_smarty->is_cached(CURRENT_TEMPLATE.'/boxes/box_infobox.html', $cache_i
 }
 
 if (!$cache) {
-  $box_infobox = $box_smarty->fetch(CURRENT_TEMPLATE.'/boxes/box_infobox.html');
+  $box_infobox = $modCoreTemplate->fetch($box_smarty, 'boxes/box_infobox.html');
 } else {
-  $box_infobox = $box_smarty->fetch(CURRENT_TEMPLATE.'/boxes/box_infobox.html', $cache_id);
+  $box_infobox = $modCoreTemplate->fetch($box_smarty, 'boxes/box_infobox.html', $cache_id);
 }
 
 $smarty->assign('box_INFOBOX', $box_infobox);

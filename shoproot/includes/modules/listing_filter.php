@@ -361,7 +361,7 @@ if (!$module_smarty->is_cached(CURRENT_TEMPLATE.'/module/listing_filter.html', $
   $filter_smarty->assign('LINK_DISPLAY_BOX', xtc_href_link(basename($PHP_SELF), xtc_get_all_get_params(array('show')).'show=box', 'NONSSL'));
 }
 
-$module = $filter_smarty->fetch(CURRENT_TEMPLATE.'/module/listing_filter.html', $cache_id);
+$module = $modCoreTemplate->fetch($filter_smarty, 'module/listing_filter.html', $cache_id);
 
 if (isset($smarty) && is_object($smarty)) {
   $smarty->assign('LISTING_FILTER', !empty($module) ? trim($module) : $module);

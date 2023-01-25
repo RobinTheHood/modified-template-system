@@ -112,7 +112,7 @@ $module_smarty->assign('CHECKBOX_PRIMARY', xtc_draw_checkbox_field('primary', 'o
 $module_smarty->assign('language', $_SESSION['language']);
 
 $module_smarty->caching = 0;
-$module = $module_smarty->fetch(CURRENT_TEMPLATE.'/module/checkout_new_address.html');
+$module = $modCoreTemplate->fetch($module_smarty, 'module/checkout_new_address.html');
 
 $smarty->assign('MODULE_new_address', $module);
 ?>

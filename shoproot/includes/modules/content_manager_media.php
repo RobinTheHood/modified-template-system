@@ -96,7 +96,7 @@ if (!$module_smarty->is_cached(CURRENT_TEMPLATE.'/module/products_media.html', $
   }
 }
 
-$module = $module_smarty->fetch(CURRENT_TEMPLATE.'/module/products_media.html', $cache_id);
+$module = $modCoreTemplate->fetch($module_smarty, 'module/products_media.html', $cache_id);
 
 $smarty->assign('MODULE_conent_manager_media', !empty($module) ? trim($module) : $module);
 $smarty->assign('MODULE_content_manager_media', !empty($module) ? trim($module) : $module); // Additional Smarty for fix typo

@@ -133,9 +133,9 @@ if (!$box_smarty->is_cached(CURRENT_TEMPLATE.'/boxes/box_categories.html', $cach
 }
 
 if (!$cache) {
-  $box_categories = $box_smarty->fetch(CURRENT_TEMPLATE.'/boxes/box_categories.html');
+  $box_categories = $modCoreTemplate->fetch($box_smarty, 'boxes/box_categories.html');
 } else {
-  $box_categories = $box_smarty->fetch(CURRENT_TEMPLATE.'/boxes/box_categories.html', $cache_id);
+  $box_categories = $modCoreTemplate->fetch($box_smarty, 'boxes/box_categories.html', $cache_id);
 }
 
 $smarty->assign('box_CATEGORIES', $box_categories);

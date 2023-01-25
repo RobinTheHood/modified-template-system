@@ -138,5 +138,5 @@ if (!$module_smarty->is_cached(CURRENT_TEMPLATE.'/module/new_products_default.ht
   }
 }
 
-$module = $module_smarty->fetch(CURRENT_TEMPLATE.'/module/new_products_default.html', $cache_id);
+$module = $modCoreTemplate->fetch($module_smarty, 'module/new_products_default.html', $cache_id);
 $default_smarty->assign('MODULE_new_products', $module);
