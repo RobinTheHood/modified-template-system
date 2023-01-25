@@ -47,7 +47,7 @@ if (!isset($_SESSION['customer_id'])) {
 clear_checkout_session();
 
 // include boxes
-require (DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/source/boxes.php');
+require $modCoreTemplate->getPath('source/boxes.php');
 
 if ($messageStack->size('account') > 0) {
   $smarty->assign('error_message', $messageStack->output('account'));

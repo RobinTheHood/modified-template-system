@@ -110,7 +110,7 @@ if (!is_object($product) || $product->isProduct() === false || $language_not_fou
 }
 
 // include boxes
-require (DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/source/boxes.php');
+require $modCoreTemplate->getPath('source/boxes.php');
 
 $breadcrumb->add(NAVBAR_TITLE_PRODUCT_REVIEWS, xtc_href_link(FILENAME_PRODUCT_REVIEWS, xtc_get_all_get_params()));
 

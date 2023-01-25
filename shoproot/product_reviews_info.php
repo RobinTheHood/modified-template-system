@@ -116,7 +116,7 @@ if (!is_object($product) || $product->isProduct() === false || $language_not_fou
 }
 
 // include boxes
-require (DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/source/boxes.php');
+require $modCoreTemplate->getPath('source/boxes.php');
 
 require (DIR_WS_INCLUDES.'header.php');
 

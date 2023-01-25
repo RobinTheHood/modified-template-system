@@ -65,7 +65,7 @@ if (xtc_db_num_rows($orders_query) < 1) {
 }
 
 // include boxes
-require (DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/source/boxes.php');
+require $modCoreTemplate->getPath('source/boxes.php');
 
 $_SESSION['customer_gid'] = $_SESSION['customer_id'];
 

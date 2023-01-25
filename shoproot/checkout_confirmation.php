@@ -150,7 +150,7 @@ if ((is_array($payment_modules->modules)
 }
 
 // include boxes
-require (DIR_FS_CATALOG . 'templates/' . CURRENT_TEMPLATE . '/source/boxes.php');
+require $modCoreTemplate->getPath('source/boxes.php');
 
 if (ACTIVATE_GIFT_SYSTEM == 'true') {
   include (DIR_WS_MODULES.'gift_cart.php');

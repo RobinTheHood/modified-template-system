@@ -41,7 +41,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'get_download') {
 }
 
 // include boxes
-require (DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/source/boxes.php');
+require $modCoreTemplate->getPath('source/boxes.php');
 
 include (DIR_WS_MODULES.'product_info.php');
 

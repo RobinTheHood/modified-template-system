@@ -21,7 +21,7 @@ include ('includes/application_top.php');
 $smarty = new Smarty;
 
 // include boxes
-require (DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/source/boxes.php');
+require $modCoreTemplate->getPath('source/boxes.php');
 
 if ($language_not_found === true) {
   $site_error = TEXT_SITE_NOT_FOUND;

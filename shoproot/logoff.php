@@ -62,7 +62,7 @@ xtc_session_reset();
 require (DIR_WS_INCLUDES.'write_customers_status.php');
 
 // include boxes
-require (DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/source/boxes.php');
+require $modCoreTemplate->getPath('source/boxes.php');
 
 $breadcrumb->add(NAVBAR_TITLE_LOGOFF);
 

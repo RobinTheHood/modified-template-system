@@ -47,7 +47,7 @@ if (!is_object($product) || $product->isProduct() === false || $language_not_fou
   $smarty = new Smarty;
 
   // include boxes
-  require (DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/source/boxes.php');
+  require $modCoreTemplate->getPath('source/boxes.php');
 
   // product not found in database
   $site_error = TEXT_PRODUCT_NOT_FOUND;

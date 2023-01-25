@@ -32,7 +32,7 @@ if (!function_exists('xtc_date_long')) {
 $smarty = new Smarty();
 
 // include boxes
-require (DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/source/boxes.php');
+require $modCoreTemplate->getPath('source/boxes.php');
 
 if (isset($_SESSION['customer_id'])) {
   $_SESSION['customer_id_download'] = $_SESSION['customer_id'];

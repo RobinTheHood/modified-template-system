@@ -67,7 +67,7 @@ if($billpay->isGambio()) {
     $smarty->assign('language', $_SESSION['language']);
 
 
-    require (DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/source/boxes.php');
+    require $modCoreTemplate->getPath('source/boxes.php');
     require (DIR_WS_INCLUDES.'header.php');
 
     $smarty->assign('language', $_SESSION['language']);

@@ -23,7 +23,7 @@ require_once(DIR_FS_INC.'get_wishlist_content.inc.php');
 $smarty = new Smarty;
 
 // include boxes
-require (DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/source/boxes.php');
+require $modCoreTemplate->getPath('source/boxes.php');
 
 $breadcrumb->add(NAVBAR_TITLE_WISHLIST, xtc_href_link(FILENAME_WISHLIST));
 

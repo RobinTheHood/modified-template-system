@@ -46,7 +46,7 @@ $_SERVER['REQUEST_URI'] = FILENAME_CHECKOUT_PAYMENT;
 if(!$billpay->isGambio()) {
     $billpay->_logDebug('Giropay campaign: No Gambio');
 
-    require (DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/source/boxes.php');
+    require $modCoreTemplate->getPath('source/boxes.php');
     require (DIR_WS_INCLUDES.'header.php');
 }
 

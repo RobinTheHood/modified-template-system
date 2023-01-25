@@ -61,7 +61,7 @@ if ($errorno) {
 } else {
 
   // include boxes
-  require (DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/source/boxes.php');
+  require $modCoreTemplate->getPath('source/boxes.php');
 
   // build breadcrumb
   $breadcrumb->add(NAVBAR_TITLE1_ADVANCED_SEARCH, xtc_href_link(FILENAME_ADVANCED_SEARCH));

@@ -55,7 +55,7 @@ if ($customer_info['customers_id'] != $_SESSION['customer_id']) {
 clear_checkout_session();
 
 // include boxes
-require (DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/source/boxes.php');
+require $modCoreTemplate->getPath('source/boxes.php');
 
 require (DIR_WS_CLASSES.'order.php');
 $order = new order((int)$_GET['order_id']);

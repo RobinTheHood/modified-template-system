@@ -38,12 +38,12 @@ if (TRACKING_ECONDA_ACTIVE == 'true') {
 
 // require theme based css
 if (is_file('templates/'.CURRENT_TEMPLATE.'/css/general_bottom.css.php')) {
-  require('templates/'.CURRENT_TEMPLATE.'/css/general_bottom.css.php');
+  require $modCoreTemplate->getPath('css/general_bottom.css.php');
 }
 
 // require theme based javascript
 if (is_file('templates/'.CURRENT_TEMPLATE.'/javascript/general_bottom.js.php')) {
-  require('templates/'.CURRENT_TEMPLATE.'/javascript/general_bottom.js.php');
+  require $modCoreTemplate->getPath('javascript/general_bottom.js.php');
 }
 
 foreach(auto_include(DIR_FS_CATALOG.'includes/extra/application_bottom/','php') as $file) require ($file);

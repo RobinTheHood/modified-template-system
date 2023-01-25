@@ -146,7 +146,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'process') {
 }
 
 // include boxes
-require (DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/source/boxes.php');
+require $modCoreTemplate->getPath('source/boxes.php');
 
 $breadcrumb->add(NAVBAR_GV_SEND);
 
