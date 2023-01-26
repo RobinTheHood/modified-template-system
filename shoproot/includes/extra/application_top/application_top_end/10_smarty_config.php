@@ -5,7 +5,7 @@ if (isset($_GET['show'])) {
 }
 
 // load Template config
-if (file_exists(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/config/config.php')) {
+if (file_exists($modCoreTemplate->getPath('config/config.php'))) {
   require_once $modCoreTemplate->getPath('config/config.php');
 }
 ?>

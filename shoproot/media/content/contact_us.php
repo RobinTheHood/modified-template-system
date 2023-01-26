@@ -112,8 +112,8 @@
       if (isset($phone))    $additional_fields .= EMAIL_PHONE . $phone . "\n" ;
       if (isset($fax))      $additional_fields .= EMAIL_FAX . $fax . "\n" ;
 
-      if (file_exists(DIR_FS_DOCUMENT_ROOT.'templates/'.CURRENT_TEMPLATE.'/mail/'.$_SESSION['language'].'/contact_us.html') 
-          && file_exists(DIR_FS_DOCUMENT_ROOT.'templates/'.CURRENT_TEMPLATE.'/mail/'.$_SESSION['language'].'/contact_us.txt')
+      if (file_exists($modCoreTemplate->getPath('mail/'.$_SESSION['language'].'/contact_us.html')) 
+          && file_exists($modCoreTemplate->getPath('mail/'.$_SESSION['language'].'/contact_us.txt'))
           ) 
       {
         $smarty->assign('language', $_SESSION['language']);

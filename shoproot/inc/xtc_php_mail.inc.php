@@ -28,7 +28,7 @@ function xtc_php_mail($from_email_address, $from_email_name,
                       $priority = null
                      )
 {
-  global $order, $main, $LogLevel;
+  global $order, $main, $LogLevel, $modCoreTemplate;
 
   // include needed function
   require_once(DIR_FS_INC.'xtc_not_null.inc.php');
@@ -82,12 +82,12 @@ function xtc_php_mail($from_email_address, $from_email_name,
   // load the signatures only, if the appropriate file(s) exists
   $html_signatur = '';
   $txt_signatur = '';
-  if (file_exists(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/mail/'.$lang_data['directory'].'/signatur.html')) {
+  if (file_exists($modCoreTemplate->getPath('mail/'.$lang_data['directory'].'/signatur.html'))) {
     $shop_content_data = $main->getContentData(EMAIL_SIGNATURE_ID, $lang_data['languages_id'], ((isset($customers_status)) ? $customers_status : DEFAULT_CUSTOMERS_STATUS_ID_GUEST));    
     $mailsmarty->assign('SIGNATURE_HTML', $shop_content_data['content_text']);
     $html_signatur = $modCoreTemplate->fetch($mailsmarty, 'mail/'.$lang_data['directory'].'/signatur.html'); 
   }
-  if (file_exists(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/mail/'.$lang_data['directory'].'/signatur.txt')) {
+  if (file_exists($modCoreTemplate->getPath('mail/'.$lang_data['directory'].'/signatur.txt'))) {
     $shop_content_data = $main->getContentData(EMAIL_SIGNATURE_ID, $lang_data['languages_id'], ((isset($customers_status)) ? $customers_status : DEFAULT_CUSTOMERS_STATUS_ID_GUEST));
     $mailsmarty->assign('SIGNATURE_TXT', $shop_content_data['content_text']);
     $txt_signatur = $modCoreTemplate->fetch($mailsmarty, 'mail/'.$lang_data['directory'].'/signatur.txt'); 
@@ -95,10 +95,10 @@ function xtc_php_mail($from_email_address, $from_email_name,
 
   $html_widerruf = '';
   $txt_widerruf = '';
-  if (file_exists(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/mail/'.$lang_data['directory'].'/widerruf.html')) {
+  if (file_exists($modCoreTemplate->getPath('mail/'.$lang_data['directory'].'/widerruf.html'))) {
     $html_widerruf = $modCoreTemplate->fetch($mailsmarty, 'mail/'.$lang_data['directory'].'/widerruf.html'); 
   }
-  if (file_exists(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/mail/'.$lang_data['directory'].'/widerruf.txt')) {
+  if (file_exists($modCoreTemplate->getPath('mail/'.$lang_data['directory'].'/widerruf.txt'))) {
     $txt_widerruf = $modCoreTemplate->fetch($mailsmarty, 'mail/'.$lang_data['directory'].'/widerruf.txt'); 
   }  
 
