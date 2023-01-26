@@ -73,7 +73,7 @@
 
     // display split-page-number-links
     function display_links($max_page_links, $parameters = '') {
-      global $PHP_SELF, $request_type;
+      global $PHP_SELF, $request_type, $modCoreTemplate;
 
       $display_links_string = '';
       $display_links_array = array();
@@ -160,7 +160,7 @@
         $display_links_string .= '&nbsp;'.$display_links_array['next'].'&nbsp;';
       }
       
-      if (is_file(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/pagination.html')) {
+      if (is_file($modCoreTemplate->getPath('module/pagination.html'))) {
         return $display_links_array;
       }
       return $display_links_string;

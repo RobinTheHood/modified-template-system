@@ -87,7 +87,7 @@
         }
 
         if (defined('CURRENT_TEMPLATE')
-            && is_file(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/message_stack.html')
+            && is_file($modCoreTemplate->getPath('module/message_stack.html'))
             )
         {
           $smarty = new Smarty();

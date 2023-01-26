@@ -45,7 +45,7 @@
         if ($banner = xtc_banner_exists('dynamic', $groups['banners_group'])) {
           $banner_array = xtc_display_banner('static', $banner);
 
-          if (is_file(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/banners.html')) {
+          if (is_file($modCoreTemplate->getPath('module/banners.html'))) {
             $banner_smarty->assign('banner_data', $banner_array);
             $banner_smarty->caching = 0;
             $banners = $modCoreTemplate->fetch($banner_smarty, 'module/banners.html');

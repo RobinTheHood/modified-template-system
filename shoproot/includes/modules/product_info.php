@@ -208,7 +208,7 @@ if (!is_object($product) || $product->isProduct() === false || $language_not_fou
   // get default product_info template
   if ($product->data['product_template'] == '' 
       || $product->data['product_template'] == 'default'
-      || !is_file(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/product_info/'.$product->data['product_template'])
+      || !is_file($modCoreTemplate->getPath('module/product_info/'.$product->data['product_template']))
       )
   {
     $files = array_filter(auto_include(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/product_info/','html'), function($file) {

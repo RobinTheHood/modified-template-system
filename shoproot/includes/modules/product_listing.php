@@ -59,7 +59,7 @@ if ($listing_split->number_of_rows == 0
 {
   xtc_redirect(xtc_href_link(FILENAME_DEFAULT));
 } elseif ($listing_split->number_of_rows > 0) {
-  if (!is_file(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/pagination.html')) {
+  if (!is_file($modCoreTemplate->getPath('module/pagination.html'))) {
     $pagination = '<div class="smallText" style="clear:both;">
                      <div style="float:left;">'.$listing_split->display_count(TEXT_DISPLAY_NUMBER_OF_PRODUCTS).'</div> 
                      <div style="text-align:right;">'.TEXT_RESULT_PAGE.' '.$listing_split->display_links(MAX_DISPLAY_PAGE_LINKS, xtc_get_all_get_params(array ('page', 'info', 'x', 'y', 'keywords')).(isset($_GET['keywords'])?'keywords='. urlencode($_GET['keywords']):'')).'</div> 
@@ -152,7 +152,7 @@ if ($result != false) {
   if (!isset($category['listing_template'])
       || $category['listing_template'] == '' 
       || $category['listing_template'] == 'default'
-      || !is_file(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/product_listing/'.$category['listing_template'])
+      || !is_file($modCoreTemplate->getPath('module/product_listing/'.$category['listing_template']))
       )
   {
     $files = array_filter(auto_include(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/product_listing/','html'), function($file) {
@@ -179,7 +179,7 @@ if ($result != false) {
   // support for own manufacturers template
   $template = CURRENT_TEMPLATE.'/module/product_listing/'.$category['listing_template'];
   if (isset ($_GET['manufacturers_id']) && $_GET['manufacturers_id'] > 0 && strpos($PHP_SELF, FILENAME_ADVANCED_SEARCH_RESULT) === false) {
-    if (is_file(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/manufacturers_listing.html')) {
+    if (is_file($modCoreTemplate->getPath('module/manufacturers_listing.html'))) {
       $template = CURRENT_TEMPLATE.'/module/manufacturers_listing.html';
     }
   }
@@ -210,7 +210,7 @@ if ($result != false) {
     // get default template
     if ($category['categories_template'] == '' 
         || $category['categories_template'] == 'default'
-        || !is_file(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/categorie_listing/'.$category['categories_template'])
+        || !is_file($modCoreTemplate->getPath('module/categorie_listing/'.$category['categories_template']))
         )
     {
       $files = array_filter(auto_include(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/categorie_listing/','html'), function($file) {
@@ -256,7 +256,7 @@ if ($result != false) {
 
     // support for own manufacturers template
     $template = CURRENT_TEMPLATE.'/module/categorie_listing/'.$manufacturer_template;
-    if (is_file(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/manufacturers.html')) {
+    if (is_file($modCoreTemplate->getPath('module/manufacturers.html'))) {
       $template = CURRENT_TEMPLATE.'/module/manufacturers.html';
     }
   

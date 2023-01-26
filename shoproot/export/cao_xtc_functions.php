@@ -998,6 +998,8 @@ function SendCustomersNewsletter ()
 
 function SendShopConfig ()
 {
+  global $modCoreTemplate;
+
   $schema = '<?xml version="1.0" encoding="' . CHARSET . '"?>' . "\n" .
             '<CONFIG>' . "\n" .
             '<CONFIG_DATA>' . "\n" ;
@@ -1079,11 +1081,11 @@ function SendShopConfig ()
       {
 // BOF - Tomcraft - 2010-02-04 - Prevent modified eCommerce Shopsoftware from fetching other files than *.html
 /*
-          if (is_file(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/product_listing/'.$file) and
+          if (is_file($modCoreTemplate->getPath('module/product_listing/'.$file)) and
              ($file != "index.html"))
          {
 */
-          if (is_file(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/product_listing/'.$file) and (substr($file, -5) == ".html") and ($file != "index.html") and (substr($file, 0, 1) !=".")) {
+          if (is_file($modCoreTemplate->getPath('module/product_listing/'.$file) and (substr($file, -5) == ".html") and ($file != "index.html") and (substr($file, 0, 1) !="."))) {
 // EOF - Tomcraft - 2010-02-04 - Prevent modified eCommerce Shopsoftware from fetching other files than *.html
              $schema .= "<TEMPLATE>" . $file . "</TEMPLATE>\n";
          } //if
@@ -1101,11 +1103,11 @@ function SendShopConfig ()
       {
 // BOF - Tomcraft - 2010-02-04 - Prevent modified eCommerce Shopsoftware from fetching other files than *.html
 /*
-          if (is_file(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/product_info/'.$file) and
+          if (is_file($modCoreTemplate->getPath('module/product_info/'.$file)) and
              ($file != "index.html"))
          {
 */
-          if (is_file(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/product_info/'.$file) and (substr($file, -5) == ".html") and ($file != "index.html") and (substr($file, 0, 1) !=".")) {
+          if (is_file($modCoreTemplate->getPath('module/product_info/'.$file) and (substr($file, -5) == ".html") and ($file != "index.html") and (substr($file, 0, 1) !="."))) {
 // EOF - Tomcraft - 2010-02-04 - Prevent modified eCommerce Shopsoftware from fetching other files than *.html
              $schema .= "<TEMPLATE>" . $file . "</TEMPLATE>\n";
          } //if
@@ -1123,11 +1125,11 @@ function SendShopConfig ()
       {
 // BOF - Tomcraft - 2010-02-04 - Prevent modified eCommerce Shopsoftware from fetching other files than *.html
 /*
-          if (is_file(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/product_options/'.$file) and
+          if (is_file($modCoreTemplate->getPath('module/product_options/'.$file)) and
              ($file != "index.html"))
          {
 */
-           if (is_file(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/product_options/'.$file) and (substr($file, -5) == ".html") and ($file != "index.html") and (substr($file, 0, 1) !=".")) {
+           if (is_file($modCoreTemplate->getPath('module/product_options/'.$file) and (substr($file, -5) == ".html") and ($file != "index.html") and (substr($file, 0, 1) !="."))) {
 // EOF - Tomcraft - 2010-02-04 - Prevent modified eCommerce Shopsoftware from fetching other files than *.html
              $schema .= "<TEMPLATE>" . $file . "</TEMPLATE>\n";
          } //if

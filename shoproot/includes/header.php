@@ -110,7 +110,7 @@ Please visit our website: www.modified-shop.org
 if (DIR_WS_BASE == '') {
   echo '<base href="'.(($request_type == 'SSL') ? HTTPS_SERVER : HTTP_SERVER).DIR_WS_CATALOG.'" />'.PHP_EOL;
 }
-if (is_file('templates/'.CURRENT_TEMPLATE.'/css/general.css.php')) {
+if (is_file($modCoreTemplate->getPath('css/general.css.php'))) {
   require $modCoreTemplate->getPath('css/general.css.php');
 } else { //Maintain backwards compatibility for older templates 
   echo '<link rel="stylesheet" type="text/css" href="templates/'.CURRENT_TEMPLATE.'/stylesheet.css" />'.PHP_EOL;

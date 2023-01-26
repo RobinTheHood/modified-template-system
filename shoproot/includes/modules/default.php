@@ -129,7 +129,7 @@ switch ($category_depth) {
     // get default template
     if ($category['categories_template'] == '' 
         || $category['categories_template'] == 'default'
-        || !is_file(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/categorie_listing/'.$category['categories_template'])
+        || !is_file($modCoreTemplate->getPath('module/categorie_listing/'.$category['categories_template']))
         )
     {
       $files = array_filter(auto_include(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/categorie_listing/','html'), function($file) {

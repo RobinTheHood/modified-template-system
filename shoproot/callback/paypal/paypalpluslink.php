@@ -111,7 +111,7 @@ if (isset($_GET['oID'])
       $smarty->assign('BUTTON_BACK', '<a href="'.$cancel_link.'">'.xtc_image_button('button_back.gif', IMAGE_BUTTON_BACK).'</a>');
     
       $tpl_file = DIR_FS_EXTERNAL.'paypal/templates/ppp.html';
-      if (is_file(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/paypal/ppp.html')) {
+      if (is_file($modCoreTemplate->getPath('module/paypal/ppp.html'))) {
         $tpl_file = DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/paypal/ppp.html';
       }
       $main_content = $smarty->fetch($tpl_file);

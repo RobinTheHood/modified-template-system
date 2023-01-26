@@ -29,7 +29,7 @@ if (!isset($_SESSION['customers_login_tries'])) {
   $_SESSION['customers_login_tries'] = 0;
 }
 
-if (is_file(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/offline/login_shop.html')) {
+if (is_file($modCoreTemplate->getPath('module/offline/login_shop.html'))) {
 
   // create smarty elements
   $smarty = new Smarty;

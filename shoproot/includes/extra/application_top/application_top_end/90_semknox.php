@@ -29,7 +29,7 @@
   
     $smarty->assign('language', $_SESSION['language']);
     
-    if (is_file(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/semknox_listing.html')) {
+    if (is_file($modCoreTemplate->getPath('module/semknox_listing.html'))) {
       $module = $modCoreTemplate->fetch($smarty, 'module/semknox_listing.html');
     } else {
       $module = $smarty->fetch(DIR_FS_EXTERNAL.'semknox/templates/semknox_listing.html');
