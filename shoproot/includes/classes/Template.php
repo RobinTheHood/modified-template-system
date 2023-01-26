@@ -11,6 +11,11 @@ class Template
         return DIR_FS_CATALOG . 'templates/' . CURRENT_TEMPLATE . '/' . $templatePath;
     }
 
+    public function getUrl(string $templatePath): string
+    {
+        return HTTP_SERVER . DIR_WS_CATALOG . 'templates/' . CURRENT_TEMPLATE . '/' . $templatePath;
+    }
+
     public function fetch($smartyObj, string $templatePath)
     {
         return $smartyObj->fetch(CURRENT_TEMPLATE . '/' . $templatePath);
