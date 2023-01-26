@@ -85,21 +85,21 @@ function xtc_php_mail($from_email_address, $from_email_name,
   if (file_exists(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/mail/'.$lang_data['directory'].'/signatur.html')) {
     $shop_content_data = $main->getContentData(EMAIL_SIGNATURE_ID, $lang_data['languages_id'], ((isset($customers_status)) ? $customers_status : DEFAULT_CUSTOMERS_STATUS_ID_GUEST));    
     $mailsmarty->assign('SIGNATURE_HTML', $shop_content_data['content_text']);
-    $html_signatur = $mailsmarty->fetch(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/mail/'.$lang_data['directory'].'/signatur.html'); 
+    $html_signatur = $modCoreTemplate->fetch($mailsmarty, 'mail/'.$lang_data['directory'].'/signatur.html'); 
   }
   if (file_exists(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/mail/'.$lang_data['directory'].'/signatur.txt')) {
     $shop_content_data = $main->getContentData(EMAIL_SIGNATURE_ID, $lang_data['languages_id'], ((isset($customers_status)) ? $customers_status : DEFAULT_CUSTOMERS_STATUS_ID_GUEST));
     $mailsmarty->assign('SIGNATURE_TXT', $shop_content_data['content_text']);
-    $txt_signatur = $mailsmarty->fetch(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/mail/'.$lang_data['directory'].'/signatur.txt'); 
+    $txt_signatur = $modCoreTemplate->fetch($mailsmarty, 'mail/'.$lang_data['directory'].'/signatur.txt'); 
   }
 
   $html_widerruf = '';
   $txt_widerruf = '';
   if (file_exists(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/mail/'.$lang_data['directory'].'/widerruf.html')) {
-    $html_widerruf = $mailsmarty->fetch(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/mail/'.$lang_data['directory'].'/widerruf.html'); 
+    $html_widerruf = $modCoreTemplate->fetch($mailsmarty, 'mail/'.$lang_data['directory'].'/widerruf.html'); 
   }
   if (file_exists(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/mail/'.$lang_data['directory'].'/widerruf.txt')) {
-    $txt_widerruf = $mailsmarty->fetch(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/mail/'.$lang_data['directory'].'/widerruf.txt'); 
+    $txt_widerruf = $modCoreTemplate->fetch($mailsmarty, 'mail/'.$lang_data['directory'].'/widerruf.txt'); 
   }  
 
   //Platzhalter [WIDERRUF] durch Widerruf Text ersetzen
@@ -139,7 +139,7 @@ function xtc_php_mail($from_email_address, $from_email_name,
   // decode html2txt
   $html_array = array('<br />', '<br/>', '<br>');
   $txt_array = array(" \n", " \n", " \n");
-  $message_body_plain = str_replace($html_array, $txt_array, $message_body_plain.$txt_signatur);//DPW Signatur ergänzt.
+  $message_body_plain = str_replace($html_array, $txt_array, $message_body_plain.$txt_signatur);//DPW Signatur ergï¿½nzt.
   
   // remove html tags
   $message_body_plain = strip_tags($message_body_plain);
@@ -238,7 +238,7 @@ function xtc_php_mail($from_email_address, $from_email_name,
   $mail->setWordWrap((int)EMAIL_WORD_WRAP);
   if (EMAIL_USE_HTML == 'true') { // set email format to HTML
     $mail->IsHTML(true);
-    $mail->Body = $message_body_html.$html_signatur;//DPW Signatur ergänzt.
+    $mail->Body = $message_body_html.$html_signatur;//DPW Signatur ergï¿½nzt.
     $mail->AltBody = $message_body_plain;
   } else {
     $mail->IsHTML(false);

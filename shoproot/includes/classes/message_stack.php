@@ -71,6 +71,8 @@
     }
 
     function output($class, $type = 'error') {
+      global $modCoreTemplate;
+
       $output = '';
       if ($this->size($class, $type) > 0) {
         if (in_array($class, $this->global_array)
@@ -93,7 +95,7 @@
           $smarty->assign('type', $type);
           $smarty->assign('language', $_SESSION['language']);
           $smarty->assign('messages', $_SESSION['messageToStack'][$class][$type]);
-          $output = $smarty->fetch(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/message_stack.html');
+          $output = $modCoreTemplate->fetch($smarty, 'module/message_stack.html');
         } else {
           foreach ($_SESSION['messageToStack'][$class][$type] as $message) {
             $output .= '<p>'.$message.'</p>';

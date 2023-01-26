@@ -21,12 +21,12 @@
     if (file_exists(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/mail/'.$order->info['language'].'/signatur.html')) {
       $shop_content_data = $main->getContentData(EMAIL_SIGNATURE_ID, $order->info['languages_id']);    
       $smarty->assign('SIGNATURE_HTML', $shop_content_data['content_text']);
-      $html_signatur = $smarty->fetch(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/mail/'.$order->info['language'].'/signatur.html'); 
+      $html_signatur = $modCoreTemplate->fetch($smarty, 'mail/'.$order->info['language'].'/signatur.html'); 
     }
     if (file_exists(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/mail/'.$order->info['language'].'/signatur.txt')) {
       $shop_content_data = $main->getContentData(EMAIL_SIGNATURE_ID, $order->info['languages_id']);
       $smarty->assign('SIGNATURE_TXT', $shop_content_data['content_text']);
-      $txt_signatur = $smarty->fetch(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/mail/'.$order->info['language'].'/signatur.txt'); 
+      $txt_signatur = $modCoreTemplate->fetch($smarty, 'mail/'.$order->info['language'].'/signatur.txt'); 
     }
 
     //Platzhalter [NOSIGNATUR] falls keine Signatir notwendig (zB Newsletter)
