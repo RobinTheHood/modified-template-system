@@ -41,7 +41,7 @@
       $smarty->assign('order', $order);
       $smarty->assign('order_data', $order->getOrderData($oID));
 
-      $smarty->assign('tpl_path',DIR_WS_BASE.'templates/'.CURRENT_TEMPLATE.'/');
+      $smarty->assign('tpl_path', $modCoreTemplate->getUrl(''));
       $smarty->assign('logo_path', HTTP_SERVER.DIR_WS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/img/');
       $smarty->assign('NAME', $order->customer['name']);
       $smarty->assign('ORDER_NR', $order->info['order_id']);

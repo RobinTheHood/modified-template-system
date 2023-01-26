@@ -19,7 +19,7 @@ include ('includes/application_top.php');
 
 $smarty = new Smarty;
 $smarty->assign('language', $_SESSION['language']);
-$smarty->assign('tpl_path', DIR_WS_BASE.'templates/'.CURRENT_TEMPLATE.'/');
+$smarty->assign('tpl_path', $modCoreTemplate->getUrl(''));
 
 // include boxes
 require $modCoreTemplate->getPath('source/boxes.php');

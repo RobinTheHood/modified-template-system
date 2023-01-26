@@ -152,4 +152,4 @@ if (in_array(basename($PHP_SELF), $bestsellers) && !isset($_GET['cPath']) && !is
 }
 // -----------------------------------------------------------------------------------------
 
-$smarty->assign('tpl_path', DIR_WS_BASE.'templates/'.CURRENT_TEMPLATE.'/');
+$smarty->assign('tpl_path', $modCoreTemplate->getUrl(''));

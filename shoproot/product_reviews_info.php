@@ -32,7 +32,7 @@ if ($_SESSION['customers_status']['customers_status_read_reviews'] == '0') {
 
 $smarty = new Smarty;
 $smarty->assign('language', $_SESSION['language']);
-$smarty->assign('tpl_path', DIR_WS_BASE.'templates/'.CURRENT_TEMPLATE.'/');
+$smarty->assign('tpl_path', $modCoreTemplate->getUrl(''));
 
 if (!is_object($product) || $product->isProduct() === false || $language_not_found === true) {
 

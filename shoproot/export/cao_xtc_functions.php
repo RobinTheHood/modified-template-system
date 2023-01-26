@@ -2476,7 +2476,7 @@ function OrderUpdate ()
           $smarty->template_dir = DIR_FS_CATALOG.'templates';
           $smarty->compile_dir = DIR_FS_CATALOG.'templates_c';
           $smarty->config_dir = DIR_FS_CATALOG.'lang';
-          $smarty->assign('tpl_path', HTTP_SERVER.DIR_WS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/');
+          $smarty->assign('tpl_path', $modCoreTemplate->getUrl(''));
           $smarty->assign('logo_path', HTTP_SERVER.DIR_WS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/img/');
           $smarty->assign('NAME',$check_status['customers_name']);
           $smarty->assign('ORDER_NR',$oID);
@@ -2675,7 +2675,7 @@ function CustomersUpdate ()
     $smarty->compile_dir = DIR_FS_CATALOG.'templates_c';
     $smarty->config_dir = DIR_FS_CATALOG.'lang';
 
-    $smarty->assign('tpl_path', HTTP_SERVER.DIR_WS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/');
+    $smarty->assign('tpl_path', $modCoreTemplate->getUrl(''));
     $smarty->assign('logo_path', HTTP_SERVER.DIR_WS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/img/');
     $smarty->assign('NAME',$sql_customers_data_array['customers_lastname'] . ' ' . $sql_customers_data_array['customers_firstname']);
     $smarty->assign('EMAIL',$sql_customers_data_array['customers_email_address']);

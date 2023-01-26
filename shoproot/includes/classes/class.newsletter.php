@@ -358,7 +358,7 @@ class newsletter {
     
     if ($sendmail === true) {
       $smarty->assign('language', $_SESSION['language']);
-      $smarty->assign('tpl_path', HTTP_SERVER.DIR_WS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/');
+      $smarty->assign('tpl_path', $modCoreTemplate->getUrl(''));
       $smarty->assign('logo_path', HTTP_SERVER.DIR_WS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/img/');
       
       $smarty->caching = 0;

@@ -27,7 +27,7 @@ require_once (DIR_FS_INC.'xtc_get_products_mo_images.inc.php');
 $info_smarty = new Smarty;
 $info_smarty->assign('language', $_SESSION['language']);
 $info_smarty->assign('charset', $_SESSION['language_charset'] ); 
-$info_smarty->assign('tpl_path', DIR_WS_BASE.'templates/'.CURRENT_TEMPLATE.'/');
+$info_smarty->assign('tpl_path', $modCoreTemplate->getUrl(''));
 
 if (DIR_WS_BASE == '') {
   $info_smarty->assign('base_href', (($request_type == 'SSL') ? HTTPS_SERVER : HTTP_SERVER) . DIR_WS_CATALOG);

@@ -26,7 +26,7 @@ require_once (DIR_FS_INC.'xtc_word_count.inc.php');
 // create smarty
 $smarty = new Smarty;
 $smarty->assign('language', $_SESSION['language']);
-$smarty->assign('tpl_path', DIR_WS_BASE.'templates/'.CURRENT_TEMPLATE.'/');
+$smarty->assign('tpl_path', $modCoreTemplate->getUrl(''));
 
 if ($_SESSION['customers_status']['customers_status_read_reviews'] == '0') {
   xtc_redirect(xtc_href_link(FILENAME_LOGIN, '', 'SSL'));

@@ -30,7 +30,7 @@ if ($_SESSION['customers_status']['customers_status_read_reviews'] == '0') {
 // create smarty
 $smarty = new Smarty;
 $smarty->assign('language', $_SESSION['language']);
-$smarty->assign('tpl_path', DIR_WS_BASE.'templates/'.CURRENT_TEMPLATE.'/');
+$smarty->assign('tpl_path', $modCoreTemplate->getUrl(''));
 
 $reviews_query_raw = "SELECT r.reviews_id,
                         left(rd.reviews_text, 250) as reviews_text,

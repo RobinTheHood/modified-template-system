@@ -26,7 +26,7 @@ if (ENABLE_SSL == true && $request_type == 'NONSSL' && !isset($_GET['action']) &
 // create smarty elements
 $smarty = new Smarty;
 $smarty->assign('language', $_SESSION['language']);
-$smarty->assign('tpl_path', DIR_WS_BASE.'templates/'.CURRENT_TEMPLATE.'/');
+$smarty->assign('tpl_path', $modCoreTemplate->getUrl(''));
 
 // include boxes
 require $modCoreTemplate->getPath('source/boxes.php');
