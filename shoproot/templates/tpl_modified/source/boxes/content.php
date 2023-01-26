@@ -26,8 +26,8 @@ if (!$box_smarty->is_cached(CURRENT_TEMPLATE.'/boxes/box_content.html', $cache_i
 
 
   // include needed functions
-  require_once (DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/source/inc/xtc_show_content.inc.php');
-  require_once (DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/source/inc/close_ul_tags.inc.php');
+  require_once $modCoreTemplate->getPath('source/inc/xtc_show_content.inc.php');
+  require_once $modCoreTemplate->getPath('source/inc/close_ul_tags.inc.php');
 
   $content_array = array();
   $content_string = '';

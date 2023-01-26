@@ -25,8 +25,8 @@ $cache_id = md5('lID:'.$_SESSION['language'].'|csID:'.$_SESSION['customers_statu
 if (!$box_smarty->is_cached(CURRENT_TEMPLATE.'/boxes/box_information.html', $cache_id) || !$cache) {
 
   // include needed functions
-  require_once (DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/source/inc/xtc_show_content.inc.php');
-  require_once (DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/source/inc/close_ul_tags.inc.php');
+  require_once $modCoreTemplate->getPath('source/inc/xtc_show_content.inc.php');
+  require_once $modCoreTemplate->getPath('source/inc/close_ul_tags.inc.php');
   
   $content_array = array();
   $content_string = '';

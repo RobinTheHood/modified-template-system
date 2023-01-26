@@ -63,5 +63,5 @@
 
   // css buttons
   if (is_file(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/source/inc/css_button.inc.php')) {
-    require_once(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/source/inc/css_button.inc.php');
+    require_once $modCoreTemplate->getPath('source/inc/css_button.inc.php');
   }
