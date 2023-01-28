@@ -34,7 +34,7 @@ if (!CacheCheck()) {
   $cache_id = md5('lID:'.$_SESSION['language'].'|csID:'.$_SESSION['customers_status']['customers_status_id'].'|coID:'.(int)$_GET['coID']);
 }
 
-if (!$module_smarty->is_cached(CURRENT_TEMPLATE.'/module/products_media.html', $cache_id) || !$cache) {
+if (!$module_smarty->is_cached($modCoreTemplate->getPath('module/products_media.html'), $cache_id) || !$cache) {
   //get downloads
   $content_query = xtDBquery("SELECT content_id, 
                                      content_name, 

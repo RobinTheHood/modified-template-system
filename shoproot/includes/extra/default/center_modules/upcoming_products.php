@@ -38,7 +38,7 @@ if (MAX_DISPLAY_UPCOMING_PRODUCTS != '0') {
     $cache_id = md5('lID:'.$_SESSION['language'].'|csID:'.$_SESSION['customers_status']['customers_status_id'].'|curr:'.$_SESSION['currency'].'|country:'.((isset($_SESSION['country'])) ? $_SESSION['country'] : ((isset($_SESSION['customer_country_id'])) ? $_SESSION['customer_country_id'] : STORE_COUNTRY)));
   }
 
-  if (!$module_smarty->is_cached(CURRENT_TEMPLATE.'/module/upcoming_products.html', $cache_id) || !$cache) {
+  if (!$module_smarty->is_cached($modCoreTemplate->getPath('module/upcoming_products.html'), $cache_id) || !$cache) {
     $expected_query = xtDBquery("SELECT ".$product->default_select.",
                                         products_date_available as date_expected
                                    FROM ".TABLE_PRODUCTS." p

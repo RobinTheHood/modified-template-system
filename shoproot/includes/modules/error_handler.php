@@ -27,7 +27,7 @@ if (!CacheCheck()) {
   $cache_id = md5('lID:'.$_SESSION['language'].'|error:'.$site_error);
 }
 
-if (!$module_smarty->is_cached(CURRENT_TEMPLATE.'/module/error_message.html', $cache_id) || !$cache) {
+if (!$module_smarty->is_cached($modCoreTemplate->getPath('module/error_message.html'), $cache_id) || !$cache) {
   $module_smarty->assign('ERROR', $site_error);
 
   $link = 'javascript:history.back(1)';

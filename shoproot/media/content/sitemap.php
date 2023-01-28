@@ -49,7 +49,7 @@ if (!CacheCheck()) {
   $cache_id = md5('lID:'.$_SESSION['language'].'|csID'.$_SESSION['customers_status']['customers_status_id'].((isset($_REQUEST['error'])) ? '|error:'.$_REQUEST['error'] : ''));
 }
 
-if (!$module_smarty->is_cached(CURRENT_TEMPLATE.'/module/sitemap.html', $cache_id) || !$cache) {  
+if (!$module_smarty->is_cached($modCoreTemplate->getPath('module/sitemap.html'), $cache_id) || !$cache) {  
   $module_content = array();
 
   if (function_exists('xtc_get_category_tree_array')) {

@@ -52,7 +52,7 @@ if (xtc_db_num_rows($specials_query) > 0) {
   // set cache id
   $cache_id = md5($_SESSION['currency'].$_SESSION['language'].$specials['products_id']);
 
-  if (!$box_smarty->is_cached(CURRENT_TEMPLATE.'/boxes/box_specials.html', $cache_id) || !$cache) {
+  if (!$box_smarty->is_cached($modCoreTemplate->getPath('boxes/box_specials.html'), $cache_id) || !$cache) {
     $box_smarty->assign('box_content', $product->buildDataArray($specials));
     $box_smarty->assign('SPECIALS_LINK', xtc_href_link(FILENAME_SPECIALS));
   }

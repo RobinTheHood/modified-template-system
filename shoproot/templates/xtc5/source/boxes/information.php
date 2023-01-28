@@ -22,7 +22,7 @@ include(DIR_FS_BOXES_INC . 'smarty_default.php');
 // set cache id
 $cache_id = md5('lID:'.$_SESSION['language'].'|csID:'.$_SESSION['customers_status']['customers_status_id'].'coP:'.$coPath);
 
-if (!$box_smarty->is_cached(CURRENT_TEMPLATE.'/boxes/box_information.html', $cache_id) || !$cache) {
+if (!$box_smarty->is_cached($modCoreTemplate->getPath('boxes/box_information.html'), $cache_id) || !$cache) {
 
   // include needed functions
   require_once $modCoreTemplate->getPath('source/inc/xtc_show_content.inc.php');

@@ -54,7 +54,7 @@ if (!is_object($product) || $product->isProduct() === false || $language_not_fou
     $cache_id = md5('lID:'.$_SESSION['language'].'|csID:'.$_SESSION['customers_status']['customers_status_id'].'|pID:'.(int)$_GET['products_id'].'|rID:'.(int)$_GET['reviews_id']);
   }
 
-  if (!$smarty->is_cached(CURRENT_TEMPLATE.'/module/product_reviews_info.html', $cache_id) || !$cache) {
+  if (!$smarty->is_cached($modCoreTemplate->getPath('module/product_reviews_info.html'), $cache_id) || !$cache) {
     $product_reviews_query = xtDBquery("SELECT r.*,
                                                rd.reviews_text,
                                                p.products_id,

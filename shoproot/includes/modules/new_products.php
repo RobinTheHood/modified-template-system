@@ -41,7 +41,7 @@ if (!CacheCheck()) {
   $cache_id = md5('lID:'.$_SESSION['language'].'|csID:'.$_SESSION['customers_status']['customers_status_id'].'|pID:'.$new_products_category_id.'|curr:'.$_SESSION['currency'].'|country:'.((isset($_SESSION['country'])) ? $_SESSION['country'] : ((isset($_SESSION['customer_country_id'])) ? $_SESSION['customer_country_id'] : STORE_COUNTRY)));
 }
 
-if (!$module_smarty->is_cached(CURRENT_TEMPLATE.'/module/new_products.html', $cache_id) || !$cache) {
+if (!$module_smarty->is_cached($modCoreTemplate->getPath('module/new_products.html'), $cache_id) || !$cache) {
   $days = '';
   if (MAX_DISPLAY_NEW_PRODUCTS_DAYS != '0') {
     $date_new_products = date("Y-m-d", mktime(1, 1, 1, date("m"), date("d") - MAX_DISPLAY_NEW_PRODUCTS_DAYS, date("Y")));

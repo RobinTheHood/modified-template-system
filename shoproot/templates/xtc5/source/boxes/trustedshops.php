@@ -16,7 +16,7 @@ include(DIR_FS_BOXES_INC . 'smarty_default.php');
 // set cache id
 $cache_id = md5('lID:'.$_SESSION['language']);
 
-if (!$box_smarty->is_cached(CURRENT_TEMPLATE.'/boxes/box_trustedshops.html', $cache_id) || !$cache) {
+if (!$box_smarty->is_cached($modCoreTemplate->getPath('boxes/box_trustedshops.html'), $cache_id) || !$cache) {
   $box_smarty->assign('STICKER_CODE', MODULE_TS_REVIEW_STICKER);
 }
 

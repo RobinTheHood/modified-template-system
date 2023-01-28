@@ -41,7 +41,7 @@ if (!CacheCheck()) {
   $cache_id = md5('lID:'.$_SESSION['language']);
 }
 
-if (!$smarty->is_cached(CURRENT_TEMPLATE.'/module/ssl_check.html', $cache_id) || !$cache) {
+if (!$smarty->is_cached($modCoreTemplate->getPath('module/ssl_check.html'), $cache_id) || !$cache) {
   $smarty->assign('BUTTON_CONTINUE', '<a href="'.xtc_href_link(FILENAME_DEFAULT).'">'.xtc_image_button('button_continue.gif', IMAGE_BUTTON_CONTINUE).'</a>');
 }
 

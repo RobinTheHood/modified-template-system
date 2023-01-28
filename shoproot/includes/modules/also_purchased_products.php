@@ -35,7 +35,7 @@ if (!CacheCheck()) {
   $cache_id = md5('lID:'.$_SESSION['language'].'|csID:'.$_SESSION['customers_status']['customers_status_id'].'|pID:'.$product->data['products_id'].'|curr:'.$_SESSION['currency'].'|country:'.((isset($_SESSION['country'])) ? $_SESSION['country'] : ((isset($_SESSION['customer_country_id'])) ? $_SESSION['customer_country_id'] : STORE_COUNTRY)));
 }
 
-if (!$module_smarty->is_cached(CURRENT_TEMPLATE.'/module/also_purchased.html', $cache_id) || !$cache) {
+if (!$module_smarty->is_cached($modCoreTemplate->getPath('module/also_purchased.html'), $cache_id) || !$cache) {
   $data = $product->getAlsoPurchased();
   if (count($data) > 0
       && count($data) >= MIN_DISPLAY_ALSO_PURCHASED

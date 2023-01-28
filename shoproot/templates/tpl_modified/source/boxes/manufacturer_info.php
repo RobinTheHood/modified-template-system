@@ -22,7 +22,7 @@ include(DIR_FS_BOXES_INC . 'smarty_default.php');
 // set cache id
 $cache_id = md5('lID:'.$_SESSION['language'].'|mID:'.((isset($product->data['manufacturers_id']) && $product->data['manufacturers_id'] != '') ? $product->data['manufacturers_id'] : '0'));
 
-if (!$box_smarty->is_cached(CURRENT_TEMPLATE.'/boxes/box_manufacturers_info.html', $cache_id) || !$cache) {
+if (!$box_smarty->is_cached($modCoreTemplate->getPath('boxes/box_manufacturers_info.html'), $cache_id) || !$cache) {
   $manufacturers_array = xtc_get_manufacturers();
   if (isset($manufacturers_array[$product->data['manufacturers_id']])) {
     $manufacturer = $manufacturers_array[$product->data['manufacturers_id']];

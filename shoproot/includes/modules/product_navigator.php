@@ -33,7 +33,7 @@ if (!CacheCheck()) {
   $cache_id = md5('lID:'.$_SESSION['language'].'|csID:'.$_SESSION['customers_status']['customers_status_id'].'|pID:'.$product->data['products_id'].'|cID:'.$current_category_id);
 }
 
-if (!$module_smarty->is_cached(CURRENT_TEMPLATE.'/module/product_navigator.html', $cache_id) || !$cache) {
+if (!$module_smarty->is_cached($modCoreTemplate->getPath('module/product_navigator.html'), $cache_id) || !$cache) {
   // select products
   $sorting_query = xtDBquery("SELECT products_sorting,
                                      products_sorting2 

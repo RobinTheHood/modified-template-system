@@ -25,7 +25,7 @@ if (isset($_SESSION['tracking']['products_history']) && count($_SESSION['trackin
   // set cache id
   $cache_id = md5($_SESSION['currency'].$_SESSION['language'].$_SESSION['customers_status']['customers_status'].$_SESSION['tracking']['products_history'][$random_last_viewed]);
 
-  if (!$box_smarty->is_cached(CURRENT_TEMPLATE.'/boxes/box_last_viewed.html', $cache_id) || !$cache) {
+  if (!$box_smarty->is_cached($modCoreTemplate->getPath('boxes/box_last_viewed.html'), $cache_id) || !$cache) {
 
     $random_query = "SELECT ".$product->default_select.",
                             p2c.categories_id,

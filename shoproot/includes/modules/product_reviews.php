@@ -38,7 +38,7 @@ if (!CacheCheck()) {
   $cache_id = md5('lID:'.$_SESSION['language'].'|csID:'.$_SESSION['customers_status']['customers_status_id'].'|pID:'.$product->data['products_id'].'|count:'.$product->getReviewsCount());
 }
 
-if (!$module_smarty->is_cached(CURRENT_TEMPLATE.'/module/products_reviews.html', $cache_id) || !$cache) {
+if (!$module_smarty->is_cached($modCoreTemplate->getPath('module/products_reviews.html'), $cache_id) || !$cache) {
   $button_preview = '';
   if ($_SESSION['customers_status']['customers_status_write_reviews'] == 1) {
     $button_preview = '<a href="'.xtc_href_link(FILENAME_PRODUCT_REVIEWS_WRITE, 'products_id='.$product->data['products_id']).'">'.xtc_image_button('button_write_review.gif', IMAGE_BUTTON_WRITE_REVIEW).'</a>';
