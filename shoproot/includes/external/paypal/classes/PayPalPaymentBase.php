@@ -369,7 +369,7 @@ class PayPalPaymentBase extends PayPalCommon {
 
       $tpl_file = DIR_FS_EXTERNAL.'paypal/templates/shipping_block.html';
       if (is_file($modCoreTemplate->getPath('module/paypal/shipping_block.html'))) {
-        $tpl_file = DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/paypal/shipping_block.html';
+        $tpl_file = $modCoreTemplate->getPath('module/paypal/shipping_block.html');
       }
       $shipping_method = $module_smarty->fetch($tpl_file);
     
@@ -459,7 +459,7 @@ class PayPalPaymentBase extends PayPalCommon {
     
     $tpl_file = DIR_FS_EXTERNAL.'paypal/templates/comments_block.html';
     if (is_file($modCoreTemplate->getPath('module/paypal/comments_block.html'))) {
-      $tpl_file = DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/paypal/comments_block.html';
+      $tpl_file = $modCoreTemplate->getPath('module/paypal/comments_block.html');
     }
     $process_button = $module_smarty->fetch($tpl_file);
 

@@ -28,7 +28,7 @@ if (is_object($order) && in_array($order->info['payment_method'], $paypal_paymen
   
   $tpl_file = DIR_FS_EXTERNAL.'paypal/templates/payment_info.html';
   if (is_file($modCoreTemplate->getPath('module/paypal/payment_info.html'))) {
-    $tpl_file = DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/paypal/payment_info.html';
+    $tpl_file = $modCoreTemplate->getPath('module/paypal/payment_info.html');
   }
 
   if (strpos($order->info['payment_method'], 'link') !== false) {

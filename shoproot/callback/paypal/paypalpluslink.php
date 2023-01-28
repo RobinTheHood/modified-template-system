@@ -112,7 +112,7 @@ if (isset($_GET['oID'])
     
       $tpl_file = DIR_FS_EXTERNAL.'paypal/templates/ppp.html';
       if (is_file($modCoreTemplate->getPath('module/paypal/ppp.html'))) {
-        $tpl_file = DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/paypal/ppp.html';
+        $tpl_file = $modCoreTemplate->getPath('module/paypal/ppp.html');
       }
       $main_content = $smarty->fetch($tpl_file);
     

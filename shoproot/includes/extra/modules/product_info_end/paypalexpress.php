@@ -37,7 +37,7 @@
   
       $tpl_file = DIR_FS_EXTERNAL.'paypal/templates/apms.html';
       if (is_file($modCoreTemplate->getPath('module/paypal/apms.html'))) {
-        $tpl_file = DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/paypal/apms.html';
+        $tpl_file = $modCoreTemplate->getPath('module/paypal/apms.html');
       }
       $info_smarty->assign('ADD_CART_BUTTON_PAYPAL', $paypal_smarty->fetch($tpl_file));
     }

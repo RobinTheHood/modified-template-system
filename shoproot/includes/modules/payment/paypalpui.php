@@ -78,7 +78,7 @@ class paypalpui extends PayPalPaymentV2 {
 
       $tpl_file = DIR_FS_EXTERNAL.'paypal/templates/pui_error.html';
       if (is_file($modCoreTemplate->getPath('module/paypal/pui_error.html'))) {
-        $tpl_file = DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/paypal/pui_error.html';
+        $tpl_file = $modCoreTemplate->getPath('module/paypal/pui_error.html');
       }
       $paypal_smarty->assign('error_message', $messageStack->output('paypalpui'));
       $info = $paypal_smarty->fetch($tpl_file);
@@ -179,7 +179,7 @@ class paypalpui extends PayPalPaymentV2 {
 
     $tpl_file = DIR_FS_EXTERNAL.'paypal/templates/pui.html';
     if (is_file($modCoreTemplate->getPath('module/paypal/pui.html'))) {
-      $tpl_file = DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/paypal/pui.html';
+      $tpl_file = $modCoreTemplate->getPath('module/paypal/pui.html');
     }
     $process_button = $paypal_smarty->fetch($tpl_file);
 

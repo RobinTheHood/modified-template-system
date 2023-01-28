@@ -73,7 +73,7 @@ class paypalacdc extends PayPalPaymentV2 {
 
     $tpl_file = DIR_FS_EXTERNAL.'paypal/templates/acdc.html';
     if (is_file($modCoreTemplate->getPath('module/paypal/acdc.html'))) {
-      $tpl_file = DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/paypal/acdc.html';
+      $tpl_file = $modCoreTemplate->getPath('module/paypal/acdc.html');
     }
     $process_button = $paypal_smarty->fetch($tpl_file);
 
