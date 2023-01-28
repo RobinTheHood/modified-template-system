@@ -155,7 +155,7 @@ if ($result != false) {
       || !is_file($modCoreTemplate->getPath('module/product_listing/'.$category['listing_template']))
       )
   {
-    $files = array_filter(auto_include(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/product_listing/','html'), function($file) {
+    $files = array_filter(auto_include($modCoreTemplate->getPath('module/product_listing/'),'html'), function($file) {
       return false === strpos($file, 'index.html');
     });
     $category['listing_template'] = basename($files[0]);
@@ -213,7 +213,7 @@ if ($result != false) {
         || !is_file($modCoreTemplate->getPath('module/categorie_listing/'.$category['categories_template']))
         )
     {
-      $files = array_filter(auto_include(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/categorie_listing/','html'), function($file) {
+      $files = array_filter(auto_include($modCoreTemplate->getPath('module/categorie_listing/'),'html'), function($file) {
         return false === strpos($file, 'index.html');
       });
       $category['categories_template'] = basename($files[0]);
@@ -249,7 +249,7 @@ if ($result != false) {
     foreach(auto_include(DIR_FS_CATALOG.'includes/extra/modules/product_listing_end/','php') as $file) require ($file);
 
     // get default template
-    $files = array_filter(auto_include(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/categorie_listing/','html'), function($file) {
+    $files = array_filter(auto_include($modCoreTemplate->getPath('module/categorie_listing/'),'html'), function($file) {
       return false === strpos($file, 'index.html');
     });
     $manufacturer_template = basename($files[0]);

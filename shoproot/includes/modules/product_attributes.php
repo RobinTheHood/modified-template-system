@@ -30,7 +30,7 @@ if ($product->data['options_template'] == ''
     || !is_file($modCoreTemplate->getPath('module/product_options/'.$product->data['options_template']))
     )
 {
-  $files = array_filter(auto_include(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/product_options/','html'), function($file) {
+  $files = array_filter(auto_include($modCoreTemplate->getPath('module/product_options/'),'html'), function($file) {
     return false === strpos($file, 'index.html');
   });
   $product->data['options_template'] = basename($files[0]);

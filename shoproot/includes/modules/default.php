@@ -132,7 +132,7 @@ switch ($category_depth) {
         || !is_file($modCoreTemplate->getPath('module/categorie_listing/'.$category['categories_template']))
         )
     {
-      $files = array_filter(auto_include(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/categorie_listing/','html'), function($file) {
+      $files = array_filter(auto_include($modCoreTemplate->getPath('module/categorie_listing/'),'html'), function($file) {
         return false === strpos($file, 'index.html');
       });
       $category['categories_template'] = basename($files[0]);

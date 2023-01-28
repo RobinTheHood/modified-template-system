@@ -219,8 +219,8 @@ if (!$action || in_array($action, array('delete', 'list'))) {
     'contact_us',
   );
 
-  $template_array = auto_include(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/mail/'.$_SESSION['language'].'/','html');
-  $template_array = array_merge($template_array, auto_include(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/admin/mail/'.$_SESSION['language'].'/','html'));
+  $template_array = auto_include($modCoreTemplate->getPath('mail/'.$_SESSION['language'].'/'),'html');
+  $template_array = array_merge($template_array, auto_include($modCoreTemplate->getPath('admin/mail/'.$_SESSION['language'].'/'),'html'));
 
   foreach ($template_array as $index => $template) {
     $template = strstr(basename($template), '.html', true);
