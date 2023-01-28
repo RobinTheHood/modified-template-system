@@ -76,7 +76,7 @@ if(!$billpay->isGambio()) {
 
     $smarty->assign('language', $_SESSION['language']); // intended duplicate
     $smarty->assign('main_content', $billpaySmarty->fetch('../includes/external/billpay/templates/checkout_billpay_giropay.tpl'));
-    $smarty->display(CURRENT_TEMPLATE . '/index.html');
+    $modCoreTemplate->display($smarty, 'index.html');
 
     include ('includes/application_bottom.php');
 } else {

@@ -141,7 +141,7 @@ class PayonePayment {
 	}
 
   function _credit_risk_check() {
-    global $smarty, $breadcrumb, $request_type;
+    global $smarty, $breadcrumb, $request_type, $modCoreTemplate;
     
     $active_genre = $this->_getActiveGenreIdentifier();
         
@@ -179,7 +179,7 @@ class PayonePayment {
       $smarty->assign('main_content', $main_content);
       $smarty->caching = 0;
       if (!defined('RM')) $smarty->load_filter('output', 'note');
-      $smarty->display(CURRENT_TEMPLATE . '/index.html');
+      $modCoreTemplate->display($smarty, 'index.html');
 
       include ('includes/application_bottom.php');
       exit();		  
@@ -187,6 +187,8 @@ class PayonePayment {
   }
   
 	function selection() {
+		global $modCoreTemplate;
+
 		$active_genre = $this->_getActiveGenreIdentifier();
 		if ($active_genre === false) {
 			return false;
@@ -236,7 +238,7 @@ class PayonePayment {
           $smarty->assign('main_content', $main_content);
           $smarty->caching = 0;
           if (!defined('RM')) $smarty->load_filter('output', 'note');
-          $smarty->display(CURRENT_TEMPLATE . '/index.html');
+          $modCoreTemplate->display($smarty, 'index.html');
 
           include ('includes/application_bottom.php');
           exit();          
