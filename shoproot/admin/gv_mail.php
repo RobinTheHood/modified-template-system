@@ -52,7 +52,7 @@
     global $currencies, $smarty, $modCoreTemplate;
     
     $smarty->assign('tpl_path', $modCoreTemplate->getUrl(''));
-    $smarty->assign('logo_path', HTTP_SERVER.DIR_WS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/img/');
+    $smarty->assign('logo_path', $modCoreTemplate->getUrl('img/'));
 
     $smarty->assign('MESSAGE', $data['message']);
     $smarty->assign('WEBSITE', HTTP_SERVER.DIR_WS_CATALOG);

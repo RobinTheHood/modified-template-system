@@ -118,7 +118,7 @@
       {
         $smarty->assign('language', $_SESSION['language']);
         $smarty->assign('tpl_path', $modCoreTemplate->getUrl(''));    
-        $smarty->assign('logo_path', HTTP_SERVER.DIR_WS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/img/');
+        $smarty->assign('logo_path', $modCoreTemplate->getUrl('img/'));
         $smarty->assign('NAME', $name);
         $smarty->assign('EMAIL', $email);
         $smarty->assign('DATE', $datum);

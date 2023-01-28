@@ -71,7 +71,7 @@
   $smarty->assign('charset', $langcode['language_charset']);
   $smarty->assign('language', $order->info['language']);
 
-  $smarty->assign('logo_path', DIR_WS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/img/');
+  $smarty->assign('logo_path', $modCoreTemplate->getUrl('img/'));
   $smarty->assign('tpl_path', $modCoreTemplate->getUrl(''));
 
   $smarty->assign('oID',$order->info['order_id']);

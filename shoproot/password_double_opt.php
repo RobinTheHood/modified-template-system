@@ -80,7 +80,7 @@ if (isset($_GET['action'])
       // assign language to template for caching
       $smarty->assign('language', $_SESSION['language']);
       $smarty->assign('tpl_path', $modCoreTemplate->getUrl(''));
-      $smarty->assign('logo_path', HTTP_SERVER.DIR_WS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/img/');
+      $smarty->assign('logo_path', $modCoreTemplate->getUrl('img/'));
 
       // assign vars
       $smarty->assign('EMAIL', $check_customer['customers_email_address']);

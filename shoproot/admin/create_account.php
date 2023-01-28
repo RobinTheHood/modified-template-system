@@ -320,7 +320,7 @@
         $smarty->config_dir = DIR_FS_CATALOG.'lang';
         
         $smarty->assign('tpl_path', $modCoreTemplate->getUrl(''));
-        $smarty->assign('logo_path', HTTP_SERVER.DIR_WS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/img/');
+        $smarty->assign('logo_path', $modCoreTemplate->getUrl('img/'));
 
         $smarty->assign('GENDER', $customers_gender);
         $smarty->assign('FIRSTNAME',$customers_firstname);
