@@ -251,7 +251,7 @@ elseif (!isset($_SESSION['cot_gv']) || $total <= 0) {
 require (DIR_WS_INCLUDES . 'header.php');
 
 $module_smarty->caching = 0;
-$payment_block = $module_smarty->fetch(CURRENT_TEMPLATE . '/module/checkout_payment_block.html');
+$payment_block = $modCoreTemplate->fetch($module_smarty, 'module/checkout_payment_block.html');
 
 $smarty->assign('COMMENTS', xtc_draw_textarea_field('comments', 'soft', '60', '5', isset($_SESSION['comments']) ? $_SESSION['comments'] : '') . xtc_draw_hidden_field('comments_added', 'YES'));
 
@@ -301,7 +301,7 @@ if ($messageStack->size('checkout_payment') > 0) {
 
 $smarty->assign('language', $_SESSION['language']);
 $smarty->assign('PAYMENT_BLOCK', $payment_block);
-$main_content = $smarty->fetch(CURRENT_TEMPLATE . '/module/checkout_payment.html');
+$main_content = $modCoreTemplate->fetch($smarty, 'module/checkout_payment.html');
 $smarty->assign('main_content', $main_content);
 $smarty->caching = 0;
 if (!defined('RM')) $smarty->load_filter('output', 'note');

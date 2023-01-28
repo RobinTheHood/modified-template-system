@@ -2485,8 +2485,8 @@ function OrderUpdate ()
           $smarty->assign('NOTIFY_COMMENTS',$comments);
           $smarty->assign('ORDER_STATUS',$o_status);
 
-          $html_mail=$smarty->fetch(CURRENT_TEMPLATE . '/admin/mail/'.$check_status['language'].'/change_order_mail.html');
-          $txt_mail=$smarty->fetch(CURRENT_TEMPLATE . '/admin/mail/'.$check_status['language'].'/change_order_mail.txt');
+          $html_mail=$modCoreTemplate->fetch($smarty, 'admin/mail/'.$check_status['language'].'/change_order_mail.html');
+          $txt_mail=$modCoreTemplate->fetch($smarty, 'admin/mail/'.$check_status['language'].'/change_order_mail.txt');
 
           // send mail with html/txt template
           xtc_php_mail(EMAIL_BILLING_ADDRESS,
@@ -2683,8 +2683,8 @@ function CustomersUpdate ()
     //$smarty->assign('language', $Lang_folder);
     $smarty->assign('content', $module_content);
 
-    $html_mail=$smarty->fetch(CURRENT_TEMPLATE . '/admin/mail/'.$Lang_folder.'/create_account_mail.html');
-    $txt_mail=$smarty->fetch(CURRENT_TEMPLATE . '/admin/mail/'.$Lang_folder.'/create_account_mail.txt');
+    $html_mail=$modCoreTemplate->fetch($smarty, 'admin/mail/'.$Lang_folder.'/create_account_mail.html');
+    $txt_mail=$modCoreTemplate->fetch($smarty, 'admin/mail/'.$Lang_folder.'/create_account_mail.txt');
 
     // send mail with html/txt template
     xtc_php_mail(EMAIL_SUPPORT_ADDRESS,

@@ -79,8 +79,8 @@
         $smarty->assign('FIRSTNAME', $mail['customers_firstname']);
         $smarty->assign('LASTNAME', $mail['customers_lastname']);
 
-        $html_mail = $smarty->fetch(CURRENT_TEMPLATE . '/admin/mail/'.$_SESSION['language'].'/gift_accepted.html');
-        $txt_mail = $smarty->fetch(CURRENT_TEMPLATE . '/admin/mail/'.$_SESSION['language'].'/gift_accepted.txt');
+        $html_mail = $modCoreTemplate->fetch($smarty, 'admin/mail/'.$_SESSION['language'].'/gift_accepted.html');
+        $txt_mail = $modCoreTemplate->fetch($smarty, 'admin/mail/'.$_SESSION['language'].'/gift_accepted.txt');
 
         xtc_php_mail(EMAIL_BILLING_ADDRESS,
                      EMAIL_BILLING_NAME,

@@ -490,7 +490,7 @@ $smarty->assign('FORM_END', '</form>');
 $smarty->assign('language', $_SESSION['language']);
 $smarty->assign('BUTTON_SUBMIT', xtc_image_submit('button_continue.gif', IMAGE_BUTTON_CONTINUE));
 
-$main_content = $smarty->fetch(CURRENT_TEMPLATE . '/module/create_account_guest.html');
+$main_content = $modCoreTemplate->fetch($smarty, 'module/create_account_guest.html');
 $smarty->assign('main_content', $main_content);
 if (!defined('RM'))
   $smarty->load_filter('output', 'note');

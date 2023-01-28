@@ -345,7 +345,7 @@ if ($messageStack->size('checkout_confirmation') > 0) {
 }
 
 $smarty->assign('language', $_SESSION['language']);
-$main_content = $smarty->fetch(CURRENT_TEMPLATE . '/module/checkout_confirmation.html');
+$main_content = $modCoreTemplate->fetch($smarty, 'module/checkout_confirmation.html');
 $smarty->assign('main_content', $main_content);
 $smarty->caching = 0;
 if (!defined('RM')) $smarty->load_filter('output', 'note');
