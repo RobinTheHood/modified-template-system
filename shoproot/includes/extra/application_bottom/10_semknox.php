@@ -34,13 +34,13 @@
     }
 
     if (is_file($modCoreTemplate->getPath('module/semknox_suggest.html'))) {
-      $template_suggest_file = CURRENT_TEMPLATE.'/module/semknox_suggest.html';
+      $template_suggest_file = $modCoreTemplate->getPath('module/semknox_suggest.html');
     } else {
       $template_suggest_file = DIR_FS_EXTERNAL.'semknox/templates/semknox_suggest.html';
     }
 
     if (is_file($modCoreTemplate->getPath('module/semknox_result.html'))) {
-      $template_result_file = CURRENT_TEMPLATE.'/module/semknox_result.html';
+      $template_result_file = $modCoreTemplate->getPath('module/semknox_result.html';
     } else {
       $template_result_file = DIR_FS_EXTERNAL.'semknox/templates/semknox_result.html';
     }
@@ -72,7 +72,7 @@
     
     $callback_js = '';
     if (is_file($modCoreTemplate->getPath('javascript/semknox_callback.js'))) {
-      $callback_js = file_get_contents(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/javascript/semknox_callback.js');
+      $callback_js = file_get_contents($modCoreTemplate->getPath('javascript/semknox_callback.js'));
     } 
     
     if (MODULE_SEMKNOX_SYSTEM_DEFAULT_CSS != 'true') {

@@ -1210,10 +1210,11 @@ class categories {
 
 
   function create_templates_dropdown_menu($template, $path, $default_value, $style = '') {
+    global $modCoreTemplate;
     $files = array();
     
-    if (is_dir(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.$path)) {
-      foreach(auto_include(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.$path, 'html') as $file) {
+    if (is_dir($modCoreTemplate->getPath($path))) {
+      foreach(auto_include($modCoreTemplate->getPath($path), 'html') as $file) {
         $files[] = array(
           'id' => basename($file), 
           'text' => basename($file),

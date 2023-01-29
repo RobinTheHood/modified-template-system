@@ -30,7 +30,7 @@ if (!CacheCheck()) {
 $categorie_template = 'sub_categories_listing.html';
 foreach(auto_include(DIR_FS_CATALOG.'includes/extra/modules/categories_listing/categories_smarty/','php') as $file) require_once ($file);
 
-if (!$categorie_smarty->is_cached(CURRENT_TEMPLATE.'/module/'.$categorie_template, $cache_id) || !$cache) {
+if (!$categorie_smarty->is_cached($modCoreTemplate->getPath('module/'.$categorie_template), $cache_id) || !$cache) {
   if (MAX_DISPLAY_CATEGORIES_PER_ROW > 0) {
     if (isset ($cPath) && preg_match('/_/', $cPath)) { 
       $category_links = array_reverse($cPath_array);

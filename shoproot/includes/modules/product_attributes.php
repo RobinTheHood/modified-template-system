@@ -53,7 +53,7 @@ if (!CacheCheck()) {
   $cache_id = md5('lID:'.$_SESSION['language'].'|csID:'.$_SESSION['customers_status']['customers_status_id'].'|pID:'.$_GET['products_id'].'|curr:'.$_SESSION['currency'].'|country:'.((isset($_SESSION['country'])) ? $_SESSION['country'] : ((isset($_SESSION['customer_country_id'])) ? $_SESSION['customer_country_id'] : STORE_COUNTRY)));
 }
 
-if (!$module_smarty->is_cached(CURRENT_TEMPLATE.'/module/product_options/'.$product->data['options_template'], $cache_id) || !$cache) {
+if (!$module_smarty->is_cached($modCoreTemplate->getPath('module/product_options/'.$product->data['options_template']), $cache_id) || !$cache) {
   if ($product->getAttributesCount() > 0) {
 
     $attrib_checked_array = array();

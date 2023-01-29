@@ -1075,7 +1075,7 @@ function SendShopConfig ()
 
   //Ausgabe ProductListingTemplates
   $schema = '<PRODUCT_LISTING_TEMPLATES>' . "\n";
-  if ($dir = opendir(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/product_listing/'))
+  if ($dir = opendir($modCoreTemplate->getPath('module/product_listing/')))
   {
       while (($file = readdir($dir)) != false)
       {
@@ -1097,7 +1097,7 @@ function SendShopConfig ()
 
   //Ausgabe ProductInfoTemplates
   $schema = '<PRODUCT_DETAILS_TEMPLATES>' . "\n";
-  if ($dir = opendir(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/product_info/'))
+  if ($dir = opendir($modCoreTemplate->getPath('module/product_info/')))
   {
       while (($file = readdir($dir)) != false)
       {
@@ -1119,7 +1119,7 @@ function SendShopConfig ()
 
   //Ausgabe ProductOptionsTemplates
   $schema = '<PRODUCT_OPTIONS_TEMPLATES>' . "\n";
-  if ($dir = opendir(DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/module/product_options/'))
+  if ($dir = opendir($modCoreTemplate->getPath('module/product_options/')))
   {
       while (($file = readdir($dir)) != false)
       {
